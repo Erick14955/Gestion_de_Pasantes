@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_de_Pasantes.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,14 @@ namespace Gestion_de_Pasantes
         public MainForm()
         {
             InitializeComponent();
+            this.PasanteToolStripMenuItem.Click += new EventHandler(this.PasanteToolStripMenuItem_ItemClicked);
         }
 
-        private void UsuariosToolStripMenuItem_ItemClicked(object sender, EventArgs e)
+        private void PasanteToolStripMenuItem_ItemClicked(object sender, EventArgs e)
         {
-
+            rPasantes pasantes = new rPasantes();
+            pasantes.MdiParent = this;
+            pasantes.Show();
         }
 
         private void RolesToolStripMenuItem_ItemClicked(object sender, EventArgs e)
