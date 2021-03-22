@@ -26,7 +26,7 @@ namespace Gestion_de_Pasantes
             }
             else
             {
-                //if (UsuariosBLL.ExisteUsuario(EmailtextBox.Text, passwordtextBox.Text))
+                /*if (UsuariosBLL.ExisteUsuario(EmailtextBox.Text, passwordtextBox.Text))
                 {
                     MainForm mnf = new MainForm();
                     mnf.Show();
@@ -36,7 +36,7 @@ namespace Gestion_de_Pasantes
                     ErroreserrorProvider.SetError(EmailtextBox, "El email o clave es incorrecto");
                     ErroreserrorProvider.SetError(passwordtextBox, "El email o clave es incorrecto");
                     passwordtextBox.Clear();
-                }
+                }*/
             }
 
             EmailtextBox.Clear();
