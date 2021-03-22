@@ -52,9 +52,9 @@ namespace Gestion_de_Pasantes
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HabilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InstitucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -246,30 +246,30 @@ namespace Gestion_de_Pasantes
             // RegistrosToolStripMenuItem
             // 
             this.RegistrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.UsuariosToolStripMenuItem,
-            this.RolesToolStripMenuItem,
-            this.PermisosToolStripMenuItem});
+            this.PasanteToolStripMenuItem,
+            this.HabilidadesToolStripMenuItem,
+            this.InstitucionToolStripMenuItem});
             this.RegistrosToolStripMenuItem.Name = "RegistrosToolStripMenuItem";
             this.RegistrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.RegistrosToolStripMenuItem.Text = "&Registros";
             // 
-            // UsuariosToolStripMenuItem
+            // PasanteToolStripMenuItem
             // 
-            this.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem";
-            this.UsuariosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.UsuariosToolStripMenuItem.Text = "Usuarios";
+            this.PasanteToolStripMenuItem.Name = "PasanteToolStripMenuItem";
+            this.PasanteToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.PasanteToolStripMenuItem.Text = "Pasante";
             // 
-            // RolesToolStripMenuItem
+            // HabilidadesToolStripMenuItem
             // 
-            this.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem";
-            this.RolesToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.RolesToolStripMenuItem.Text = "Roles";
+            this.HabilidadesToolStripMenuItem.Name = "HabilidadesToolStripMenuItem";
+            this.HabilidadesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.HabilidadesToolStripMenuItem.Text = "Habilidades";
             // 
-            // PermisosToolStripMenuItem
+            // InstitucionToolStripMenuItem
             // 
-            this.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem";
-            this.PermisosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.PermisosToolStripMenuItem.Text = "Permisos";
+            this.InstitucionToolStripMenuItem.Name = "InstitucionToolStripMenuItem";
+            this.InstitucionToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.InstitucionToolStripMenuItem.Text = "Institución";
             // 
             // ConsultasToolStripMenuItem
             // 
@@ -375,9 +375,9 @@ namespace Gestion_de_Pasantes
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RegistrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem UsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PasanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem PermisosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InstitucionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
@@ -387,6 +387,7 @@ namespace Gestion_de_Pasantes
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem HabilidadesToolStripMenuItem;
     }
 }
 
