@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_de_Pasantes.Entidades
 {
-    class Instituciones
+    public class Instituciones
     {
         [Key]
 
