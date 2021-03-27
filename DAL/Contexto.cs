@@ -11,7 +11,7 @@ namespace Gestion_de_Pasantes.DAL
     public class Contexto : DbContext
     {
         public DbSet<Pasantes> Pasantes { get; set; }
-
+        public DbSet<Instituciones> Instituciones { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
