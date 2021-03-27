@@ -147,26 +147,6 @@ namespace Gestion_de_Pasantes.BLL
             return encontrado;
         }
 
-        public static bool ExisteNombre(string buscarnombre)
-        {
-            Contexto contexto = new Contexto();
-            bool encontrado = false;
-            try
-            {
-                encontrado = contexto.Pasantes.Any(e => e.NombrePasante == buscarnombre);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-
-            return encontrado;
-        }
-
         public static List<Pasantes> GetList(Expression<Func<Pasantes, bool>> criterio)
         {
             List<Pasantes> lista = new List<Pasantes>();

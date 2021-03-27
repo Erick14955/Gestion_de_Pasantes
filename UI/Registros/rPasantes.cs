@@ -18,50 +18,56 @@ namespace Gestion_de_Pasantes.UI.Registros
         {
             InitializeComponent();
         }
-        /*
+        
         public void Limpiar()
         {
-            UsuarioIdNumericUpDown.Value = 0;
-            AliasTextBox.Clear();
+            PasanteIdNumericUpDown.Value = 0;
             NombreTextBox.Clear();
             ClaveTextBox.Clear();
-            ConfirmarClaveTextBox.Clear();
-            ConfirmarClaveTextBox.Clear();
+            ConfirmarClavetextBox.Clear();
             FechaCreacionDateTimePicker.Value = DateTime.Now;
-            RolComboBox.Text = " ";
+            HabilidadComboBox.Text = " ";
             ActivoCheckBox.Checked = false;
+            InstitucioncomboBox.Text = " ";
+            EmailTextBox.Clear();
+            MatriculaTextBox.Clear();
+            totalhorastextBox.Clear();
         }
-        public void LlenaCampos(Usuarios usuarios)
+        public void LlenaCampos(Pasantes pasantes)
         {
-            ActivoCheckBox.Checked = usuarios.Activo;
-            UsuarioIdNumericUpDown.Value = usuarios.UsuarioID;
-            NombreTextBox.Text = usuarios.NombreUsuario;
-            ClaveTextBox.Text = usuarios.Clave;
-            ConfirmarClaveTextBox.Text = usuarios.Clave;
-            ConfirmarClaveTextBox.Text = usuarios.Email;
-            FechaCreacionDateTimePicker.Value = usuarios.FechaUsuario;
-            RolComboBox.Text = usuarios.Rol;
-            AliasTextBox.Text = usuarios.AliasUsuario;
+            ActivoCheckBox.Checked = pasantes.Activo;
+            PasanteIdNumericUpDown.Value = pasantes.id;
+            NombreTextBox.Text = pasantes.NombrePasante;
+            ClaveTextBox.Text = pasantes.Clave;
+            ConfirmarClavetextBox.Text = pasantes.Clave;
+            EmailTextBox.Text = pasantes.Email;
+            FechaCreacionDateTimePicker.Value = pasantes.Fecha;
+            HabilidadComboBox.Text = pasantes.Habilidad;
+            InstitucioncomboBox.Text = pasantes.Institucion;
+            totalhorastextBox.Text = Convert.ToString(pasantes.TotalHoras);
+            MatriculaTextBox.Text = Convert.ToString(pasantes.Matricula);
         }
-        private Usuarios LlenaClase()
+        private Pasantes LlenaClase()
         {
-            Usuarios usuario = new Usuarios();
-            usuario.UsuarioID = (int)UsuarioIdNumericUpDown.Value;
-            usuario.AliasUsuario = AliasTextBox.Text;
-            usuario.Activo = ActivoCheckBox.Checked;
-            usuario.Email = ConfirmarClaveTextBox.Text;
-            usuario.FechaUsuario = FechaCreacionDateTimePicker.Value;
-            usuario.Rol = RolComboBox.Text;
-            usuario.Clave = ClaveTextBox.Text;
-            usuario.NombreUsuario = NombreTextBox.Text;
+            Pasantes pasantes = new Pasantes();
+            pasantes.id = (int)PasanteIdNumericUpDown.Value;
+            pasantes.Activo = ActivoCheckBox.Checked;
+            pasantes.Email = EmailTextBox.Text;
+            pasantes.Fecha = FechaCreacionDateTimePicker.Value;
+            pasantes.Habilidad = HabilidadComboBox.Text;
+            pasantes.Clave = ClaveTextBox.Text;
+            pasantes.NombrePasante = NombreTextBox.Text;
+            pasantes.TotalHoras = Convert.ToInt32(totalhorastextBox.Text);
+            pasantes.Matricula = Convert.ToInt32(MatriculaTextBox.Text);
+            pasantes.Institucion = InstitucioncomboBox.Text;
 
-            return usuario;
+            return pasantes;
         }
         private void rUsuarios_Load(object sender, EventArgs e)
         {
-            RolComboBox.DataSource = RolesBLL.GetRoles();
-            RolComboBox.DisplayMember = "DescripcionRol";
-            RolComboBox.ValueMember = "RolID";
+            HabilidadComboBox.DataSource = PasantesBLL.GetList();
+            HabilidadComboBox.DisplayMember = "DescripcionRol";
+            HabilidadComboBox.ValueMember = "RolID";
         }
         private bool Validar()
         {
@@ -80,16 +86,10 @@ namespace Gestion_de_Pasantes.UI.Registros
                 EmailTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(AliasTextBox.Text))
+            if (string.IsNullOrWhiteSpace(HabilidadComboBox.Text))
             {
-                MyErrorProvider.SetError(AliasTextBox, "El campo Alias no puede estar vacio");
-                AliasTextBox.Focus();
-                paso = false;
-            }
-            if (string.IsNullOrWhiteSpace(RolComboBox.Text))
-            {
-                MyErrorProvider.SetError(RolComboBox, "Debe agregar un rol especifico");
-                RolComboBox.Focus();
+                MyErrorProvider.SetError(HabilidadComboBox, "Debe agregar un rol especifico");
+                HabilidadComboBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(ClaveTextBox.Text))
@@ -98,24 +98,18 @@ namespace Gestion_de_Pasantes.UI.Registros
                 ClaveTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(ConfirmarClaveTextBox.Text))
+            if (string.IsNullOrWhiteSpace(ConfirmarClavetextBox.Text))
             {
-                MyErrorProvider.SetError(ConfirmarClaveTextBox, "Debe confirmar la clave");
-                ConfirmarClaveTextBox.Focus();
+                MyErrorProvider.SetError(ConfirmarClavetextBox, "Debe confirmar la clave");
+                ConfirmarClavetextBox.Focus();
                 paso = false;
             }
-            if (ClaveTextBox.Text != ConfirmarClaveTextBox.Text)
+            if (ClaveTextBox.Text != ConfirmarClavetextBox.Text)
             {
-                MyErrorProvider.SetError(ConfirmarClaveTextBox, "Las contrseñas deben ser iguales.");
-                ConfirmarClaveTextBox.Focus();
+                MyErrorProvider.SetError(ConfirmarClavetextBox, "Las contrseñas deben ser iguales.");
+                ConfirmarClavetextBox.Focus();
                 MyErrorProvider.SetError(ClaveTextBox, "Las contraseñas deben ser iguales.");
                 ClaveTextBox.Focus();
-                paso = false;
-            }
-            if (UsuariosBLL.ExisteAlias(AliasTextBox.Text))
-            {
-                MyErrorProvider.SetError(AliasTextBox, "Los Alias no pueden repetirse!");
-                AliasTextBox.Focus();
                 paso = false;
             }
 
@@ -124,16 +118,16 @@ namespace Gestion_de_Pasantes.UI.Registros
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             int id;
-            Usuarios usuario = new Usuarios();
-            int.TryParse(UsuarioIdNumericUpDown.Text, out id);
+            Pasantes pasantes = new Pasantes();
+            int.TryParse(PasanteIdNumericUpDown.Text, out id);
 
             Limpiar();
 
-            usuario = UsuariosBLL.Buscar(id);
+            pasantes = PasantesBLL.Buscar(id);
 
-            if (usuario != null)
+            if (pasantes != null)
             {
-                LlenaCampos(usuario);
+                LlenaCampos(pasantes);
             }
             else
             {
@@ -148,14 +142,14 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            Usuarios usuarios;
+            Pasantes pasantes;
 
             if (!Validar())
                 return;
 
-            usuarios = LlenaClase();
+            pasantes = LlenaClase();
 
-            var paso = UsuariosBLL.Guardar(usuarios);
+            var paso = PasantesBLL.Guardar(pasantes);
 
             if (paso)
             {
@@ -173,15 +167,15 @@ namespace Gestion_de_Pasantes.UI.Registros
             MyErrorProvider.Clear();
 
             int id;
-            int.TryParse(UsuarioIdNumericUpDown.Text, out id);
+            int.TryParse(PasanteIdNumericUpDown.Text, out id);
 
             Limpiar();
 
-            if (UsuariosBLL.Eliminar(id))
+            if (PasantesBLL.Eliminar(id))
                 MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MyErrorProvider.SetError(UsuarioIdNumericUpDown, "No se puede eliminar una persona que no existe");
+                MyErrorProvider.SetError(PasanteIdNumericUpDown, "No se puede eliminar una persona que no existe");
         }
-        */
+        
     }
 }
