@@ -32,7 +32,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cInstituciones));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.FiltroTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -69,14 +69,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Filtro";
-            // 
-            // FiltroTextBox
-            // 
-            this.FiltroTextBox.Location = new System.Drawing.Point(43, 51);
-            this.FiltroTextBox.Multiline = true;
-            this.FiltroTextBox.Name = "FiltroTextBox";
-            this.FiltroTextBox.Size = new System.Drawing.Size(108, 23);
-            this.FiltroTextBox.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -206,18 +198,30 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.button2.Text = "Imprimir";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Id",
+            "Nombre",
+            "Region"});
+            this.comboBox1.Location = new System.Drawing.Point(44, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(107, 23);
+            this.comboBox1.TabIndex = 9;
+            // 
             // cInstituciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 341);
+            this.ClientSize = new System.Drawing.Size(659, 347);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.InformacionTextBox);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.FiltroTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Name = "cInstituciones";
@@ -236,7 +240,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox FiltroTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -250,5 +253,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
