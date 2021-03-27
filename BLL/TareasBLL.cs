@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_de_Pasantes.BLL
 {
-    class TareasBLL
+    public class TareasBLL
     {
     }
 }

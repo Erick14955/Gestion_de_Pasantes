@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_de_Pasantes.BLL
 {
-    class PasantesBLL
+    public class PasantesBLL
     {
         public static bool Guardar(Pasantes pasantes)
         {
