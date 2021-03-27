@@ -76,7 +76,8 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.comboBox1.Items.AddRange(new object[] {
             "Id",
             "Nombre",
-            "Regin"});
+            "Matricula",
+            "InstitucionTotal de horas"});
             this.comboBox1.Location = new System.Drawing.Point(43, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(114, 23);
@@ -215,7 +216,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 351);
+            this.ClientSize = new System.Drawing.Size(630, 351);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BuscarButton);

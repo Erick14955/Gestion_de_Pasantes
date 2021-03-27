@@ -225,7 +225,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Name = "cInstituciones";
-            this.Text = "cInstituciones";
+            this.Text = "Consultas Instituciones";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
