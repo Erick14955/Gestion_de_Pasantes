@@ -13,7 +13,6 @@ namespace Gestion_de_Pasantes.Entidades
         public int id { get; set; }
         public string NombrePasante { get; set; }
         public string Institucion { get; set; }
-        public string ApellidosPasantes { get; set; }
         public int Matricula { get; set; }
         public string Habilidad { get; set; }
         public int TotalHoras { get; set; }
