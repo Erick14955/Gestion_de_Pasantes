@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_de_Pasantes.Entidades
 {
-    class Pasantes
+    public class Pasantes
     {
         [Key]
         public int id { get; set; }
@@ -19,6 +19,7 @@ namespace Gestion_de_Pasantes.Entidades
         public int TotalHoras { get; set; }
         public string Email { get; set; }
         public bool Activo { get; set; }
+        public string Clave { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
     }
 }
