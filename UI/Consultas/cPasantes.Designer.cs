@@ -32,23 +32,23 @@ namespace Gestion_de_Pasantes.UI.Consultas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cPasantes));
             this.FiltroCheckBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InformacionTextBox = new System.Windows.Forms.TextBox();
             this.EsactivoGroupBox = new System.Windows.Forms.GroupBox();
             this.InactivoRadioButton = new System.Windows.Forms.RadioButton();
             this.ActivoRadioButton = new System.Windows.Forms.RadioButton();
             this.TodoRadioButton = new System.Windows.Forms.RadioButton();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PasantesDataGridView = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.EsactivoGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasantesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // FiltroCheckBox
@@ -70,18 +70,20 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.label1.TabIndex = 1;
             this.label1.Text = "Filtro";
             // 
-            // comboBox1
+            // FiltroComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.FiltroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
             "Nombre",
             "Matricula",
-            "InstitucionTotal de horas"});
-            this.comboBox1.Location = new System.Drawing.Point(43, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 23);
-            this.comboBox1.TabIndex = 2;
+            "Institucion ",
+            "Total de horas"});
+            this.FiltroComboBox.Location = new System.Drawing.Point(43, 52);
+            this.FiltroComboBox.Name = "FiltroComboBox";
+            this.FiltroComboBox.Size = new System.Drawing.Size(114, 23);
+            this.FiltroComboBox.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -129,13 +131,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.label2.TabIndex = 0;
             this.label2.Text = "Desde";
             // 
-            // textBox1
+            // InformacionTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 25);
-            this.textBox1.TabIndex = 4;
+            this.InformacionTextBox.Location = new System.Drawing.Point(163, 50);
+            this.InformacionTextBox.Multiline = true;
+            this.InformacionTextBox.Name = "InformacionTextBox";
+            this.InformacionTextBox.Size = new System.Drawing.Size(296, 25);
+            this.InformacionTextBox.TabIndex = 4;
             // 
             // EsactivoGroupBox
             // 
@@ -193,15 +195,16 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // dataGridView1
+            // PasantesDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 79);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(608, 240);
-            this.dataGridView1.TabIndex = 7;
+            this.PasantesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PasantesDataGridView.Location = new System.Drawing.Point(12, 79);
+            this.PasantesDataGridView.Name = "PasantesDataGridView";
+            this.PasantesDataGridView.RowTemplate.Height = 25;
+            this.PasantesDataGridView.Size = new System.Drawing.Size(608, 240);
+            this.PasantesDataGridView.TabIndex = 7;
             // 
             // button1
             // 
@@ -218,12 +221,12 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 351);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PasantesDataGridView);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EsactivoGroupBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InformacionTextBox);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
             this.Name = "cPasantes";
@@ -232,7 +235,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.PerformLayout();
             this.EsactivoGroupBox.ResumeLayout(false);
             this.EsactivoGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PasantesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,19 +245,19 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private System.Windows.Forms.CheckBox FiltroCheckBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox FiltroComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InformacionTextBox;
         private System.Windows.Forms.GroupBox EsactivoGroupBox;
         private System.Windows.Forms.RadioButton InactivoRadioButton;
         private System.Windows.Forms.RadioButton ActivoRadioButton;
         private System.Windows.Forms.RadioButton TodoRadioButton;
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PasantesDataGridView;
         private System.Windows.Forms.Button button1;
     }
 }
