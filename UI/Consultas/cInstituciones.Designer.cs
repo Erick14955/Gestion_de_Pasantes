@@ -40,15 +40,15 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.InformacionTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.InactivoRadioButton = new System.Windows.Forms.RadioButton();
-            this.ActivoRadioButton2 = new System.Windows.Forms.RadioButton();
+            this.ActivoRadioButton = new System.Windows.Forms.RadioButton();
             this.TodoRadioButton = new System.Windows.Forms.RadioButton();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.ConsultaDataGridView = new System.Windows.Forms.DataGridView();
+            this.InstitucionesDataGridView = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstitucionesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // FiltroCheckBox
@@ -126,7 +126,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.InactivoRadioButton);
-            this.groupBox2.Controls.Add(this.ActivoRadioButton2);
+            this.groupBox2.Controls.Add(this.ActivoRadioButton);
             this.groupBox2.Controls.Add(this.TodoRadioButton);
             this.groupBox2.Location = new System.Drawing.Point(472, 1);
             this.groupBox2.Name = "groupBox2";
@@ -146,16 +146,16 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.InactivoRadioButton.Text = "Inactivo";
             this.InactivoRadioButton.UseVisualStyleBackColor = true;
             // 
-            // ActivoRadioButton2
+            // ActivoRadioButton
             // 
-            this.ActivoRadioButton2.AutoSize = true;
-            this.ActivoRadioButton2.Location = new System.Drawing.Point(6, 33);
-            this.ActivoRadioButton2.Name = "ActivoRadioButton2";
-            this.ActivoRadioButton2.Size = new System.Drawing.Size(59, 19);
-            this.ActivoRadioButton2.TabIndex = 1;
-            this.ActivoRadioButton2.TabStop = true;
-            this.ActivoRadioButton2.Text = "Activo";
-            this.ActivoRadioButton2.UseVisualStyleBackColor = true;
+            this.ActivoRadioButton.AutoSize = true;
+            this.ActivoRadioButton.Location = new System.Drawing.Point(6, 33);
+            this.ActivoRadioButton.Name = "ActivoRadioButton";
+            this.ActivoRadioButton.Size = new System.Drawing.Size(59, 19);
+            this.ActivoRadioButton.TabIndex = 1;
+            this.ActivoRadioButton.TabStop = true;
+            this.ActivoRadioButton.Text = "Activo";
+            this.ActivoRadioButton.UseVisualStyleBackColor = true;
             // 
             // TodoRadioButton
             // 
@@ -181,14 +181,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // ConsultaDataGridView
+            // InstitucionesDataGridView
             // 
-            this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaDataGridView.Location = new System.Drawing.Point(12, 81);
-            this.ConsultaDataGridView.Name = "ConsultaDataGridView";
-            this.ConsultaDataGridView.RowTemplate.Height = 25;
-            this.ConsultaDataGridView.Size = new System.Drawing.Size(640, 226);
-            this.ConsultaDataGridView.TabIndex = 7;
+            this.InstitucionesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InstitucionesDataGridView.Location = new System.Drawing.Point(12, 81);
+            this.InstitucionesDataGridView.Name = "InstitucionesDataGridView";
+            this.InstitucionesDataGridView.RowTemplate.Height = 25;
+            this.InstitucionesDataGridView.Size = new System.Drawing.Size(640, 226);
+            this.InstitucionesDataGridView.TabIndex = 7;
             // 
             // button2
             // 
@@ -218,7 +218,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.ClientSize = new System.Drawing.Size(659, 347);
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.ConsultaDataGridView);
+            this.Controls.Add(this.InstitucionesDataGridView);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.InformacionTextBox);
@@ -231,7 +231,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstitucionesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,10 +249,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
         private System.Windows.Forms.TextBox InformacionTextBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton InactivoRadioButton;
-        private System.Windows.Forms.RadioButton ActivoRadioButton2;
+        private System.Windows.Forms.RadioButton ActivoRadioButton;
         private System.Windows.Forms.RadioButton TodoRadioButton;
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.DataGridView ConsultaDataGridView;
+        private System.Windows.Forms.DataGridView InstitucionesDataGridView;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox FiltroComboBox;
     }
