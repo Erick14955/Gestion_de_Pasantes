@@ -118,15 +118,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             }
             else
             {
-                //si CriterioTextBox no se encuentra vacio y FiltroActivo no se encuentra cortejado
                 if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
                 {
                     switch (FiltroComboBox.SelectedIndex)
                     {
-                        case 0: //RolId
+                        case 0:
                             lista = PasantesBLL.GetList(r => r.id == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
-                        case 1: //Descripcion
+                        case 1:
                             lista = PasantesBLL.GetList(r => r.NombrePasante.Contains(InformacionTextBox.Text));
                             break;
                         case 2:
@@ -146,7 +145,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     lista = PasantesBLL.GetList(r => true);
             }
 
-            //Si usarFecha se encuentra cortejado
             if (FiltroCheckBox.Checked)
             {
                 lista = PasantesBLL.GetList(r => r.Fecha >= dateTimePicker1.Value && r.Fecha <= dateTimePicker2.Value);
