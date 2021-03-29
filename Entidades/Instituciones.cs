@@ -20,5 +20,7 @@ namespace Gestion_de_Pasantes.Entidades
         public DateTime Fecha { get; set; } = DateTime.Now;
         public string Telefono { get; set; }
         public string NumFax { get; set; }
+        public bool Privada { get; set; }
+        public bool Publica { get; set; }
     }
 }

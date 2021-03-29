@@ -26,12 +26,13 @@ namespace Gestion_de_Pasantes.UI.Registros
             ClaveTextBox.Clear();
             ConfirmarClavetextBox.Clear();
             FechaCreacionDateTimePicker.Value = DateTime.Now;
-            HabilidadComboBox.Text = " ";
+            //HabilidadComboBox.Text = " ";
             ActivoCheckBox.Checked = false;
             InstitucioncomboBox.Text = " ";
             EmailTextBox.Clear();
             MatriculaTextBox.Clear();
             totalhorastextBox.Clear();
+            MyErrorProvider.Clear();
         }
         public void LlenaCampos(Pasantes pasantes)
         {
@@ -42,7 +43,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             ConfirmarClavetextBox.Text = pasantes.Clave;
             EmailTextBox.Text = pasantes.Email;
             FechaCreacionDateTimePicker.Value = pasantes.Fecha;
-            HabilidadComboBox.Text = pasantes.Habilidad;
+            //HabilidadComboBox.Text = pasantes.Habilidad;
             InstitucioncomboBox.Text = pasantes.Institucion;
             totalhorastextBox.Text = Convert.ToString(pasantes.TotalHoras);
             MatriculaTextBox.Text = Convert.ToString(pasantes.Matricula);
@@ -54,7 +55,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             pasantes.Activo = ActivoCheckBox.Checked;
             pasantes.Email = EmailTextBox.Text;
             pasantes.Fecha = FechaCreacionDateTimePicker.Value;
-            pasantes.Habilidad = HabilidadComboBox.Text;
+            //pasantes.Habilidad = HabilidadComboBox.Text;
             pasantes.Clave = ClaveTextBox.Text;
             pasantes.NombrePasante = NombreTextBox.Text;
             pasantes.TotalHoras = Convert.ToInt32(totalhorastextBox.Text);
@@ -65,9 +66,9 @@ namespace Gestion_de_Pasantes.UI.Registros
         }
         private void rUsuarios_Load(object sender, EventArgs e)
         {
-            HabilidadComboBox.DataSource = PasantesBLL.GetList();
+            /*HabilidadComboBox.DataSource = PasantesBLL.GetList();
             HabilidadComboBox.DisplayMember = "DescripcionRol";
-            HabilidadComboBox.ValueMember = "RolID";
+            HabilidadComboBox.ValueMember = "RolID";*/
         }
         private bool Validar()
         {
@@ -86,12 +87,12 @@ namespace Gestion_de_Pasantes.UI.Registros
                 EmailTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(HabilidadComboBox.Text))
+            /*if (string.IsNullOrWhiteSpace(HabilidadComboBox.Text))
             {
                 MyErrorProvider.SetError(HabilidadComboBox, "Debe agregar un rol especifico");
                 HabilidadComboBox.Focus();
                 paso = false;
-            }
+            }*/
             if (string.IsNullOrWhiteSpace(ClaveTextBox.Text))
             {
                 MyErrorProvider.SetError(ClaveTextBox, "Debe asignar una clave a su usuario");
@@ -131,7 +132,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             }
             else
             {
-                MessageBox.Show("Usuario no Encontrad0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Pasante no Encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

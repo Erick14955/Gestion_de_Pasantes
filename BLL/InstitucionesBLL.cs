@@ -126,7 +126,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                encontrado = context.Instituciones.Find(id) != null;
+                encontrado = context.Instituciones.Any(e => e.InstitucionId == id);
             }
             catch (Exception)
             {
@@ -140,6 +140,27 @@ namespace Gestion_de_Pasantes.BLL
 
             return encontrado;
 
+        }
+
+        public static bool ExisteInstitucion(string nombre)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+
+            try
+            {
+                encontrado = contexto.Instituciones.Any(e => e.NombreInstitucion == nombre);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return encontrado;
         }
 
         public static List<Instituciones> GetList(Expression<Func<Instituciones, bool>> criterio)
@@ -162,6 +183,26 @@ namespace Gestion_de_Pasantes.BLL
             }
             return lista;
 
+        }
+
+        public static List<Instituciones> GetRoles()
+        {
+            List<Instituciones> lista = new List<Instituciones>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                lista = contexto.Instituciones.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
         }
     }
 }
