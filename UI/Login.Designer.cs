@@ -68,6 +68,7 @@ namespace Gestion_de_Pasantes
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(131, 23);
             this.EmailtextBox.TabIndex = 3;
+            this.EmailtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailtextBox_KeyPress);
             // 
             // passwordlabel
             // 
@@ -87,6 +88,7 @@ namespace Gestion_de_Pasantes
             this.passwordtextBox.PasswordChar = '*';
             this.passwordtextBox.Size = new System.Drawing.Size(131, 23);
             this.passwordtextBox.TabIndex = 5;
+            this.passwordtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordtextBox_KeyPress);
             // 
             // Loginbutton
             // 

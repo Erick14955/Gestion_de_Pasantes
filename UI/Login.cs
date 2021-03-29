@@ -20,28 +20,70 @@ namespace Gestion_de_Pasantes
 
         private void Loginbutton_Click(object sender, EventArgs e)
         {
-            if (EmailtextBox.Text == "user" && passwordtextBox.Text == "1234")
+            if ((EmailtextBox.Text == "") && (passwordtextBox.Text == ""))
+                MessageBox.Show("No puede dejar los Campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            if ((EmailtextBox.Text != "user") && (passwordtextBox.Text == "1234"))
+                MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            if ((EmailtextBox.Text == "user") && (passwordtextBox.Text != "1234"))
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            if ((EmailtextBox.Text != "") && (passwordtextBox.Text != ""))
             {
-                MainForm mnf = new MainForm();
-                mnf.Show();
+                if ((EmailtextBox.Text != "user") && (passwordtextBox.Text != "1234"))
+                    MessageBox.Show("Usuario y Contraseña Incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
+
+            if ((EmailtextBox.Text != "") && (passwordtextBox.Text != ""))
             {
-                if (PasantesBLL.ExisteUsuario(EmailtextBox.Text, passwordtextBox.Text))
+
+                if (EmailtextBox.Text == "user" && passwordtextBox.Text == "1234")
                 {
                     MainForm mnf = new MainForm();
                     mnf.Show();
                 }
-                else
+            }
+        }
+
+        private void EmailtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                passwordtextBox.Focus();
+            }
+        }
+
+        private void passwordtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if ((EmailtextBox.Text == "") && (passwordtextBox.Text == ""))
+                    MessageBox.Show("No puede dejar los Campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                if ((EmailtextBox.Text != "user") && (passwordtextBox.Text == "1234"))
+                    MessageBox.Show("Usuario incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if ((EmailtextBox.Text == "user") && (passwordtextBox.Text != "1234"))
+                    MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if ((EmailtextBox.Text != "") && (passwordtextBox.Text != ""))
                 {
-                    ErroreserrorProvider.SetError(EmailtextBox, "El email o clave es incorrecto");
-                    ErroreserrorProvider.SetError(passwordtextBox, "El email o clave es incorrecto");
-                    passwordtextBox.Clear();
+                    if ((EmailtextBox.Text != "user") && (passwordtextBox.Text != "1234"))
+                        MessageBox.Show("Usuario y Contraseña Incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if ((EmailtextBox.Text != "") && (passwordtextBox.Text != ""))
+                {
+
+                    if (EmailtextBox.Text == "user" && passwordtextBox.Text == "1234")
+                    {
+                        MainForm mnf = new MainForm();
+                        mnf.Show();
+                        this.Hide();
+                    }
                 }
             }
-
-            EmailtextBox.Clear();
-            passwordtextBox.Clear();
         }
     }
 }
