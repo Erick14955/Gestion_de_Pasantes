@@ -123,7 +123,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     switch (FiltroComboBox.SelectedIndex)
                     {
                         case 0: //RolId
-                            lista = PasantesBLL.GetList(r => r.id == Utilitarios.ToInt(InformacionTextBox.Text));
+                            lista = PasantesBLL.GetList(r => r.Id == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
                             lista = PasantesBLL.GetList(r => r.NombrePasante.Contains(InformacionTextBox.Text));
