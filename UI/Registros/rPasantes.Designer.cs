@@ -72,7 +72,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 21);
+            this.label1.Location = new System.Drawing.Point(38, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 0;
@@ -80,7 +80,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // PasanteIdNumericUpDown
             // 
-            this.PasanteIdNumericUpDown.Location = new System.Drawing.Point(120, 20);
+            this.PasanteIdNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PasanteIdNumericUpDown.Location = new System.Drawing.Point(120, 45);
             this.PasanteIdNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasanteIdNumericUpDown.Name = "PasanteIdNumericUpDown";
             this.PasanteIdNumericUpDown.Size = new System.Drawing.Size(106, 23);
@@ -89,7 +91,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 63);
+            this.label2.Location = new System.Drawing.Point(38, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 3;
@@ -98,7 +100,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 109);
+            this.label3.Location = new System.Drawing.Point(38, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 15);
             this.label3.TabIndex = 5;
@@ -106,7 +108,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NombreTextBox
             // 
-            this.NombreTextBox.Location = new System.Drawing.Point(120, 106);
+            this.NombreTextBox.Location = new System.Drawing.Point(120, 131);
             this.NombreTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(225, 23);
@@ -115,7 +117,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 152);
+            this.label4.Location = new System.Drawing.Point(38, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 15);
             this.label4.TabIndex = 7;
@@ -123,7 +125,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(121, 152);
+            this.EmailTextBox.Location = new System.Drawing.Point(121, 177);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(225, 23);
@@ -132,7 +134,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(374, 155);
+            this.label5.Location = new System.Drawing.Point(374, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 15);
             this.label5.TabIndex = 9;
@@ -140,7 +142,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // MatriculaTextBox
             // 
-            this.MatriculaTextBox.Location = new System.Drawing.Point(481, 149);
+            this.MatriculaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MatriculaTextBox.Location = new System.Drawing.Point(481, 174);
             this.MatriculaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MatriculaTextBox.Name = "MatriculaTextBox";
             this.MatriculaTextBox.Size = new System.Drawing.Size(225, 23);
@@ -149,7 +153,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 196);
+            this.label6.Location = new System.Drawing.Point(39, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 15);
             this.label6.TabIndex = 11;
@@ -157,7 +161,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // ClaveTextBox
             // 
-            this.ClaveTextBox.Location = new System.Drawing.Point(122, 194);
+            this.ClaveTextBox.Location = new System.Drawing.Point(122, 219);
             this.ClaveTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.PasswordChar = '*';
@@ -167,7 +171,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(374, 62);
+            this.label8.Location = new System.Drawing.Point(374, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 15);
             this.label8.TabIndex = 14;
@@ -175,9 +179,11 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // FechaCreacionDateTimePicker
             // 
+            this.FechaCreacionDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FechaCreacionDateTimePicker.CustomFormat = "dd / MM / yyyy";
             this.FechaCreacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaCreacionDateTimePicker.Location = new System.Drawing.Point(481, 61);
+            this.FechaCreacionDateTimePicker.Location = new System.Drawing.Point(481, 86);
             this.FechaCreacionDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechaCreacionDateTimePicker.Name = "FechaCreacionDateTimePicker";
             this.FechaCreacionDateTimePicker.Size = new System.Drawing.Size(225, 23);
@@ -185,8 +191,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // ActivoCheckBox
             // 
+            this.ActivoCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ActivoCheckBox.AutoSize = true;
-            this.ActivoCheckBox.Location = new System.Drawing.Point(642, 22);
+            this.ActivoCheckBox.Location = new System.Drawing.Point(642, 47);
             this.ActivoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ActivoCheckBox.Name = "ActivoCheckBox";
             this.ActivoCheckBox.Size = new System.Drawing.Size(60, 19);
@@ -196,11 +203,12 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // BuscarButton
             // 
+            this.BuscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(263, 21);
+            this.BuscarButton.Location = new System.Drawing.Point(263, 45);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(83, 24);
+            this.BuscarButton.Size = new System.Drawing.Size(83, 25);
             this.BuscarButton.TabIndex = 17;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -208,6 +216,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
+            this.NuevoButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NuevoButton.Location = new System.Drawing.Point(164, 472);
             this.NuevoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NuevoButton.Name = "NuevoButton";
@@ -218,6 +227,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.GuardarButton.Location = new System.Drawing.Point(320, 472);
             this.GuardarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GuardarButton.Name = "GuardarButton";
@@ -228,6 +238,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
+            this.EliminarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.EliminarButton.Location = new System.Drawing.Point(480, 472);
             this.EliminarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EliminarButton.Name = "EliminarButton";
@@ -243,7 +254,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(374, 112);
+            this.label9.Location = new System.Drawing.Point(374, 137);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 15);
             this.label9.TabIndex = 22;
@@ -251,7 +262,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // totalhorastextBox
             // 
-            this.totalhorastextBox.Location = new System.Drawing.Point(481, 106);
+            this.totalhorastextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalhorastextBox.Location = new System.Drawing.Point(481, 131);
             this.totalhorastextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.totalhorastextBox.Name = "totalhorastextBox";
             this.totalhorastextBox.Size = new System.Drawing.Size(225, 23);
@@ -260,7 +273,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // InstitucioncomboBox
             // 
             this.InstitucioncomboBox.FormattingEnabled = true;
-            this.InstitucioncomboBox.Location = new System.Drawing.Point(120, 60);
+            this.InstitucioncomboBox.Location = new System.Drawing.Point(120, 85);
             this.InstitucioncomboBox.Name = "InstitucioncomboBox";
             this.InstitucioncomboBox.Size = new System.Drawing.Size(225, 23);
             this.InstitucioncomboBox.TabIndex = 23;
@@ -268,7 +281,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(374, 196);
+            this.label11.Location = new System.Drawing.Point(374, 221);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 15);
             this.label11.TabIndex = 25;
@@ -276,7 +289,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // ConfirmarClavetextBox
             // 
-            this.ConfirmarClavetextBox.Location = new System.Drawing.Point(481, 194);
+            this.ConfirmarClavetextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConfirmarClavetextBox.Location = new System.Drawing.Point(481, 219);
             this.ConfirmarClavetextBox.Name = "ConfirmarClavetextBox";
             this.ConfirmarClavetextBox.PasswordChar = '*';
             this.ConfirmarClavetextBox.Size = new System.Drawing.Size(225, 23);
@@ -284,6 +299,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -291,7 +309,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 236);
+            this.groupBox1.Location = new System.Drawing.Point(23, 261);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -310,6 +328,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.Location = new System.Drawing.Point(5, 181);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
@@ -320,6 +339,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(612, 37);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -330,6 +350,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(326, 37);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
@@ -356,6 +378,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(5, 63);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -395,6 +420,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.PasanteIdNumericUpDown);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(761, 562);
             this.Name = "rPasantes";
             this.Text = "Registro de Pasantes";
             ((System.ComponentModel.ISupportInitialize)(this.PasanteIdNumericUpDown)).EndInit();

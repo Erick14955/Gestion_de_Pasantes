@@ -63,7 +63,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 27);
+            this.label1.Location = new System.Drawing.Point(13, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 15);
             this.label1.TabIndex = 0;
@@ -71,7 +71,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(98, 62);
+            this.NombretextBox.Location = new System.Drawing.Point(101, 61);
             this.NombretextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(263, 23);
@@ -80,7 +80,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 64);
+            this.label2.Location = new System.Drawing.Point(13, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // RegiontextBox
             // 
-            this.RegiontextBox.Location = new System.Drawing.Point(98, 100);
+            this.RegiontextBox.Location = new System.Drawing.Point(101, 99);
             this.RegiontextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegiontextBox.Name = "RegiontextBox";
             this.RegiontextBox.Size = new System.Drawing.Size(263, 23);
@@ -97,7 +97,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 103);
+            this.label3.Location = new System.Drawing.Point(13, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 15);
             this.label3.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(98, 137);
+            this.DirecciontextBox.Location = new System.Drawing.Point(101, 136);
             this.DirecciontextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(263, 23);
@@ -114,7 +114,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 140);
+            this.label4.Location = new System.Drawing.Point(13, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 15);
             this.label4.TabIndex = 6;
@@ -122,7 +122,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(278, 26);
+            this.Buscarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Buscarbutton.Location = new System.Drawing.Point(281, 25);
             this.Buscarbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(82, 22);
@@ -133,7 +134,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(98, 27);
+            this.IdnumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IdnumericUpDown.Location = new System.Drawing.Point(101, 26);
             this.IdnumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(131, 23);
@@ -141,8 +144,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // ActivocheckBox
             // 
+            this.ActivocheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ActivocheckBox.AutoSize = true;
-            this.ActivocheckBox.Location = new System.Drawing.Point(633, 61);
+            this.ActivocheckBox.Location = new System.Drawing.Point(636, 60);
             this.ActivocheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ActivocheckBox.Name = "ActivocheckBox";
             this.ActivocheckBox.Size = new System.Drawing.Size(60, 19);
@@ -153,7 +157,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(407, 64);
+            this.label5.Location = new System.Drawing.Point(410, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 15);
             this.label5.TabIndex = 11;
@@ -161,10 +165,12 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FechadateTimePicker.CalendarTitleForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(504, 61);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(507, 60);
             this.FechadateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(103, 23);
@@ -172,7 +178,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // TelefonotextBox
             // 
-            this.TelefonotextBox.Location = new System.Drawing.Point(504, 98);
+            this.TelefonotextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TelefonotextBox.Location = new System.Drawing.Point(507, 97);
             this.TelefonotextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TelefonotextBox.Name = "TelefonotextBox";
             this.TelefonotextBox.Size = new System.Drawing.Size(189, 23);
@@ -181,7 +189,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(403, 100);
+            this.label6.Location = new System.Drawing.Point(406, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 15);
             this.label6.TabIndex = 13;
@@ -189,7 +197,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // FaxtextBox
             // 
-            this.FaxtextBox.Location = new System.Drawing.Point(504, 137);
+            this.FaxtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FaxtextBox.Location = new System.Drawing.Point(507, 136);
             this.FaxtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FaxtextBox.Name = "FaxtextBox";
             this.FaxtextBox.Size = new System.Drawing.Size(189, 23);
@@ -198,7 +208,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(403, 140);
+            this.label7.Location = new System.Drawing.Point(406, 139);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 15);
             this.label7.TabIndex = 15;
@@ -206,7 +216,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // CorreotextBox
             // 
-            this.CorreotextBox.Location = new System.Drawing.Point(98, 178);
+            this.CorreotextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.CorreotextBox.Location = new System.Drawing.Point(101, 177);
             this.CorreotextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CorreotextBox.Name = "CorreotextBox";
             this.CorreotextBox.Size = new System.Drawing.Size(263, 23);
@@ -215,7 +227,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 178);
+            this.label8.Location = new System.Drawing.Point(13, 177);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 15);
             this.label8.TabIndex = 17;
@@ -223,9 +235,12 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // TipoInstituciongroupBox
             // 
+            this.TipoInstituciongroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TipoInstituciongroupBox.Controls.Add(this.publicaradioButton);
             this.TipoInstituciongroupBox.Controls.Add(this.privadaradioButton);
-            this.TipoInstituciongroupBox.Location = new System.Drawing.Point(397, 170);
+            this.TipoInstituciongroupBox.Location = new System.Drawing.Point(400, 169);
             this.TipoInstituciongroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TipoInstituciongroupBox.Name = "TipoInstituciongroupBox";
             this.TipoInstituciongroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -236,6 +251,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // publicaradioButton
             // 
+            this.publicaradioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.publicaradioButton.AutoSize = true;
             this.publicaradioButton.Location = new System.Drawing.Point(232, 13);
             this.publicaradioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -260,7 +276,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(238, 245);
+            this.Nuevobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Nuevobutton.Location = new System.Drawing.Point(241, 244);
             this.Nuevobutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(82, 22);
@@ -271,7 +288,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(358, 245);
+            this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Guardarbutton.Location = new System.Drawing.Point(361, 244);
             this.Guardarbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(82, 22);
@@ -282,7 +300,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(470, 245);
+            this.Eliminarbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Eliminarbutton.Location = new System.Drawing.Point(473, 244);
             this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(82, 22);
@@ -299,7 +318,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 291);
+            this.ClientSize = new System.Drawing.Size(729, 291);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -323,6 +342,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(745, 330);
             this.Name = "rInstituciones";
             this.Text = "Registro de instituciones";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
