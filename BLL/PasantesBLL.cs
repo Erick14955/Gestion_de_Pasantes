@@ -13,7 +13,7 @@ namespace Gestion_de_Pasantes.BLL
     {
         public static bool Guardar(Pasantes pasantes)
         {
-            if (!Existe(pasantes.id))
+            if (!Existe(pasantes.Id))
                 return Insertar(pasantes);
             else
                 return Modificar(pasantes);
@@ -133,7 +133,7 @@ namespace Gestion_de_Pasantes.BLL
             bool encontrado = false;
             try
             {
-                encontrado = contexto.Pasantes.Any(e => e.id == id);
+                encontrado = contexto.Pasantes.Any(e => e.Id == id);
             }
             catch (Exception)
             {

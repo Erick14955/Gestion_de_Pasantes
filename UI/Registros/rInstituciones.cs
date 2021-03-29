@@ -69,7 +69,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             return instituciones;
         }
 
-        public bool validar()
+        public bool Validar()
         {
             bool paso = true;
 
@@ -142,7 +142,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         {
             Instituciones instituciones;
 
-            if (!validar())
+            if (!Validar())
                 return;
 
             if (InstitucionesBLL.ExisteInstitucion(NombretextBox.Text))

@@ -37,7 +37,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         public void LlenaCampos(Pasantes pasantes)
         {
             ActivoCheckBox.Checked = pasantes.Activo;
-            PasanteIdNumericUpDown.Value = pasantes.id;
+            PasanteIdNumericUpDown.Value = pasantes.Id;
             NombreTextBox.Text = pasantes.NombrePasante;
             ClaveTextBox.Text = pasantes.Clave;
             ConfirmarClavetextBox.Text = pasantes.Clave;
@@ -51,7 +51,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private Pasantes LlenaClase()
         {
             Pasantes pasantes = new Pasantes();
-            pasantes.id = (int)PasanteIdNumericUpDown.Value;
+            pasantes.Id = (int)PasanteIdNumericUpDown.Value;
             pasantes.Activo = ActivoCheckBox.Checked;
             pasantes.Email = EmailTextBox.Text;
             pasantes.Fecha = FechaCreacionDateTimePicker.Value;
@@ -64,12 +64,12 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             return pasantes;
         }
-        private void rUsuarios_Load(object sender, EventArgs e)
+        /*private void rUsuarios_Load(object sender, EventArgs e)
         {
-            /*HabilidadComboBox.DataSource = PasantesBLL.GetList();
+            HabilidadComboBox.DataSource = PasantesBLL.GetList();
             HabilidadComboBox.DisplayMember = "DescripcionRol";
-            HabilidadComboBox.ValueMember = "RolID";*/
-        }
+            HabilidadComboBox.ValueMember = "RolID";
+        }*/
         private bool Validar()
         {
             bool paso = true;

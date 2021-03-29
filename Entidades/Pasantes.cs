@@ -10,7 +10,7 @@ namespace Gestion_de_Pasantes.Entidades
     public class Pasantes
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         public string NombrePasante { get; set; }
         public string Institucion { get; set; }
         public int Matricula { get; set; }
