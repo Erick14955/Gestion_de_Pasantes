@@ -16,5 +16,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
         {
             InitializeComponent();
         }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
