@@ -43,7 +43,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             ConfirmarClavetextBox.Text = pasantes.Clave;
             EmailTextBox.Text = pasantes.Email;
             FechaCreacionDateTimePicker.Value = pasantes.Fecha;
-            //HabilidadComboBox.Text = pasantes.Habilidad;
             InstitucioncomboBox.Text = pasantes.Institucion;
             totalhorastextBox.Text = Convert.ToString(pasantes.TotalHoras);
             MatriculaTextBox.Text = Convert.ToString(pasantes.Matricula);
@@ -55,7 +54,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             pasantes.Activo = ActivoCheckBox.Checked;
             pasantes.Email = EmailTextBox.Text;
             pasantes.Fecha = FechaCreacionDateTimePicker.Value;
-            //pasantes.Habilidad = HabilidadComboBox.Text;
             pasantes.Clave = ClaveTextBox.Text;
             pasantes.NombrePasante = NombreTextBox.Text;
             pasantes.TotalHoras = Convert.ToInt32(totalhorastextBox.Text);
@@ -64,12 +62,12 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             return pasantes;
         }
-        /*private void rUsuarios_Load(object sender, EventArgs e)
+        private void rUsuarios_Load(object sender, EventArgs e)
         {
-            HabilidadComboBox.DataSource = PasantesBLL.GetList();
-            HabilidadComboBox.DisplayMember = "DescripcionRol";
-            HabilidadComboBox.ValueMember = "RolID";
-        }*/
+            InstitucioncomboBox.DataSource = InstitucionesBLL.GetInstituciones();
+            InstitucioncomboBox.DisplayMember = "NombreInstitucion";
+            InstitucioncomboBox.ValueMember = "Id";
+        }
         private bool Validar()
         {
             bool paso = true;
@@ -87,12 +85,6 @@ namespace Gestion_de_Pasantes.UI.Registros
                 EmailTextBox.Focus();
                 paso = false;
             }
-            /*if (string.IsNullOrWhiteSpace(HabilidadComboBox.Text))
-            {
-                MyErrorProvider.SetError(HabilidadComboBox, "Debe agregar un rol especifico");
-                HabilidadComboBox.Focus();
-                paso = false;
-            }*/
             if (string.IsNullOrWhiteSpace(ClaveTextBox.Text))
             {
                 MyErrorProvider.SetError(ClaveTextBox, "Debe asignar una clave a su usuario");
@@ -175,7 +167,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             if (PasantesBLL.Eliminar(id))
                 MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MyErrorProvider.SetError(PasanteIdNumericUpDown, "No se puede eliminar una persona que no existe");
+                MyErrorProvider.SetError(PasanteIdNumericUpDown, "No se puede eliminar un pasante que no existe");
         }
         
     }

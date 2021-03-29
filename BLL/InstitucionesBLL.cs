@@ -185,7 +185,7 @@ namespace Gestion_de_Pasantes.BLL
 
         }
 
-        public static List<Instituciones> GetRoles()
+        public static List<Instituciones> GetInstituciones()
         {
             List<Instituciones> lista = new List<Instituciones>();
             Contexto contexto = new Contexto();

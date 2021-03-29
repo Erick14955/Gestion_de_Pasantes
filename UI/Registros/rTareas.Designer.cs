@@ -29,6 +29,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.TareaIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,129 +53,146 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TareaIdNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 31);
+            this.label1.Location = new System.Drawing.Point(22, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tarea Id";
             // 
             // TareaIdNumericUpDown
             // 
-            this.TareaIdNumericUpDown.Location = new System.Drawing.Point(154, 29);
+            this.TareaIdNumericUpDown.Location = new System.Drawing.Point(111, 38);
+            this.TareaIdNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TareaIdNumericUpDown.Name = "TareaIdNumericUpDown";
-            this.TareaIdNumericUpDown.Size = new System.Drawing.Size(150, 27);
+            this.TareaIdNumericUpDown.Size = new System.Drawing.Size(131, 23);
             this.TareaIdNumericUpDown.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 143);
+            this.label2.Location = new System.Drawing.Point(22, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre Tarea";
             // 
             // NombreTareaTextBox
             // 
-            this.NombreTareaTextBox.Location = new System.Drawing.Point(155, 138);
+            this.NombreTareaTextBox.Location = new System.Drawing.Point(112, 120);
+            this.NombreTareaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NombreTareaTextBox.Name = "NombreTareaTextBox";
-            this.NombreTareaTextBox.Size = new System.Drawing.Size(300, 27);
+            this.NombreTareaTextBox.Size = new System.Drawing.Size(263, 23);
             this.NombreTareaTextBox.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 205);
+            this.label3.Location = new System.Drawing.Point(22, 170);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Descripcion";
             // 
             // DescripcionTexBox
             // 
-            this.DescripcionTexBox.Location = new System.Drawing.Point(154, 202);
+            this.DescripcionTexBox.Location = new System.Drawing.Point(111, 168);
+            this.DescripcionTexBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DescripcionTexBox.Name = "DescripcionTexBox";
-            this.DescripcionTexBox.Size = new System.Drawing.Size(301, 27);
+            this.DescripcionTexBox.Size = new System.Drawing.Size(264, 23);
             this.DescripcionTexBox.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 264);
+            this.label5.Location = new System.Drawing.Point(22, 214);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.Size = new System.Drawing.Size(55, 15);
             this.label5.TabIndex = 12;
             this.label5.Text = "Prioridad";
             // 
             // InstitucionPasanteTextBox
             // 
-            this.InstitucionPasanteTextBox.Location = new System.Drawing.Point(682, 202);
+            this.InstitucionPasanteTextBox.Location = new System.Drawing.Point(535, 168);
+            this.InstitucionPasanteTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InstitucionPasanteTextBox.Name = "InstitucionPasanteTextBox";
-            this.InstitucionPasanteTextBox.Size = new System.Drawing.Size(301, 27);
+            this.InstitucionPasanteTextBox.Size = new System.Drawing.Size(264, 23);
             this.InstitucionPasanteTextBox.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(532, 205);
+            this.label6.Location = new System.Drawing.Point(404, 170);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 20);
+            this.label6.Size = new System.Drawing.Size(107, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "Institucion Pasante";
             // 
             // AsignadaATextBox
             // 
-            this.AsignadaATextBox.Location = new System.Drawing.Point(682, 140);
+            this.AsignadaATextBox.Location = new System.Drawing.Point(535, 121);
+            this.AsignadaATextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AsignadaATextBox.Name = "AsignadaATextBox";
-            this.AsignadaATextBox.Size = new System.Drawing.Size(301, 27);
+            this.AsignadaATextBox.Size = new System.Drawing.Size(264, 23);
             this.AsignadaATextBox.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(532, 143);
+            this.label7.Location = new System.Drawing.Point(404, 123);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 20);
+            this.label7.Size = new System.Drawing.Size(65, 15);
             this.label7.TabIndex = 8;
             this.label7.Text = "Asignada a";
             // 
             // PrioridadComboBox
             // 
             this.PrioridadComboBox.FormattingEnabled = true;
-            this.PrioridadComboBox.Location = new System.Drawing.Point(154, 259);
+            this.PrioridadComboBox.Items.AddRange(new object[] {
+            "Importante",
+            "Intermedia",
+            "Baja"});
+            this.PrioridadComboBox.Location = new System.Drawing.Point(111, 210);
+            this.PrioridadComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PrioridadComboBox.Name = "PrioridadComboBox";
-            this.PrioridadComboBox.Size = new System.Drawing.Size(301, 28);
+            this.PrioridadComboBox.Size = new System.Drawing.Size(264, 23);
             this.PrioridadComboBox.TabIndex = 13;
             // 
             // ProgresoComboBox
             // 
             this.ProgresoComboBox.FormattingEnabled = true;
-            this.ProgresoComboBox.Location = new System.Drawing.Point(682, 261);
+            this.ProgresoComboBox.Items.AddRange(new object[] {
+            "No iniciada",
+            "En progreso",
+            "Finalizada"});
+            this.ProgresoComboBox.Location = new System.Drawing.Point(535, 212);
+            this.ProgresoComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProgresoComboBox.Name = "ProgresoComboBox";
-            this.ProgresoComboBox.Size = new System.Drawing.Size(301, 28);
+            this.ProgresoComboBox.Size = new System.Drawing.Size(264, 23);
             this.ProgresoComboBox.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(532, 264);
+            this.label8.Location = new System.Drawing.Point(404, 214);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 20);
+            this.label8.Size = new System.Drawing.Size(54, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "Progreso";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 85);
+            this.label9.Location = new System.Drawing.Point(22, 80);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 20);
+            this.label9.Size = new System.Drawing.Size(88, 15);
             this.label9.TabIndex = 16;
             this.label9.Text = "Fecha Creacion";
             // 
@@ -182,80 +200,95 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.FechaInicioDateTimePicker.CustomFormat = "dd/MM/yyyy  HH:mm ";
             this.FechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaInicioDateTimePicker.Location = new System.Drawing.Point(154, 80);
+            this.FechaInicioDateTimePicker.Location = new System.Drawing.Point(111, 76);
+            this.FechaInicioDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechaInicioDateTimePicker.Name = "FechaInicioDateTimePicker";
-            this.FechaInicioDateTimePicker.Size = new System.Drawing.Size(301, 27);
+            this.FechaInicioDateTimePicker.Size = new System.Drawing.Size(264, 23);
             this.FechaInicioDateTimePicker.TabIndex = 17;
             // 
             // FechaVencimientoDateTimePicker
             // 
             this.FechaVencimientoDateTimePicker.CustomFormat = "dd/MM/yyyy  HH:mm ";
             this.FechaVencimientoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(682, 78);
+            this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(535, 74);
+            this.FechaVencimientoDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechaVencimientoDateTimePicker.Name = "FechaVencimientoDateTimePicker";
-            this.FechaVencimientoDateTimePicker.Size = new System.Drawing.Size(301, 27);
+            this.FechaVencimientoDateTimePicker.Size = new System.Drawing.Size(264, 23);
             this.FechaVencimientoDateTimePicker.TabIndex = 19;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(532, 85);
+            this.label10.Location = new System.Drawing.Point(404, 80);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 20);
+            this.label10.Size = new System.Drawing.Size(107, 15);
             this.label10.TabIndex = 18;
             this.label10.Text = "Fecha Vencimiento";
             // 
             // ActivoCheckBox
             // 
             this.ActivoCheckBox.AutoSize = true;
-            this.ActivoCheckBox.Location = new System.Drawing.Point(910, 30);
+            this.ActivoCheckBox.Location = new System.Drawing.Point(734, 38);
+            this.ActivoCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ActivoCheckBox.Name = "ActivoCheckBox";
-            this.ActivoCheckBox.Size = new System.Drawing.Size(73, 24);
+            this.ActivoCheckBox.Size = new System.Drawing.Size(60, 19);
             this.ActivoCheckBox.TabIndex = 20;
             this.ActivoCheckBox.Text = "Activo";
             this.ActivoCheckBox.UseVisualStyleBackColor = true;
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Location = new System.Drawing.Point(361, 27);
+            this.BuscarButton.Location = new System.Drawing.Point(292, 36);
+            this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(94, 29);
+            this.BuscarButton.Size = new System.Drawing.Size(82, 22);
             this.BuscarButton.TabIndex = 21;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(309, 401);
+            this.NuevoButton.Location = new System.Drawing.Point(277, 276);
+            this.NuevoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(120, 49);
+            this.NuevoButton.Size = new System.Drawing.Size(105, 26);
             this.NuevoButton.TabIndex = 22;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(456, 401);
+            this.GuardarButton.Location = new System.Drawing.Point(406, 276);
+            this.GuardarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(120, 49);
+            this.GuardarButton.Size = new System.Drawing.Size(105, 26);
             this.GuardarButton.TabIndex = 23;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(603, 401);
+            this.EliminarButton.Location = new System.Drawing.Point(535, 276);
+            this.EliminarButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(120, 49);
+            this.EliminarButton.Size = new System.Drawing.Size(105, 26);
             this.EliminarButton.TabIndex = 24;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // rTareas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 524);
+            this.ClientSize = new System.Drawing.Size(821, 339);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
@@ -279,9 +312,11 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TareaIdNumericUpDown);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "rTareas";
             this.Text = "rTareas";
             ((System.ComponentModel.ISupportInitialize)(this.TareaIdNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +347,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }

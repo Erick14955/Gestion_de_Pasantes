@@ -88,10 +88,10 @@ namespace Gestion_de_Pasantes.BLL
             Contexto contexto = new Contexto();
             try
             {
-                var usuario = contexto.Pasantes.Find(id);
-                if (usuario != null)
+                var pasantes = contexto.Pasantes.Find(id);
+                if (pasantes != null)
                 {
-                    contexto.Pasantes.Remove(usuario);
+                    contexto.Pasantes.Remove(pasantes);
                     paso = contexto.SaveChanges() > 0;
                 }
             }

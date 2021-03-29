@@ -177,7 +177,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             if (InstitucionesBLL.Eliminar(id))
                 MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MyerrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una persona que no existe");
+                MyerrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una institucion que no existe");
         }
     }
 }
