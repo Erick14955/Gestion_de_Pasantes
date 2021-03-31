@@ -66,13 +66,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.PasantesDataGridView.Location = new System.Drawing.Point(12, 79);
             this.PasantesDataGridView.Name = "PasantesDataGridView";
             this.PasantesDataGridView.RowTemplate.Height = 25;
-            this.PasantesDataGridView.Size = new System.Drawing.Size(608, 240);
+            this.PasantesDataGridView.Size = new System.Drawing.Size(622, 240);
             this.PasantesDataGridView.TabIndex = 25;
             // 
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(544, 10);
+            this.BuscarButton.Location = new System.Drawing.Point(557, 10);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(77, 65);
             this.BuscarButton.TabIndex = 24;
@@ -86,7 +86,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.EsactivoGroupBox.Controls.Add(this.InactivoRadioButton);
             this.EsactivoGroupBox.Controls.Add(this.ActivoRadioButton);
             this.EsactivoGroupBox.Controls.Add(this.TodoRadioButton);
-            this.EsactivoGroupBox.Location = new System.Drawing.Point(465, 2);
+            this.EsactivoGroupBox.Location = new System.Drawing.Point(475, 2);
             this.EsactivoGroupBox.Name = "EsactivoGroupBox";
             this.EsactivoGroupBox.Size = new System.Drawing.Size(76, 73);
             this.EsactivoGroupBox.TabIndex = 23;
@@ -128,7 +128,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // InformacionTextBox
             // 
-            this.InformacionTextBox.Location = new System.Drawing.Point(163, 50);
+            this.InformacionTextBox.Location = new System.Drawing.Point(173, 50);
             this.InformacionTextBox.Multiline = true;
             this.InformacionTextBox.Name = "InformacionTextBox";
             this.InformacionTextBox.Size = new System.Drawing.Size(296, 25);
@@ -140,7 +140,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(163, 2);
+            this.groupBox1.Location = new System.Drawing.Point(173, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(296, 42);
             this.groupBox1.TabIndex = 21;
@@ -190,7 +190,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             "Matricula",
             "Institucion ",
             "Total de horas"});
-            this.FiltroComboBox.Location = new System.Drawing.Point(43, 52);
+            this.FiltroComboBox.Location = new System.Drawing.Point(52, 52);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(114, 23);
             this.FiltroComboBox.TabIndex = 20;
@@ -218,7 +218,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 353);
+            this.ClientSize = new System.Drawing.Size(643, 353);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PasantesDataGridView);
             this.Controls.Add(this.BuscarButton);
