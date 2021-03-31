@@ -76,11 +76,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     {
                         switch (FiltroComboBox.SelectedIndex)
                         {
-                            /*Id
-                            Nombre
-                            Matricula
-                            Institucion
-                            Total de horas*/
                             case 0:
                                 lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
                                 break;

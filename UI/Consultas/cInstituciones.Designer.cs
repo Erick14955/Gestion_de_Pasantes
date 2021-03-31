@@ -76,7 +76,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(157, 1);
+            this.groupBox1.Location = new System.Drawing.Point(168, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(309, 44);
             this.groupBox1.TabIndex = 3;
@@ -118,7 +118,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // InformacionTextBox
             // 
-            this.InformacionTextBox.Location = new System.Drawing.Point(157, 51);
+            this.InformacionTextBox.Location = new System.Drawing.Point(168, 51);
             this.InformacionTextBox.Name = "InformacionTextBox";
             this.InformacionTextBox.Size = new System.Drawing.Size(309, 23);
             this.InformacionTextBox.TabIndex = 4;
@@ -128,7 +128,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox2.Controls.Add(this.InactivoRadioButton);
             this.groupBox2.Controls.Add(this.ActivoRadioButton);
             this.groupBox2.Controls.Add(this.TodoRadioButton);
-            this.groupBox2.Location = new System.Drawing.Point(472, 1);
+            this.groupBox2.Location = new System.Drawing.Point(483, 1);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(81, 73);
             this.groupBox2.TabIndex = 5;
@@ -172,9 +172,9 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BuscarButton.Location = new System.Drawing.Point(559, 9);
+            this.BuscarButton.Location = new System.Drawing.Point(570, 9);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(83, 65);
+            this.BuscarButton.Size = new System.Drawing.Size(79, 65);
             this.BuscarButton.TabIndex = 6;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -187,7 +187,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.InstitucionesDataGridView.Location = new System.Drawing.Point(12, 81);
             this.InstitucionesDataGridView.Name = "InstitucionesDataGridView";
             this.InstitucionesDataGridView.RowTemplate.Height = 25;
-            this.InstitucionesDataGridView.Size = new System.Drawing.Size(640, 226);
+            this.InstitucionesDataGridView.Size = new System.Drawing.Size(637, 226);
             this.InstitucionesDataGridView.TabIndex = 7;
             // 
             // button2
@@ -201,12 +201,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // FiltroComboBox
             // 
+            this.FiltroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltroComboBox.FormattingEnabled = true;
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
             "Nombre",
             "Region"});
-            this.FiltroComboBox.Location = new System.Drawing.Point(44, 51);
+            this.FiltroComboBox.Location = new System.Drawing.Point(52, 52);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(107, 23);
             this.FiltroComboBox.TabIndex = 9;
@@ -215,7 +216,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 347);
+            this.ClientSize = new System.Drawing.Size(657, 347);
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.InstitucionesDataGridView);

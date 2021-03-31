@@ -13,6 +13,9 @@ namespace Gestion_de_Pasantes.DAL
         public DbSet<Pasantes> Pasantes { get; set; }
         public DbSet<Instituciones> Instituciones { get; set; }
         public DbSet<Tareas> Tareas { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Roles> Roles { get; set; }
+        public DbSet<Permisos> Permisos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
