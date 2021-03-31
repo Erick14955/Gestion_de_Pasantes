@@ -31,7 +31,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cTareas));
             this.button1 = new System.Windows.Forms.Button();
-            this.PasantesDataGridView = new System.Windows.Forms.DataGridView();
+            this.TareasDataGridView = new System.Windows.Forms.DataGridView();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.EsactivoGroupBox = new System.Windows.Forms.GroupBox();
             this.InactivoRadioButton = new System.Windows.Forms.RadioButton();
@@ -46,7 +46,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FiltroCheckBox = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PasantesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TareasDataGridView)).BeginInit();
             this.EsactivoGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,14 +60,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.button1.Text = "Imprimir";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // PasantesDataGridView
+            // TareasDataGridView
             // 
-            this.PasantesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PasantesDataGridView.Location = new System.Drawing.Point(12, 79);
-            this.PasantesDataGridView.Name = "PasantesDataGridView";
-            this.PasantesDataGridView.RowTemplate.Height = 25;
-            this.PasantesDataGridView.Size = new System.Drawing.Size(622, 240);
-            this.PasantesDataGridView.TabIndex = 16;
+            this.TareasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TareasDataGridView.Location = new System.Drawing.Point(12, 79);
+            this.TareasDataGridView.Name = "TareasDataGridView";
+            this.TareasDataGridView.RowTemplate.Height = 25;
+            this.TareasDataGridView.Size = new System.Drawing.Size(622, 240);
+            this.TareasDataGridView.TabIndex = 16;
             // 
             // BuscarButton
             // 
@@ -220,7 +220,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 353);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.PasantesDataGridView);
+            this.Controls.Add(this.TareasDataGridView);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EsactivoGroupBox);
             this.Controls.Add(this.InformacionTextBox);
@@ -230,7 +230,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroCheckBox);
             this.Name = "cTareas";
             this.Text = "Consulta Tareas";
-            ((System.ComponentModel.ISupportInitialize)(this.PasantesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TareasDataGridView)).EndInit();
             this.EsactivoGroupBox.ResumeLayout(false);
             this.EsactivoGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -243,7 +243,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView PasantesDataGridView;
+        private System.Windows.Forms.DataGridView TareasDataGridView;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.GroupBox EsactivoGroupBox;
         private System.Windows.Forms.RadioButton InactivoRadioButton;

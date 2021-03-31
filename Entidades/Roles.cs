@@ -13,6 +13,8 @@ namespace Gestion_de_Pasantes.Entidades
         [Key]
         public int RolID { get; set; }
         public string DescripcionRol { get; set; }
+        public string NombreRol { get; set; }
+
         public DateTime FechaCreacion { get; set; }
         public bool esActivo { get; set; }
         [ForeignKey("RolID")]

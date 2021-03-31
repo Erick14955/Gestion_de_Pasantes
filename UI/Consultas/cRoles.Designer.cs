@@ -30,15 +30,15 @@ namespace Gestion_de_Pasantes.UI.Consultas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cRoles));
-            this.PasantesDataGridView = new System.Windows.Forms.DataGridView();
+            this.RolesDataGridView = new System.Windows.Forms.DataGridView();
             this.EsactivoGroupBox = new System.Windows.Forms.GroupBox();
             this.InactivoRadioButton = new System.Windows.Forms.RadioButton();
             this.ActivoRadioButton = new System.Windows.Forms.RadioButton();
             this.TodoRadioButton = new System.Windows.Forms.RadioButton();
             this.InformacionTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaFinal = new System.Windows.Forms.DateTimePicker();
+            this.FechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
@@ -46,19 +46,19 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroCheckBox = new System.Windows.Forms.CheckBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.ImprimirButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PasantesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RolesDataGridView)).BeginInit();
             this.EsactivoGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PasantesDataGridView
+            // RolesDataGridView
             // 
-            this.PasantesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PasantesDataGridView.Location = new System.Drawing.Point(12, 79);
-            this.PasantesDataGridView.Name = "PasantesDataGridView";
-            this.PasantesDataGridView.RowTemplate.Height = 25;
-            this.PasantesDataGridView.Size = new System.Drawing.Size(608, 240);
-            this.PasantesDataGridView.TabIndex = 14;
+            this.RolesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RolesDataGridView.Location = new System.Drawing.Point(12, 79);
+            this.RolesDataGridView.Name = "RolesDataGridView";
+            this.RolesDataGridView.RowTemplate.Height = 25;
+            this.RolesDataGridView.Size = new System.Drawing.Size(608, 240);
+            this.RolesDataGridView.TabIndex = 14;
             // 
             // EsactivoGroupBox
             // 
@@ -115,8 +115,8 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.FechaFinal);
+            this.groupBox1.Controls.Add(this.FechaInicio);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(163, 2);
@@ -125,21 +125,21 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
-            // dateTimePicker2
+            // FechaFinal
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(194, 14);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(94, 23);
-            this.dateTimePicker2.TabIndex = 3;
+            this.FechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaFinal.Location = new System.Drawing.Point(194, 14);
+            this.FechaFinal.Name = "FechaFinal";
+            this.FechaFinal.Size = new System.Drawing.Size(94, 23);
+            this.FechaFinal.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // FechaInicio
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(51, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(94, 23);
-            this.dateTimePicker1.TabIndex = 2;
+            this.FechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaInicio.Location = new System.Drawing.Point(51, 14);
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.Size = new System.Drawing.Size(94, 23);
+            this.FechaInicio.TabIndex = 2;
             // 
             // label3
             // 
@@ -165,10 +165,8 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroComboBox.FormattingEnabled = true;
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
-            "Nombre",
-            "Matricula",
-            "Institucion ",
-            "Total de horas"});
+            "Rol",
+            "descripción"});
             this.FiltroComboBox.Location = new System.Drawing.Point(43, 52);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(114, 23);
@@ -204,6 +202,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // ImprimirButton
             // 
@@ -221,7 +220,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.ClientSize = new System.Drawing.Size(627, 356);
             this.Controls.Add(this.ImprimirButton);
             this.Controls.Add(this.BuscarButton);
-            this.Controls.Add(this.PasantesDataGridView);
+            this.Controls.Add(this.RolesDataGridView);
             this.Controls.Add(this.EsactivoGroupBox);
             this.Controls.Add(this.InformacionTextBox);
             this.Controls.Add(this.groupBox1);
@@ -230,7 +229,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroCheckBox);
             this.Name = "cRoles";
             this.Text = "Consultas Roles";
-            ((System.ComponentModel.ISupportInitialize)(this.PasantesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RolesDataGridView)).EndInit();
             this.EsactivoGroupBox.ResumeLayout(false);
             this.EsactivoGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -242,15 +241,15 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         #endregion
 
-        private System.Windows.Forms.DataGridView PasantesDataGridView;
+        private System.Windows.Forms.DataGridView RolesDataGridView;
         private System.Windows.Forms.GroupBox EsactivoGroupBox;
         private System.Windows.Forms.RadioButton InactivoRadioButton;
         private System.Windows.Forms.RadioButton ActivoRadioButton;
         private System.Windows.Forms.RadioButton TodoRadioButton;
         private System.Windows.Forms.TextBox InformacionTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaFinal;
+        private System.Windows.Forms.DateTimePicker FechaInicio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox FiltroComboBox;
