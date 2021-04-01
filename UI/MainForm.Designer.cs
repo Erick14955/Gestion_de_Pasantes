@@ -56,6 +56,7 @@ namespace Gestion_de_Pasantes
             this.HabilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InstitucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasantesStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,7 @@ namespace Gestion_de_Pasantes
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PasantesStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TareatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,7 +250,8 @@ namespace Gestion_de_Pasantes
             this.RegistrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PasanteToolStripMenuItem,
             this.HabilidadesToolStripMenuItem,
-            this.InstitucionToolStripMenuItem});
+            this.InstitucionToolStripMenuItem,
+            this.TareatoolStripMenuItem});
             this.RegistrosToolStripMenuItem.Name = "RegistrosToolStripMenuItem";
             this.RegistrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.RegistrosToolStripMenuItem.Text = "&Registros";
@@ -279,6 +281,12 @@ namespace Gestion_de_Pasantes
             this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
             this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.ConsultasToolStripMenuItem.Text = "&Consultas";
+            // 
+            // PasantesStripMenuItem
+            // 
+            this.PasantesStripMenuItem.Name = "PasantesStripMenuItem";
+            this.PasantesStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.PasantesStripMenuItem.Text = "Pasantes";
             // 
             // helpToolStripMenuItem
             // 
@@ -333,11 +341,11 @@ namespace Gestion_de_Pasantes
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
-            // PasantesStripMenuItem
+            // TareatoolStripMenuItem
             // 
-            this.PasantesStripMenuItem.Name = "PasantesStripMenuItem";
-            this.PasantesStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.PasantesStripMenuItem.Text = "Pasantes";
+            this.TareatoolStripMenuItem.Name = "TareatoolStripMenuItem";
+            this.TareatoolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.TareatoolStripMenuItem.Text = "Tareas";
             // 
             // MainForm
             // 
@@ -398,6 +406,7 @@ namespace Gestion_de_Pasantes
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HabilidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PasantesStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TareatoolStripMenuItem;
     }
 }
 

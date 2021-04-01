@@ -20,6 +20,7 @@ namespace Gestion_de_Pasantes
             this.PasanteToolStripMenuItem.Click += new EventHandler(this.PasanteToolStripMenuItem_ItemClicked);
             this.PasantesStripMenuItem.Click += new EventHandler(this.PasantesToolStripMenuItem_ItemClicked);
             this.InstitucionToolStripMenuItem.Click += new EventHandler(this.InstitucionToolStripMenuItem_ItemClicked);
+            this.TareatoolStripMenuItem.Click += new EventHandler(this.TareaToolStripMenuItem_ItemClicked);
         }
 
         private void PasanteToolStripMenuItem_ItemClicked(object sender, EventArgs e)
@@ -43,8 +44,11 @@ namespace Gestion_de_Pasantes
             registroinst.Show();
         }
 
-        private void ConsultasToolStripMenuItem_ItemClicked(object sender, EventArgs e)
+        private void TareaToolStripMenuItem_ItemClicked(object sender, EventArgs e)
         {
+            rTareas registareas = new rTareas();
+            registareas.MdiParent = this;
+            registareas.Show();
         }
     }
 }
