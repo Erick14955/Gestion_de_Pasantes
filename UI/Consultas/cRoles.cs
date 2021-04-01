@@ -85,7 +85,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = RolesBLL.GetList(r => r.RolID == Utilitarios.ToInt(InformacionTextBox.Text) && !r.esActivo);
                                 break;
                             case 1:
-                                lista = RolesBLL.GetList(r => r.NombreRol.Contains(InformacionTextBox.Text.ToUpper()) && !r.esActivo || r.NombreRol.Contains(InformacionTextBox.Text.ToLower())                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            !r.Activo);
+                                lista = RolesBLL.GetList(r => r.NombreRol.Contains(InformacionTextBox.Text.ToUpper()) && !r.esActivo || r.NombreRol.Contains(InformacionTextBox.Text.ToLower()) && !r.esActivo);
                                 break;
                             case 2:
                                 lista = RolesBLL.GetList(r => r.DescripcionRol.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo);
