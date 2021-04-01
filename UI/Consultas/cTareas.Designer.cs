@@ -36,14 +36,19 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.InformacionTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FiltroCheckBox = new System.Windows.Forms.CheckBox();
+            this.EsactivoGroupBox = new System.Windows.Forms.GroupBox();
+            this.InactivoRadioButton = new System.Windows.Forms.RadioButton();
+            this.ActivoRadioButton = new System.Windows.Forms.RadioButton();
+            this.TodoRadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.TareasDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.EsactivoGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -75,6 +80,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click_1);
             // 
             // InformacionTextBox
             // 
@@ -87,7 +93,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dateTimePicker);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(196, 4);
@@ -104,13 +110,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.dateTimePicker2.Size = new System.Drawing.Size(141, 23);
             this.dateTimePicker2.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(70, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 23);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(70, 11);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(141, 23);
+            this.dateTimePicker.TabIndex = 2;
             // 
             // label3
             // 
@@ -136,10 +142,8 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroComboBox.FormattingEnabled = true;
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
-            "Nombre",
-            "Matricula",
-            "Institucion ",
-            "Total de horas"});
+            "Nombre Tarea",
+            "Nombre de Asignado"});
             this.FiltroComboBox.Location = new System.Drawing.Point(52, 54);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(114, 23);
@@ -164,11 +168,57 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroCheckBox.Text = "Uso Filtro Fecha";
             this.FiltroCheckBox.UseVisualStyleBackColor = true;
             // 
+            // EsactivoGroupBox
+            // 
+            this.EsactivoGroupBox.Controls.Add(this.InactivoRadioButton);
+            this.EsactivoGroupBox.Controls.Add(this.ActivoRadioButton);
+            this.EsactivoGroupBox.Controls.Add(this.TodoRadioButton);
+            this.EsactivoGroupBox.Location = new System.Drawing.Point(679, 4);
+            this.EsactivoGroupBox.Name = "EsactivoGroupBox";
+            this.EsactivoGroupBox.Size = new System.Drawing.Size(81, 73);
+            this.EsactivoGroupBox.TabIndex = 18;
+            this.EsactivoGroupBox.TabStop = false;
+            this.EsactivoGroupBox.Text = "EsActivo?";
+            // 
+            // InactivoRadioButton
+            // 
+            this.InactivoRadioButton.AutoSize = true;
+            this.InactivoRadioButton.Location = new System.Drawing.Point(6, 48);
+            this.InactivoRadioButton.Name = "InactivoRadioButton";
+            this.InactivoRadioButton.Size = new System.Drawing.Size(67, 19);
+            this.InactivoRadioButton.TabIndex = 2;
+            this.InactivoRadioButton.TabStop = true;
+            this.InactivoRadioButton.Text = "Inactivo";
+            this.InactivoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // ActivoRadioButton
+            // 
+            this.ActivoRadioButton.AutoSize = true;
+            this.ActivoRadioButton.Location = new System.Drawing.Point(6, 31);
+            this.ActivoRadioButton.Name = "ActivoRadioButton";
+            this.ActivoRadioButton.Size = new System.Drawing.Size(59, 19);
+            this.ActivoRadioButton.TabIndex = 1;
+            this.ActivoRadioButton.TabStop = true;
+            this.ActivoRadioButton.Text = "Activo";
+            this.ActivoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // TodoRadioButton
+            // 
+            this.TodoRadioButton.AutoSize = true;
+            this.TodoRadioButton.Location = new System.Drawing.Point(6, 14);
+            this.TodoRadioButton.Name = "TodoRadioButton";
+            this.TodoRadioButton.Size = new System.Drawing.Size(56, 19);
+            this.TodoRadioButton.TabIndex = 0;
+            this.TodoRadioButton.TabStop = true;
+            this.TodoRadioButton.Text = "Todos";
+            this.TodoRadioButton.UseVisualStyleBackColor = true;
+            // 
             // cTareas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 571);
+            this.Controls.Add(this.EsactivoGroupBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TareasDataGridView);
             this.Controls.Add(this.BuscarButton);
@@ -182,6 +232,8 @@ namespace Gestion_de_Pasantes.UI.Consultas
             ((System.ComponentModel.ISupportInitialize)(this.TareasDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.EsactivoGroupBox.ResumeLayout(false);
+            this.EsactivoGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,11 +247,15 @@ namespace Gestion_de_Pasantes.UI.Consultas
         private System.Windows.Forms.TextBox InformacionTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox FiltroComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox FiltroCheckBox;
+        private System.Windows.Forms.GroupBox EsactivoGroupBox;
+        private System.Windows.Forms.RadioButton InactivoRadioButton;
+        private System.Windows.Forms.RadioButton ActivoRadioButton;
+        private System.Windows.Forms.RadioButton TodoRadioButton;
     }
 }
