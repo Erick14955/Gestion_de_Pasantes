@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_de_Pasantes.Entidades
 {
-    class HabilidadesDetalle
+    public class HabilidadesDetalle
     {
     }
 }
