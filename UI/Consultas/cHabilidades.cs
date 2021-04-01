@@ -12,16 +12,17 @@ using System.Windows.Forms;
 
 namespace Gestion_de_Pasantes.UI.Consultas
 {
-    public partial class cTareas : Form
+    public partial class cHabilidades : Form
     {
-        public cTareas()
+        public cHabilidades()
         {
             InitializeComponent();
+
         }
 
-        private void BuscarButton_Click_1(object sender, EventArgs e)
+        private void BuscarButton_Click(object sender, EventArgs e)
         {
-            var lista = new List<Tareas>();
+            var lista = new List<Habilidades>();
 
             if (FiltroCheckBox.Checked)
             {
@@ -33,20 +34,17 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
+                                lista = HabilidadesBLL.GetList(r => r.id == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 1:
-                                lista = TareasBLL.GetList(r => r.NombreTarea.Contains(InformacionTextBox.Text));
-                                break;
-                            case 2:
-                                lista = TareasBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
+                                lista = HabilidadesBLL.GetList(r => r.NombreUsuario.Contains(InformacionTextBox.Text));
                                 break;
                             default:
                                 break;
                         }
                     }
                     else
-                        lista = TareasBLL.GetList(r => true);
+                        lista = UsuariosBLL.GetList(r => true);
                 }
                 else if (ActivoRadioButton.Checked)
                 {
@@ -55,20 +53,20 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
                                 break;
                             case 1:
-                                lista = TareasBLL.GetList(r => r.NombreTarea.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.NombreTarea.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.NombreUsuario.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 2:
-                                lista = TareasBLL.GetList(r => r.Asignado.Contains(FiltroCheckBox.Text) && r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.Email.Contains(FiltroCheckBox.Text) && r.Activo);
                                 break;
                             default:
                                 break;
                         }
                     }
                     else
-                        lista = TareasBLL.GetList(r => r.Activo);
+                        lista = UsuariosBLL.GetList(r => r.Activo);
                 }
                 else if (InactivoRadioButton.Checked)
                 {
@@ -77,20 +75,20 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
                                 break;
                             case 1:
-                                lista = TareasBLL.GetList(r => r.NombreTarea.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.NombreTarea.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.NombreUsuario.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
                                 break;
                             case 2:
-                                lista = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
                                 break;
                             default:
                                 break;
                         }
                     }
                     else
-                        lista = TareasBLL.GetList(r => !r.Activo);
+                        lista = UsuariosBLL.GetList(r => !r.Activo);
                 }
             }
             else
@@ -100,29 +98,29 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     switch (FiltroComboBox.SelectedIndex)
                     {
                         case 0:
-                            lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
+                            lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
-                            lista = TareasBLL.GetList(r => r.NombreTarea.Contains(InformacionTextBox.Text));
+                            lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(InformacionTextBox.Text));
                             break;
                         case 3:
-                            lista = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text));
+                            lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text));
                             break;
                         default:
                             break;
                     }
                 }
                 else
-                    lista = TareasBLL.GetList(r => true);
+                    lista = UsuariosBLL.GetList(r => true);
             }
 
             if (FiltroCheckBox.Checked)
             {
-                lista = TareasBLL.GetList(r => r.FechaFinal >= dateTimePicker.Value && r.FechaFinal <= dateTimePicker.Value);
+                lista = UsuariosBLL.GetList(r => r.FechaUsuario >= dateTimePicker1.Value && r.FechaUsuario <= dateTimePicker2.Value);
             }
 
-            TareasDataGridView.DataSource = null;
-            TareasDataGridView.DataSource = lista;
+            UsuarioDataGridView.DataSource = null;
+            UsuarioDataGridView.DataSource = lista;
         }
     }
 }
