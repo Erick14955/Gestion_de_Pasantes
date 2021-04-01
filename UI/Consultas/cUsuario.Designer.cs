@@ -30,7 +30,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cUsuario));
-            this.button1 = new System.Windows.Forms.Button();
+            this.ImprimirButton = new System.Windows.Forms.Button();
             this.UsuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.EsactivoGroupBox = new System.Windows.Forms.GroupBox();
@@ -51,28 +51,28 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // ImprimirButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 25);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Imprimir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ImprimirButton.Location = new System.Drawing.Point(12, 541);
+            this.ImprimirButton.Name = "ImprimirButton";
+            this.ImprimirButton.Size = new System.Drawing.Size(95, 25);
+            this.ImprimirButton.TabIndex = 26;
+            this.ImprimirButton.Text = "Imprimir";
+            this.ImprimirButton.UseVisualStyleBackColor = true;
             // 
             // UsuarioDataGridView
             // 
             this.UsuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UsuarioDataGridView.Location = new System.Drawing.Point(12, 79);
+            this.UsuarioDataGridView.Location = new System.Drawing.Point(12, 93);
             this.UsuarioDataGridView.Name = "UsuarioDataGridView";
             this.UsuarioDataGridView.RowTemplate.Height = 25;
-            this.UsuarioDataGridView.Size = new System.Drawing.Size(622, 240);
+            this.UsuarioDataGridView.Size = new System.Drawing.Size(833, 442);
             this.UsuarioDataGridView.TabIndex = 25;
             // 
             // BuscarButton
             // 
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(557, 10);
+            this.BuscarButton.Location = new System.Drawing.Point(768, 12);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(77, 65);
             this.BuscarButton.TabIndex = 24;
@@ -86,7 +86,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.EsactivoGroupBox.Controls.Add(this.InactivoRadioButton);
             this.EsactivoGroupBox.Controls.Add(this.ActivoRadioButton);
             this.EsactivoGroupBox.Controls.Add(this.TodoRadioButton);
-            this.EsactivoGroupBox.Location = new System.Drawing.Point(475, 2);
+            this.EsactivoGroupBox.Location = new System.Drawing.Point(686, 4);
             this.EsactivoGroupBox.Name = "EsactivoGroupBox";
             this.EsactivoGroupBox.Size = new System.Drawing.Size(76, 73);
             this.EsactivoGroupBox.TabIndex = 23;
@@ -128,10 +128,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // InformacionTextBox
             // 
-            this.InformacionTextBox.Location = new System.Drawing.Point(173, 50);
+            this.InformacionTextBox.Location = new System.Drawing.Point(196, 52);
             this.InformacionTextBox.Multiline = true;
             this.InformacionTextBox.Name = "InformacionTextBox";
-            this.InformacionTextBox.Size = new System.Drawing.Size(296, 25);
+            this.InformacionTextBox.Size = new System.Drawing.Size(477, 25);
             this.InformacionTextBox.TabIndex = 22;
             // 
             // groupBox1
@@ -140,32 +140,32 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(173, 2);
+            this.groupBox1.Location = new System.Drawing.Point(196, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 42);
+            this.groupBox1.Size = new System.Drawing.Size(477, 44);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(194, 14);
+            this.dateTimePicker2.Location = new System.Drawing.Point(321, 12);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(94, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(141, 23);
             this.dateTimePicker2.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(51, 14);
+            this.dateTimePicker1.Location = new System.Drawing.Point(70, 11);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(94, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(141, 23);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 19);
+            this.label3.Location = new System.Drawing.Point(276, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 1;
@@ -174,7 +174,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 19);
+            this.label2.Location = new System.Drawing.Point(25, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 15);
             this.label2.TabIndex = 0;
@@ -190,7 +190,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             "Matricula",
             "Institucion ",
             "Total de horas"});
-            this.FiltroComboBox.Location = new System.Drawing.Point(52, 52);
+            this.FiltroComboBox.Location = new System.Drawing.Point(52, 54);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(114, 23);
             this.FiltroComboBox.TabIndex = 20;
@@ -218,8 +218,8 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 353);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(855, 571);
+            this.Controls.Add(this.ImprimirButton);
             this.Controls.Add(this.UsuarioDataGridView);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EsactivoGroupBox);
@@ -242,7 +242,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ImprimirButton;
         private System.Windows.Forms.DataGridView UsuarioDataGridView;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.GroupBox EsactivoGroupBox;
