@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,15 +11,31 @@ namespace Gestion_de_Pasantes.Entidades
     public class Pasantes
     {
         [Key]
-        public int Id { get; set; }
-        public string NombrePasante { get; set; }
+        public int PasanteId { get; set; }
+        public string Nombre { get; set; }
         public string Institucion { get; set; }
         public int Matricula { get; set; }
-        public string Habilidad { get; set; }
-        public int TotalHoras { get; set; }
+        public int HorasARealizar { get; set; }
         public string Email { get; set; }
+        public string Telefono { get; set; }
         public bool Activo { get; set; }
-        public string Clave { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
+        [ForeignKey("PasanteId")]
+        public virtual List<HabilidadesDetalle> DetalleHabilidades { get; set; }
+
+        public Pasantes()
+        {
+            PasanteId = 0;
+            Nombre = string.Empty;
+            Institucion = string.Empty;
+            Matricula = 0;
+            HorasARealizar = 0;
+            Email = string.Empty;
+            Telefono = string.Empty;
+            Activo = false;
+            Fecha = DateTime.Now.Date;
+            DetalleHabilidades = new List<HabilidadesDetalle>();
+        }
+
     }
 }
