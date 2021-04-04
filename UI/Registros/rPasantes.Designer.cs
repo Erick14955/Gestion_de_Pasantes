@@ -53,14 +53,14 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label11 = new System.Windows.Forms.Label();
             this.HabilidadComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.ActivoCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.PasanteIdNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -211,7 +211,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.HabilidadComboBox);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.DetalleDataGridView);
             this.groupBox1.Location = new System.Drawing.Point(22, 457);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(654, 339);
@@ -270,15 +270,15 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label10.TabIndex = 24;
             this.label10.Text = "Habilidad";
             // 
-            // dataGridView1
+            // DetalleDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(638, 212);
-            this.dataGridView1.TabIndex = 0;
+            this.DetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleDataGridView.Location = new System.Drawing.Point(6, 74);
+            this.DetalleDataGridView.Name = "DetalleDataGridView";
+            this.DetalleDataGridView.RowHeadersWidth = 51;
+            this.DetalleDataGridView.RowTemplate.Height = 29;
+            this.DetalleDataGridView.Size = new System.Drawing.Size(638, 212);
+            this.DetalleDataGridView.TabIndex = 0;
             // 
             // NuevoButton
             // 
@@ -349,7 +349,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             ((System.ComponentModel.ISupportInitialize)(this.PasanteIdNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,7 +381,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox HabilidadComboBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DetalleDataGridView;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
