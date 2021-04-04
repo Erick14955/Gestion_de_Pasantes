@@ -10,23 +10,23 @@ namespace Gestion_de_Pasantes.Entidades
     public class Usuarios
     {
         [Key]
-        public int UsuarioID { get; set; }
-        public string NombreUsuario { get; set; }
-        public string AliasUsuario { get; set; }
+        public int UsuarioId { get; set; }
+        public string Nombre { get; set; }
+        public string Alias { get; set; }
         public string Email { get; set; }
         public string Clave { get; set; }
-        public DateTime FechaUsuario { get; set; }
+        public DateTime FechaIngreso { get; set; }
         public string Rol { get; set; }
         public bool Activo { get; set; }
 
         public Usuarios()
         {
-            UsuarioID = 0;
-            NombreUsuario = string.Empty;
-            AliasUsuario = string.Empty;
+            UsuarioId = 0;
+            Nombre = string.Empty;
+            Alias = string.Empty;
             Email = string.Empty;
             Clave = string.Empty;
-            FechaUsuario = DateTime.Now;
+            FechaIngreso = DateTime.Now;
             Rol = string.Empty;
             Activo = false;
         }

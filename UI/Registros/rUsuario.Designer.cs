@@ -58,9 +58,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario ID";
+            this.label1.Text = "Usuario Id";
             // 
             // label2
             // 
