@@ -11,12 +11,11 @@ namespace Gestion_de_Pasantes.Entidades
     {
         [Key]
         public int TareaId { get; set; }
-        public string NombreTarea { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Prioridad { get; set; }
         public string Asignado { get; set; }
-        public string Institucion { get; set; }
-        public string Progreso { get; set; }
+        public string Estado { get; set; }
         public bool Activo { get; set; }
         public DateTime FechaInicio { get; set; } = DateTime.Now;
         public DateTime FechaFinal { get; set; } = DateTime.Now;
