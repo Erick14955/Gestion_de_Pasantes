@@ -66,7 +66,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Location = new System.Drawing.Point(28, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 0;
@@ -74,14 +74,14 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // PasanteIdNumericUpDown
             // 
-            this.PasanteIdNumericUpDown.Location = new System.Drawing.Point(137, 13);
+            this.PasanteIdNumericUpDown.Location = new System.Drawing.Point(143, 24);
             this.PasanteIdNumericUpDown.Name = "PasanteIdNumericUpDown";
             this.PasanteIdNumericUpDown.Size = new System.Drawing.Size(150, 27);
             this.PasanteIdNumericUpDown.TabIndex = 1;
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Location = new System.Drawing.Point(301, 11);
+            this.BuscarButton.Location = new System.Drawing.Point(307, 22);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(94, 29);
             this.BuscarButton.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 75);
+            this.label2.Location = new System.Drawing.Point(28, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.FechaCreacionDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaCreacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaCreacionDateTimePicker.Location = new System.Drawing.Point(138, 70);
+            this.FechaCreacionDateTimePicker.Location = new System.Drawing.Point(144, 78);
             this.FechaCreacionDateTimePicker.Name = "FechaCreacionDateTimePicker";
             this.FechaCreacionDateTimePicker.Size = new System.Drawing.Size(530, 27);
             this.FechaCreacionDateTimePicker.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 188);
+            this.label4.Location = new System.Drawing.Point(28, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 20);
             this.label4.TabIndex = 7;
@@ -118,7 +118,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 245);
+            this.label5.Location = new System.Drawing.Point(28, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 9;
@@ -127,7 +127,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 302);
+            this.label6.Location = new System.Drawing.Point(28, 298);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 11;
@@ -135,7 +135,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(138, 299);
+            this.EmailTextBox.Location = new System.Drawing.Point(144, 295);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(530, 27);
             this.EmailTextBox.TabIndex = 12;
@@ -143,7 +143,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // InstitucionComboBox
             // 
             this.InstitucionComboBox.FormattingEnabled = true;
-            this.InstitucionComboBox.Location = new System.Drawing.Point(138, 127);
+            this.InstitucionComboBox.Location = new System.Drawing.Point(144, 132);
             this.InstitucionComboBox.Name = "InstitucionComboBox";
             this.InstitucionComboBox.Size = new System.Drawing.Size(530, 28);
             this.InstitucionComboBox.TabIndex = 14;
@@ -151,7 +151,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 130);
+            this.label3.Location = new System.Drawing.Point(28, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 13;
@@ -159,28 +159,28 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // MatriculaTextBox
             // 
-            this.MatriculaTextBox.Location = new System.Drawing.Point(138, 242);
+            this.MatriculaTextBox.Location = new System.Drawing.Point(144, 241);
             this.MatriculaTextBox.Name = "MatriculaTextBox";
             this.MatriculaTextBox.Size = new System.Drawing.Size(530, 27);
             this.MatriculaTextBox.TabIndex = 15;
             // 
             // NombrePasanteTextBox
             // 
-            this.NombrePasanteTextBox.Location = new System.Drawing.Point(138, 185);
+            this.NombrePasanteTextBox.Location = new System.Drawing.Point(144, 187);
             this.NombrePasanteTextBox.Name = "NombrePasanteTextBox";
             this.NombrePasanteTextBox.Size = new System.Drawing.Size(530, 27);
             this.NombrePasanteTextBox.TabIndex = 16;
             // 
             // TelefonoTextBox
             // 
-            this.TelefonoTextBox.Location = new System.Drawing.Point(138, 413);
+            this.TelefonoTextBox.Location = new System.Drawing.Point(144, 403);
             this.TelefonoTextBox.Name = "TelefonoTextBox";
             this.TelefonoTextBox.Size = new System.Drawing.Size(530, 27);
             this.TelefonoTextBox.TabIndex = 21;
             // 
             // HorasARealizarTextBox
             // 
-            this.HorasARealizarTextBox.Location = new System.Drawing.Point(138, 356);
+            this.HorasARealizarTextBox.Location = new System.Drawing.Point(144, 349);
             this.HorasARealizarTextBox.Name = "HorasARealizarTextBox";
             this.HorasARealizarTextBox.Size = new System.Drawing.Size(530, 27);
             this.HorasARealizarTextBox.TabIndex = 20;
@@ -188,7 +188,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 359);
+            this.label7.Location = new System.Drawing.Point(22, 352);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 19;
@@ -197,7 +197,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 416);
+            this.label8.Location = new System.Drawing.Point(22, 406);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 18;
@@ -212,7 +212,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.groupBox1.Controls.Add(this.HabilidadComboBox);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(16, 455);
+            this.groupBox1.Location = new System.Drawing.Point(22, 457);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(654, 339);
             this.groupBox1.TabIndex = 23;
@@ -282,7 +282,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(151, 814);
+            this.NuevoButton.Location = new System.Drawing.Point(157, 823);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(108, 39);
             this.NuevoButton.TabIndex = 28;
@@ -291,7 +291,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(291, 814);
+            this.GuardarButton.Location = new System.Drawing.Point(297, 825);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(108, 39);
             this.GuardarButton.TabIndex = 29;
@@ -300,7 +300,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(431, 814);
+            this.EliminarButton.Location = new System.Drawing.Point(437, 825);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(108, 39);
             this.EliminarButton.TabIndex = 30;
@@ -310,7 +310,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // ActivoCheckBox
             // 
             this.ActivoCheckBox.AutoSize = true;
-            this.ActivoCheckBox.Location = new System.Drawing.Point(595, 14);
+            this.ActivoCheckBox.Location = new System.Drawing.Point(601, 25);
             this.ActivoCheckBox.Name = "ActivoCheckBox";
             this.ActivoCheckBox.Size = new System.Drawing.Size(73, 24);
             this.ActivoCheckBox.TabIndex = 31;
@@ -321,7 +321,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 865);
+            this.ClientSize = new System.Drawing.Size(698, 882);
             this.Controls.Add(this.ActivoCheckBox);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.GuardarButton);
