@@ -84,9 +84,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(22, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Roles ID";
+            this.label1.Text = "Roles Id";
             // 
             // BuscarButton
             // 

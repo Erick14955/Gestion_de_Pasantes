@@ -11,10 +11,9 @@ namespace Gestion_de_Pasantes.Entidades
     public class Roles
     {
         [Key]
-        public int RolID { get; set; }
-        public string DescripcionRol { get; set; }
-        public string NombreRol { get; set; }
-
+        public int RolId { get; set; }
+        public string Descripcion { get; set; }
+        public string Nombre { get; set; }
         public DateTime FechaCreacion { get; set; }
         public bool esActivo { get; set; }
         [ForeignKey("RolID")]
@@ -22,8 +21,8 @@ namespace Gestion_de_Pasantes.Entidades
 
         public Roles()
         {
-            RolID = 0;
-            DescripcionRol = string.Empty;
+            RolId = 0;
+            Descripcion = string.Empty;
             Detalle = new List<RolesDetalle>();
             FechaCreacion = DateTime.Now;
             esActivo = false;
