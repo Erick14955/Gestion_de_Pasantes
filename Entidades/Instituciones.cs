@@ -12,15 +12,14 @@ namespace Gestion_de_Pasantes.Entidades
         [Key]
 
         public int InstitucionId { get; set; }
-        public string NombreInstitucion { get; set; }
-        public string Region { get; set; }
-        public bool Activo { get; set; }
+        public string Nombre { get; set; }
+        public string Region { get; set; }        
         public string Direccion { get; set; }
         public string Correo { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
+        public DateTime Fecha { get; set; }
         public string Telefono { get; set; }
         public string NumFax { get; set; }
-        public bool Privada { get; set; }
-        public bool Publica { get; set; }
+        public bool Activo { get; set; }
+        public string TipoInstitucion { get; set; }
     }
 }
