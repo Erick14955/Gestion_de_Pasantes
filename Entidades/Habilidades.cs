@@ -15,8 +15,7 @@ namespace Gestion_de_Pasantes.Entidades
         public DateTime FechaCreacion { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        [ForeignKey("HabilidadId")]
-        public virtual List<HabilidadesDetalle> Detalle { get; set; }
+
 
         public Habilidades()
         {
