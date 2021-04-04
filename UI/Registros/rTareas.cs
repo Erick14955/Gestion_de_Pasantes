@@ -28,8 +28,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             NombreTareaTextBox.Clear();
             DescripcionTexBox.Clear();
             PrioridadComboBox.Text = " ";
-            AsignadaATextBox.Clear();
-            InstitucionPasanteTextBox.Clear();
+            NombrePasanteTextBox.Clear();
             EstadoTareaComboBox.Text = " ";
         }
 
@@ -39,12 +38,11 @@ namespace Gestion_de_Pasantes.UI.Registros
             FechaInicioDateTimePicker.Value = tareas.FechaInicio;
             FechaVencimientoDateTimePicker.Value = tareas.FechaFinal;
             ActivoCheckBox.Checked = tareas.Activo;
-            NombreTareaTextBox.Text = tareas.NombreTarea;
+            NombreTareaTextBox.Text = tareas.Nombre;
             DescripcionTexBox.Text = tareas.Descripcion;
             PrioridadComboBox.Text = tareas.Prioridad;
-            AsignadaATextBox.Text = tareas.Asignado;
-            InstitucionPasanteTextBox.Text = tareas.Institucion;
-            EstadoTareaComboBox.Text = tareas.Progreso;
+            NombrePasanteTextBox.Text = tareas.Asignado;
+            EstadoTareaComboBox.Text = tareas.Estado;
         }
 
         private Tareas LlenarClase()
@@ -54,12 +52,11 @@ namespace Gestion_de_Pasantes.UI.Registros
             tareas.FechaFinal = FechaVencimientoDateTimePicker.Value;
             tareas.FechaInicio = FechaInicioDateTimePicker.Value;
             tareas.Activo = ActivoCheckBox.Checked;
-            tareas.NombreTarea = NombreTareaTextBox.Text;
+            tareas.Nombre = NombreTareaTextBox.Text;
             tareas.Descripcion = DescripcionTexBox.Text;
             tareas.Prioridad = PrioridadComboBox.Text;
-            tareas.Asignado = AsignadaATextBox.Text;
-            tareas.Institucion = InstitucionPasanteTextBox.Text;
-            tareas.Progreso = EstadoTareaComboBox.Text;
+            tareas.Asignado = NombrePasanteTextBox.Text;
+            tareas.Estado = EstadoTareaComboBox.Text;
 
             return tareas;
         }
@@ -74,10 +71,10 @@ namespace Gestion_de_Pasantes.UI.Registros
                 NombreTareaTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrEmpty(AsignadaATextBox.Text))
+            if (string.IsNullOrEmpty(NombrePasanteTextBox.Text))
             {
-                MyerrorProvider.SetError(AsignadaATextBox, "Este campo no puede quedar vacio");
-                AsignadaATextBox.Focus();
+                MyerrorProvider.SetError(NombrePasanteTextBox, "Este campo no puede quedar vacio");
+                NombrePasanteTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrEmpty(DescripcionTexBox.Text))
@@ -85,12 +82,7 @@ namespace Gestion_de_Pasantes.UI.Registros
                 MyerrorProvider.SetError(DescripcionTexBox, "Este campo no puede quedar vacio");
                 DescripcionTexBox.Focus();
                 paso = false;
-            }
-            if (string.IsNullOrEmpty(InstitucionPasanteTextBox.Text))
-            {
-                MyerrorProvider.SetError(InstitucionPasanteTextBox, "Este campo no puede quedar vacio");
-                InstitucionPasanteTextBox.Focus();
-                paso = false;
+
             }
             if (string.IsNullOrWhiteSpace(PrioridadComboBox.Text))
             {
