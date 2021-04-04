@@ -19,7 +19,7 @@ namespace Gestion_de_Pasantes.Entidades
         public string Email { get; set; }
         public string Telefono { get; set; }
         public bool Activo { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
+        public DateTime FechaCreacion { get; set; } = DateTime.Now;
         [ForeignKey("PasanteId")]
         public virtual List<HabilidadesDetalle> DetalleHabilidades { get; set; }
 
@@ -33,7 +33,7 @@ namespace Gestion_de_Pasantes.Entidades
             Email = string.Empty;
             Telefono = string.Empty;
             Activo = false;
-            Fecha = DateTime.Now.Date;
+            FechaCreacion = DateTime.Now.Date;
             DetalleHabilidades = new List<HabilidadesDetalle>();
         }
 
