@@ -179,5 +179,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             else
                 MyerrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una institucion que no existe");
         }
+
     }
 }
