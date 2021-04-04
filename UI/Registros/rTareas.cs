@@ -30,7 +30,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             PrioridadComboBox.Text = " ";
             AsignadaATextBox.Clear();
             InstitucionPasanteTextBox.Clear();
-            ProgresoComboBox.Text = " ";
+            EstadoTareaComboBox.Text = " ";
         }
 
         public void LlenarCampos(Tareas tareas)
@@ -44,7 +44,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             PrioridadComboBox.Text = tareas.Prioridad;
             AsignadaATextBox.Text = tareas.Asignado;
             InstitucionPasanteTextBox.Text = tareas.Institucion;
-            ProgresoComboBox.Text = tareas.Progreso;
+            EstadoTareaComboBox.Text = tareas.Progreso;
         }
 
         private Tareas LlenarClase()
@@ -59,7 +59,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             tareas.Prioridad = PrioridadComboBox.Text;
             tareas.Asignado = AsignadaATextBox.Text;
             tareas.Institucion = InstitucionPasanteTextBox.Text;
-            tareas.Progreso = ProgresoComboBox.Text;
+            tareas.Progreso = EstadoTareaComboBox.Text;
 
             return tareas;
         }
@@ -98,10 +98,10 @@ namespace Gestion_de_Pasantes.UI.Registros
                 PrioridadComboBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(ProgresoComboBox.Text))
+            if (string.IsNullOrWhiteSpace(EstadoTareaComboBox.Text))
             {
-                MyerrorProvider.SetError(ProgresoComboBox, "Este campo no puede quedar vacio");
-                ProgresoComboBox.Focus();
+                MyerrorProvider.SetError(EstadoTareaComboBox, "Este campo no puede quedar vacio");
+                EstadoTareaComboBox.Focus();
                 paso = false;
             }
 

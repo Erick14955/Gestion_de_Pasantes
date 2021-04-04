@@ -42,7 +42,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.AsignadaATextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.PrioridadComboBox = new System.Windows.Forms.ComboBox();
-            this.ProgresoComboBox = new System.Windows.Forms.ComboBox();
+            this.EstadoTareaComboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.FechaInicioDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -159,26 +159,26 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.PrioridadComboBox.Size = new System.Drawing.Size(301, 28);
             this.PrioridadComboBox.TabIndex = 13;
             // 
-            // ProgresoComboBox
+            // EstadoTareaComboBox
             // 
-            this.ProgresoComboBox.FormattingEnabled = true;
-            this.ProgresoComboBox.Items.AddRange(new object[] {
+            this.EstadoTareaComboBox.FormattingEnabled = true;
+            this.EstadoTareaComboBox.Items.AddRange(new object[] {
             "No iniciada",
             "En progreso",
             "Finalizada"});
-            this.ProgresoComboBox.Location = new System.Drawing.Point(611, 283);
-            this.ProgresoComboBox.Name = "ProgresoComboBox";
-            this.ProgresoComboBox.Size = new System.Drawing.Size(301, 28);
-            this.ProgresoComboBox.TabIndex = 15;
+            this.EstadoTareaComboBox.Location = new System.Drawing.Point(611, 283);
+            this.EstadoTareaComboBox.Name = "EstadoTareaComboBox";
+            this.EstadoTareaComboBox.Size = new System.Drawing.Size(301, 28);
+            this.EstadoTareaComboBox.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(462, 285);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 20);
+            this.label8.Size = new System.Drawing.Size(93, 20);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Progreso";
+            this.label8.Text = "Estado Tarea";
             // 
             // label9
             // 
@@ -191,7 +191,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // FechaInicioDateTimePicker
             // 
-            this.FechaInicioDateTimePicker.CustomFormat = "dd/MM/yyyy  HH:mm ";
+            this.FechaInicioDateTimePicker.CustomFormat = "dd/MM/yyyy ";
             this.FechaInicioDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaInicioDateTimePicker.Location = new System.Drawing.Point(143, 101);
             this.FechaInicioDateTimePicker.Name = "FechaInicioDateTimePicker";
@@ -200,7 +200,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // FechaVencimientoDateTimePicker
             // 
-            this.FechaVencimientoDateTimePicker.CustomFormat = "dd/MM/yyyy  HH:mm ";
+            this.FechaVencimientoDateTimePicker.CustomFormat = "dd/MM/yyyy ";
             this.FechaVencimientoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaVencimientoDateTimePicker.Location = new System.Drawing.Point(611, 99);
             this.FechaVencimientoDateTimePicker.Name = "FechaVencimientoDateTimePicker";
@@ -284,7 +284,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.label10);
             this.Controls.Add(this.FechaInicioDateTimePicker);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.ProgresoComboBox);
+            this.Controls.Add(this.EstadoTareaComboBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.PrioridadComboBox);
             this.Controls.Add(this.label5);
@@ -321,7 +321,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.TextBox AsignadaATextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox PrioridadComboBox;
-        private System.Windows.Forms.ComboBox ProgresoComboBox;
+        private System.Windows.Forms.ComboBox EstadoTareaComboBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker FechaInicioDateTimePicker;
