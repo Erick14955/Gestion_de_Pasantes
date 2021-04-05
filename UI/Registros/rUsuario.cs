@@ -51,5 +51,49 @@ namespace Gestion_de_Pasantes.UI.Registros
             EmailTextBox.Text = usuarios.Email;
             ActivoCheckBox.Checked = usuarios.Activo;
         }
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (string.IsNullOrEmpty(NombreTextBox.Text))
+            {
+                MyerrorProvider.SetError(NombreTextBox, "Este campo no puede quedar vacio");
+                NombreTextBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrEmpty(UsuarioTextBox.Text))
+            {
+                MyerrorProvider.SetError(UsuarioTextBox, "Este campo no puede quedar vacio");
+                UsuarioTextBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrEmpty(ClaveTextBox.Text))
+            {
+                MyerrorProvider.SetError(ClaveTextBox, "Este campo no puede quedar vacio");
+                ClaveTextBox.Focus();
+                paso = false;
+
+            }
+            if (string.IsNullOrWhiteSpace(ConfirmarClaveTextBox.Text))
+            {
+                MyerrorProvider.SetError(ConfirmarClaveTextBox, "Este campo no puede quedar vacio");
+                ConfirmarClaveTextBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(RolComboBox.Text))
+            {
+                MyerrorProvider.SetError(RolComboBox, "Este campo no puede quedar vacio");
+                RolComboBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
+            {
+                MyerrorProvider.SetError(EmailTextBox, "Este campo no puede quedar vacio");
+                EmailTextBox.Focus();
+                paso = false;
+            }
+
+            return paso;
+        }
     }
 }

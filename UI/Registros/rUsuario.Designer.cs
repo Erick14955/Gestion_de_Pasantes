@@ -29,6 +29,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +51,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label8 = new System.Windows.Forms.Label();
             this.RolComboBox = new System.Windows.Forms.ComboBox();
             this.ActivoCheckBox = new System.Windows.Forms.CheckBox();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -231,6 +234,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.ActivoCheckBox.Text = "Activo";
             this.ActivoCheckBox.UseVisualStyleBackColor = true;
             // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
+            // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -260,6 +267,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Name = "rUsuario";
             this.Text = "Registro Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +296,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox RolComboBox;
         private System.Windows.Forms.CheckBox ActivoCheckBox;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }
