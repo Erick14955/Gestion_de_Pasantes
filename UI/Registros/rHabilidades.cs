@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_de_Pasantes.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,30 @@ namespace Gestion_de_Pasantes.UI.Registros
         public rHabilidades()
         {
             InitializeComponent();
+        }
+        private void Limpiar()
+        {
+            HabilidadIdNumericUpDown.Value = 0;
+            NombreTextBox.Clear();
+            DescripcionTextBox.Clear();
+            FechaCreacionDateTimePicker.Value = DateTime.Now.Date;
+        }
+        private void LlenaCampo(Habilidades habilidad)
+        {
+            HabilidadIdNumericUpDown.Value = habilidad.HabilidadId;
+            NombreTextBox.Text = habilidad.Nombre;
+            DescripcionTextBox.Text = habilidad.Descripcion;
+            FechaCreacionDateTimePicker.Value = habilidad.FechaCreacion.Date;
+        }
+        private Habilidades LlenaClase()
+        {
+            Habilidades habilidad = new Habilidades();
+            habilidad.HabilidadId = Convert.ToInt32(HabilidadIdNumericUpDown.Value);
+            habilidad.Nombre = NombreTextBox.Text;
+            habilidad.Descripcion = DescripcionTextBox.Text;
+            habilidad.FechaCreacion = FechaCreacionDateTimePicker.Value.Date;
+
+            return habilidad;
         }
     }
 }

@@ -29,47 +29,47 @@ namespace Gestion_de_Pasantes.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
+            this.BuscarButton = new System.Windows.Forms.Button();
+            this.FechaCreacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.NombreTextBox = new System.Windows.Forms.TextBox();
+            this.HabilidadIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HabilidadIdNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
+            // EliminarButton
             // 
-            this.button4.Location = new System.Drawing.Point(306, 265);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 53);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.EliminarButton.Location = new System.Drawing.Point(306, 265);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(103, 53);
+            this.EliminarButton.TabIndex = 24;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // GuardarButton
             // 
-            this.button3.Location = new System.Drawing.Point(173, 262);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 53);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.GuardarButton.Location = new System.Drawing.Point(173, 262);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(103, 53);
+            this.GuardarButton.TabIndex = 23;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // NuevoButton
             // 
-            this.button2.Location = new System.Drawing.Point(40, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 53);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Nuevo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.NuevoButton.Location = new System.Drawing.Point(40, 265);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(103, 53);
+            this.NuevoButton.TabIndex = 22;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -80,32 +80,32 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label4.TabIndex = 21;
             this.label4.Text = "Descripcion";
             // 
-            // textBox1
+            // DescripcionTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 187);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 48);
-            this.textBox1.TabIndex = 20;
+            this.DescripcionTextBox.Location = new System.Drawing.Point(148, 187);
+            this.DescripcionTextBox.Multiline = true;
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(277, 48);
+            this.DescripcionTextBox.TabIndex = 20;
             // 
-            // button1
+            // BuscarButton
             // 
-            this.button1.Location = new System.Drawing.Point(361, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 29);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BuscarButton.Location = new System.Drawing.Point(361, 23);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(64, 29);
+            this.BuscarButton.TabIndex = 19;
+            this.BuscarButton.Text = "Buscar";
+            this.BuscarButton.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // FechaCreacionDateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(148, 79);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(277, 27);
-            this.dateTimePicker1.TabIndex = 18;
+            this.FechaCreacionDateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaCreacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaCreacionDateTimePicker.Location = new System.Drawing.Point(148, 79);
+            this.FechaCreacionDateTimePicker.Name = "FechaCreacionDateTimePicker";
+            this.FechaCreacionDateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.FechaCreacionDateTimePicker.Size = new System.Drawing.Size(277, 27);
+            this.FechaCreacionDateTimePicker.TabIndex = 18;
             // 
             // label3
             // 
@@ -116,19 +116,19 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label3.TabIndex = 17;
             this.label3.Text = "Nombre";
             // 
-            // textBox2
+            // NombreTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 131);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 27);
-            this.textBox2.TabIndex = 16;
+            this.NombreTextBox.Location = new System.Drawing.Point(148, 131);
+            this.NombreTextBox.Name = "NombreTextBox";
+            this.NombreTextBox.Size = new System.Drawing.Size(277, 27);
+            this.NombreTextBox.TabIndex = 16;
             // 
-            // numericUpDown1
+            // HabilidadIdNumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(148, 25);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(187, 27);
-            this.numericUpDown1.TabIndex = 15;
+            this.HabilidadIdNumericUpDown.Location = new System.Drawing.Point(148, 25);
+            this.HabilidadIdNumericUpDown.Name = "HabilidadIdNumericUpDown";
+            this.HabilidadIdNumericUpDown.Size = new System.Drawing.Size(187, 27);
+            this.HabilidadIdNumericUpDown.TabIndex = 15;
             // 
             // label2
             // 
@@ -153,21 +153,21 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 343);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.EliminarButton);
+            this.Controls.Add(this.GuardarButton);
+            this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DescripcionTextBox);
+            this.Controls.Add(this.BuscarButton);
+            this.Controls.Add(this.FechaCreacionDateTimePicker);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.NombreTextBox);
+            this.Controls.Add(this.HabilidadIdNumericUpDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rHabilidades";
             this.Text = "rHabilidades";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HabilidadIdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,16 +175,16 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EliminarButton;
+        private System.Windows.Forms.Button GuardarButton;
+        private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
+        private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.DateTimePicker FechaCreacionDateTimePicker;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox NombreTextBox;
+        private System.Windows.Forms.NumericUpDown HabilidadIdNumericUpDown;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
