@@ -33,10 +33,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(InformacionTextBox.Text));
+                                lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 1:
-                                lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(InformacionTextBox.Text));
+                                lista = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                                 break;
                             case 2:
                                 lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text));
@@ -55,10 +55,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
                                 break;
                             case 1:
-                                lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.NombreUsuario.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.Nombre.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 2:
                                 lista = UsuariosBLL.GetList(r => r.Email.Contains(FiltroCheckBox.Text) && r.Activo);
@@ -77,10 +77,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
                                 break;
                             case 1:
-                                lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.NombreUsuario.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
+                                lista = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
                                 break;
                             case 2:
                                 lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
@@ -100,10 +100,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     switch (FiltroComboBox.SelectedIndex)
                     {
                         case 0:
-                            lista = UsuariosBLL.GetList(r => r.UsuarioID == Utilitarios.ToInt(InformacionTextBox.Text));
+                            lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
-                            lista = UsuariosBLL.GetList(r => r.NombreUsuario.Contains(InformacionTextBox.Text));
+                            lista = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                             break;
                         case 3:
                             lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text));
@@ -118,7 +118,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
             if (FiltroCheckBox.Checked)
             {
-                lista = UsuariosBLL.GetList(r => r.FechaUsuario >= dateTimePicker1.Value && r.FechaUsuario <= dateTimePicker2.Value);
+                lista = UsuariosBLL.GetList(r => r.FechaIngreso >= dateTimePicker1.Value && r.FechaIngreso <= dateTimePicker2.Value);
             }
 
             UsuarioDataGridView.DataSource = null;
