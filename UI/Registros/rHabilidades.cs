@@ -1,4 +1,5 @@
-﻿using Gestion_de_Pasantes.Entidades;
+﻿using Gestion_de_Pasantes.BLL;
+using Gestion_de_Pasantes.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,13 @@ namespace Gestion_de_Pasantes.UI.Registros
             {
                 MyErrorProvider.SetError(DescripcionTextBox,"Debes agregar una descripcion a esta habilidad.");
                 DescripcionTextBox.Focus();
+
+                paso = false;
+            }
+            if (HabilidadesBLL.ExisteNombre(NombreTextBox.Text))
+            {
+                MyErrorProvider.SetError(NombreTextBox,"Esta habilidad ya existe.");
+                NombreTextBox.Focus();
 
                 paso = false;
             }
