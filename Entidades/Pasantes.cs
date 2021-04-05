@@ -27,7 +27,7 @@ namespace Gestion_de_Pasantes.Entidades
         {
             PasanteId = 0;
             Nombre = string.Empty;
-            Institucion = string.Empty;
+            InstitucionId = 0;
             Matricula = 0;
             HorasARealizar = 0;
             Email = string.Empty;

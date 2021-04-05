@@ -19,7 +19,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                paso = contexto.Usuarios.Any(e => e.UsuarioID == id);
+                paso = contexto.Usuarios.Any(e => e.UsuarioId == id);
             }
             catch (Exception)
             {
@@ -77,7 +77,7 @@ namespace Gestion_de_Pasantes.BLL
         }
         public static bool Guardar(Usuarios usuario)
         {
-            if (Existe(usuario.UsuarioID))
+            if (Existe(usuario.UsuarioId))
                 return Modificar(usuario);
             else
                 return Insertar(usuario);
@@ -138,7 +138,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                paso = contexto.Usuarios.Any(u => u.NombreUsuario.Equals(nombreusuario) && u.Clave.Equals(contrasena));
+                paso = contexto.Usuarios.Any(u => u.Nombre.Equals(nombreusuario) && u.Clave.Equals(contrasena));
             }
             catch (Exception)
             {
@@ -158,7 +158,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                encontrado = contexto.Usuarios.Any(e => e.AliasUsuario == alias);
+                encontrado = contexto.Usuarios.Any(e => e.Alias == alias);
             }
             catch (Exception)
             {

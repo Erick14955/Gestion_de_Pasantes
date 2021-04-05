@@ -18,7 +18,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                paso = contexto.Roles.Any(e => e.RolID == id);
+                paso = contexto.Roles.Any(e => e.RolId == id);
             }
             catch (Exception)
             {

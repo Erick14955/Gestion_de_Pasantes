@@ -36,7 +36,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 1:
-                                lista = InstitucionesBLL.GetList(r => r.NombreInstitucion.Contains(InformacionTextBox.Text));
+                                lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                                 break;
                             case 2:
                                 lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text));
@@ -58,7 +58,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
                                 break;
                             case 1:
-                                lista = InstitucionesBLL.GetList(r => r.NombreInstitucion.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.NombreInstitucion.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 2:
                                 lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text) && r.Activo);
@@ -80,7 +80,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
                                 break;
                             case 1:
-                                lista = InstitucionesBLL.GetList(r => r.NombreInstitucion.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.NombreInstitucion.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
+                                lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
                                 break;
                             case 2:
                                 lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
@@ -103,7 +103,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                             lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
-                            lista = InstitucionesBLL.GetList(r => r.NombreInstitucion.Contains(InformacionTextBox.Text));
+                            lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                             break;
                         case 3:
                             lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text));

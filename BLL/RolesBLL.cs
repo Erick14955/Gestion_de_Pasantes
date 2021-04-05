@@ -19,7 +19,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                paso = contexto.Roles.Any(e => e.RolID == id);
+                paso = contexto.Roles.Any(e => e.RolId == id);
             }
             catch (Exception)
             {
@@ -60,7 +60,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM RolesDetalle where RolID={roles.RolID}");
+                contexto.Database.ExecuteSqlRaw($"Delete FROM RolesDetalle where RolID={roles.RolId}");
                 foreach (var anterior in roles.Detalle)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;
@@ -81,7 +81,7 @@ namespace Gestion_de_Pasantes.BLL
 
         public static bool Guardar(Roles roles)
         {
-            if (!Existe(roles.RolID))
+            if (!Existe(roles.RolId))
                 return Insertar(roles);
             else
                 return Modificar(roles);
@@ -119,7 +119,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                roles = contexto.Roles.Include(e => e.Detalle).Where(p => p.RolID == id).SingleOrDefault();
+                roles = contexto.Roles.Include(e => e.Detalle).Where(p => p.RolId == id).SingleOrDefault();
             }
             catch (Exception)
             {

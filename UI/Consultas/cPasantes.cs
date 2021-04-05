@@ -33,19 +33,19 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = PasantesBLL.GetList(r => r.Id == Utilitarios.ToInt(InformacionTextBox.Text));
+                                lista = PasantesBLL.GetList(r => r.PasanteId == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 1:
-                                lista = PasantesBLL.GetList(r => r.NombrePasante.Contains(InformacionTextBox.Text));
+                                lista = PasantesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                                 break;
                             case 2:
                                 lista = PasantesBLL.GetList(r => r.Matricula == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 3:
-                                lista = PasantesBLL.GetList(r => r.Institucion.Contains(InformacionTextBox.Text));
+                                lista = PasantesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 4:
-                                lista = PasantesBLL.GetList(r => r.TotalHoras == Utilitarios.ToInt(InformacionTextBox.Text));
+                                lista = PasantesBLL.GetList(r => r.HorasARealizar == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             default:
                                 break;
@@ -61,19 +61,19 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = PasantesBLL.GetList(r => r.Id == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
+                                lista = PasantesBLL.GetList(r => r.PasanteId == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
                                 break;
                             case 1:
-                                lista = PasantesBLL.GetList(r => r.NombrePasante.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.NombrePasante.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = PasantesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 2:
                                 lista = PasantesBLL.GetList(r => r.Matricula == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
                                 break;
                             case 3:
-                                lista = PasantesBLL.GetList(r => r.Institucion.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.NombrePasante.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = PasantesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 4:
-                                lista = PasantesBLL.GetList(r => r.TotalHoras == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
+                                lista = PasantesBLL.GetList(r => r.HorasARealizar == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
                                 break;
                             default:
                                 break;
@@ -88,25 +88,20 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     {
                         switch (FiltroComboBox.SelectedIndex)
                         {
-                            /*Id
-                            Nombre
-                            Matricula
-                            Institucion
-                            Total de horas*/
                             case 0:
-                                lista = PasantesBLL.GetList(r => r.Id == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
+                                lista = PasantesBLL.GetList(r => r.PasanteId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
                                 break;
                             case 1:
-                                lista = PasantesBLL.GetList(r => r.NombrePasante.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.NombrePasante.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
+                                lista = PasantesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
                                 break;
                             case 2:
                                 lista = PasantesBLL.GetList(r => r.Matricula == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
                                 break;
                             case 3:
-                                lista = PasantesBLL.GetList(r => r.Institucion.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.NombrePasante.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = PasantesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 4:
-                                lista = PasantesBLL.GetList(r => r.TotalHoras == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
+                                lista = PasantesBLL.GetList(r => r.HorasARealizar == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
                                 break;
                             default:
                                 break;
@@ -122,20 +117,20 @@ namespace Gestion_de_Pasantes.UI.Consultas
                 {
                     switch (FiltroComboBox.SelectedIndex)
                     {
-                        case 0: //RolId
-                            lista = PasantesBLL.GetList(r => r.Id == Utilitarios.ToInt(InformacionTextBox.Text));
+                        case 0:
+                            lista = PasantesBLL.GetList(r => r.PasanteId == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
-                            lista = PasantesBLL.GetList(r => r.NombrePasante.Contains(InformacionTextBox.Text));
+                            lista = PasantesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                             break;
                         case 2:
                             lista = PasantesBLL.GetList(r => r.Matricula == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 3:
-                            lista = PasantesBLL.GetList(r => r.Institucion.Contains(InformacionTextBox.Text));
+                            lista = PasantesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 4:
-                            lista = PasantesBLL.GetList(r => r.TotalHoras == Utilitarios.ToInt(InformacionTextBox.Text));
+                            lista = PasantesBLL.GetList(r => r.HorasARealizar == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         default:
                             break;
@@ -147,7 +142,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
             if (FiltroCheckBox.Checked)
             {
-                lista = PasantesBLL.GetList(r => r.Fecha >= dateTimePicker1.Value && r.Fecha <= dateTimePicker2.Value);
+                lista = PasantesBLL.GetList(r => r.FechaCreacion >= dateTimePicker1.Value && r.FechaCreacion <= dateTimePicker2.Value);
             }
 
             PasantesDataGridView.DataSource = null;
