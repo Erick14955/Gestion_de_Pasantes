@@ -21,7 +21,7 @@ namespace Gestion_de_Pasantes.Entidades
         public bool Activo { get; set; }
         public DateTime FechaCreacion { get; set; } = DateTime.Now;
         [ForeignKey("PasanteId")]
-        public virtual List<HabilidadesDetalle> DetalleHabilidades { get; set; }
+        public virtual List<HabilidadesDetalle> Detalle { get; set; }
 
         public Pasantes()
         {
@@ -34,7 +34,7 @@ namespace Gestion_de_Pasantes.Entidades
             Telefono = string.Empty;
             Activo = false;
             FechaCreacion = DateTime.Now.Date;
-            DetalleHabilidades = new List<HabilidadesDetalle>();
+            Detalle = new List<HabilidadesDetalle>();
         }
 
     }

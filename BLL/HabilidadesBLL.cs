@@ -75,16 +75,10 @@ namespace Gestion_de_Pasantes.BLL
 
         private static bool Modificar(Habilidades habilidad)
         {
-            Contexto contexto = new Contexto();
             bool paso = false;
-
+            Contexto contexto = new Contexto();
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM HabilidadesDetalle where HabilidadId={habilidad.HabilidadId}");
-                foreach (var anterior in habilidad.Detalle)
-                {
-                    contexto.Entry(anterior).State = EntityState.Added;
-                }
                 contexto.Entry(habilidad).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
@@ -96,6 +90,7 @@ namespace Gestion_de_Pasantes.BLL
             {
                 contexto.Dispose();
             }
+
             return paso;
         }
 
@@ -136,10 +131,9 @@ namespace Gestion_de_Pasantes.BLL
         {
             Contexto contexto = new Contexto();
             Habilidades habilidad;
-
             try
             {
-                habilidad = contexto.Habilidades.Include(e => e.Detalle).Where(p => p.HabilidadId == id).SingleOrDefault();
+                habilidad = contexto.Habilidades.Find(id);
             }
             catch (Exception)
             {
@@ -149,10 +143,11 @@ namespace Gestion_de_Pasantes.BLL
             {
                 contexto.Dispose();
             }
+
             return habilidad;
         }
 
-        public static List<Habilidades> GetRoles()
+        public static List<Habilidades> GetHabilidades()
         {
             Contexto contexto = new Contexto();
             List<Habilidades> lista = new List<Habilidades>();
@@ -160,6 +155,7 @@ namespace Gestion_de_Pasantes.BLL
             try
             {
                 lista = contexto.Habilidades.ToList();
+
             }
             catch (Exception)
             {
