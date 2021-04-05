@@ -55,6 +55,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.EliminarButton.TabIndex = 24;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -64,6 +65,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.GuardarButton.TabIndex = 23;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // NuevoButton
             // 
@@ -73,6 +75,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.NuevoButton.TabIndex = 22;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // label4
             // 
@@ -99,6 +102,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.BuscarButton.TabIndex = 19;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // FechaCreacionDateTimePicker
             // 

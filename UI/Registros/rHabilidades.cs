@@ -70,5 +70,67 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             return paso;
         }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            int id;
+            Habilidades habilidad = new Habilidades();
+            int.TryParse(HabilidadIdNumericUpDown.Text, out id);
+
+            Limpiar();
+
+            habilidad = HabilidadesBLL.Buscar(id);
+
+            if (habilidad != null)
+            {
+                LlenaCampo(habilidad);
+            }
+            else
+            {
+                MessageBox.Show("Habilidad no Encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+            Habilidades habilidad;
+
+            if (!Validar())
+                return;
+
+            habilidad = LlenaClase();
+
+            var paso = HabilidadesBLL.Guardar(habilidad);
+
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            MyErrorProvider.Clear();
+
+            int id;
+            int.TryParse(HabilidadIdNumericUpDown.Text, out id);
+
+            Limpiar();
+
+            if (HabilidadesBLL.Eliminar(id))
+                MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                MyErrorProvider.SetError(HabilidadIdNumericUpDown, "No se puede eliminar una habilidad que no existe");
+        }
     }
 }
