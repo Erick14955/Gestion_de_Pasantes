@@ -19,7 +19,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             InitializeComponent();
         }
 
-        public void Limpiar()
+        private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
             NombretextBox.Clear();
@@ -29,25 +29,26 @@ namespace Gestion_de_Pasantes.UI.Registros
             CorreotextBox.Clear();
             FechadateTimePicker.Value = DateTime.Now;
             FaxtextBox.Clear();
-            privadaradioButton.Checked = false;
-            publicaradioButton.Checked = false;
+            PrivadaRadioButton.Checked = false;
+            PublicaRadioButton.Checked = false;
             ActivocheckBox.Checked = false;
             MyerrorProvider.Clear();
         }
 
-        public void LlenarCampos(Instituciones instituciones)
+        private void LlenarCampos(Instituciones instituciones)
         {
             ActivocheckBox.Checked = instituciones.Activo;
             IdnumericUpDown.Value = instituciones.InstitucionId;
-            NombretextBox.Text = instituciones.NombreInstitucion;
+            NombretextBox.Text = instituciones.Nombre;
             RegiontextBox.Text = instituciones.Region;
             DirecciontextBox.Text = instituciones.Direccion;
             TelefonotextBox.Text = instituciones.Telefono;
             CorreotextBox.Text = instituciones.Correo;
             FechadateTimePicker.Value = instituciones.Fecha;
             FaxtextBox.Text = instituciones.NumFax;
-            privadaradioButton.Checked = instituciones.Privada;
-            publicaradioButton.Checked = instituciones.Publica;
+
+            PublicaRadioButton.Checked = instituciones.TipoInstitucion == "Publica" ?  true : false;
+            PrivadaRadioButton.Checked = instituciones.TipoInstitucion == "Publica" ? false : true;
         }
 
         private Instituciones LlenarClase()
@@ -56,15 +57,14 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             instituciones.Activo = ActivocheckBox.Checked;
             instituciones.InstitucionId = (int)IdnumericUpDown.Value;
-            instituciones.NombreInstitucion = NombretextBox.Text;
+            instituciones.Nombre = NombretextBox.Text;
             instituciones.Region = RegiontextBox.Text;
             instituciones.Direccion = DirecciontextBox.Text;
             instituciones.Telefono = TelefonotextBox.Text;
             instituciones.Correo = CorreotextBox.Text;
             instituciones.Fecha = FechadateTimePicker.Value;
             instituciones.NumFax = FaxtextBox.Text;
-            instituciones.Privada = privadaradioButton.Checked;
-            instituciones.Publica = publicaradioButton.Checked;
+            instituciones.TipoInstitucion = PublicaRadioButton.Checked == true ? "Publica" : "Privada";
 
             return instituciones;
         }

@@ -49,8 +49,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.CorreotextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TipoInstituciongroupBox = new System.Windows.Forms.GroupBox();
-            this.privadaradioButton = new System.Windows.Forms.RadioButton();
-            this.publicaradioButton = new System.Windows.Forms.RadioButton();
+            this.PrivadaRadioButton = new System.Windows.Forms.RadioButton();
+            this.PublicaRadioButton = new System.Windows.Forms.RadioButton();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -215,8 +215,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // TipoInstituciongroupBox
             // 
-            this.TipoInstituciongroupBox.Controls.Add(this.privadaradioButton);
-            this.TipoInstituciongroupBox.Controls.Add(this.publicaradioButton);
+            this.TipoInstituciongroupBox.Controls.Add(this.PrivadaRadioButton);
+            this.TipoInstituciongroupBox.Controls.Add(this.PublicaRadioButton);
             this.TipoInstituciongroupBox.Location = new System.Drawing.Point(21, 485);
             this.TipoInstituciongroupBox.Name = "TipoInstituciongroupBox";
             this.TipoInstituciongroupBox.Size = new System.Drawing.Size(526, 51);
@@ -224,28 +224,28 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.TipoInstituciongroupBox.TabStop = false;
             this.TipoInstituciongroupBox.Text = "Tipo Institución";
             // 
-            // privadaradioButton
+            // PrivadaRadioButton
             // 
-            this.privadaradioButton.AutoSize = true;
-            this.privadaradioButton.Location = new System.Drawing.Point(143, 17);
-            this.privadaradioButton.Name = "privadaradioButton";
-            this.privadaradioButton.Size = new System.Drawing.Size(79, 24);
-            this.privadaradioButton.TabIndex = 0;
-            this.privadaradioButton.TabStop = true;
-            this.privadaradioButton.Text = "Privada";
-            this.privadaradioButton.UseVisualStyleBackColor = true;
+            this.PrivadaRadioButton.AutoSize = true;
+            this.PrivadaRadioButton.Location = new System.Drawing.Point(143, 17);
+            this.PrivadaRadioButton.Name = "PrivadaRadioButton";
+            this.PrivadaRadioButton.Size = new System.Drawing.Size(79, 24);
+            this.PrivadaRadioButton.TabIndex = 0;
+            this.PrivadaRadioButton.TabStop = true;
+            this.PrivadaRadioButton.Text = "Privada";
+            this.PrivadaRadioButton.UseVisualStyleBackColor = true;
             // 
-            // publicaradioButton
+            // PublicaRadioButton
             // 
-            this.publicaradioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.publicaradioButton.AutoSize = true;
-            this.publicaradioButton.Location = new System.Drawing.Point(339, 17);
-            this.publicaradioButton.Name = "publicaradioButton";
-            this.publicaradioButton.Size = new System.Drawing.Size(78, 24);
-            this.publicaradioButton.TabIndex = 1;
-            this.publicaradioButton.TabStop = true;
-            this.publicaradioButton.Text = "Pública";
-            this.publicaradioButton.UseVisualStyleBackColor = true;
+            this.PublicaRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PublicaRadioButton.AutoSize = true;
+            this.PublicaRadioButton.Location = new System.Drawing.Point(339, 17);
+            this.PublicaRadioButton.Name = "PublicaRadioButton";
+            this.PublicaRadioButton.Size = new System.Drawing.Size(78, 24);
+            this.PublicaRadioButton.TabIndex = 1;
+            this.PublicaRadioButton.TabStop = true;
+            this.PublicaRadioButton.Text = "Pública";
+            this.PublicaRadioButton.UseVisualStyleBackColor = true;
             // 
             // Nuevobutton
             // 
@@ -340,8 +340,8 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.TextBox CorreotextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox TipoInstituciongroupBox;
-        private System.Windows.Forms.RadioButton publicaradioButton;
-        private System.Windows.Forms.RadioButton privadaradioButton;
+        private System.Windows.Forms.RadioButton PublicaRadioButton;
+        private System.Windows.Forms.RadioButton PrivadaRadioButton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
