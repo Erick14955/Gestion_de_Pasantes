@@ -29,6 +29,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.NumericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,9 +50,11 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.FechaCreacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).BeginInit();
             this.DetallegroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // DescripcionTextBox
@@ -240,6 +243,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label4.TabIndex = 29;
             this.label4.Text = "Fecha Creacion";
             // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
             // rRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -265,6 +272,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.DetallegroupBox.ResumeLayout(false);
             this.DetallegroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,5 +300,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.TextBox NombreTextBox;
         private System.Windows.Forms.DateTimePicker FechaCreacionDateTimePicker;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }

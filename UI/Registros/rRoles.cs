@@ -48,5 +48,34 @@ namespace Gestion_de_Pasantes.UI.Registros
             ActivoCheckBox.Checked = roles.esActivo;
             FechaCreacionDateTimePicker.Value = roles.FechaCreacion;
         }
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (NombreTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombreTextBox, "Debes agregar un Nombre a este Rol.");
+                NombreTextBox.Focus();
+
+                paso = false;
+            }
+            if (DescripcionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DescripcionTextBox, "Debes agregar una descripcion a este Rol.");
+                DescripcionTextBox.Focus();
+
+                paso = false;
+            }
+            if (PermisosComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(PermisosComboBox, "Debe elegír un Permiso.");
+                NombreTextBox.Focus();
+
+                paso = false;
+            }
+
+            return paso;
+        }
+
     }
 }
