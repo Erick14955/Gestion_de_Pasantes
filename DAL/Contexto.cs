@@ -20,7 +20,16 @@ namespace Gestion_de_Pasantes.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = Data/datosUsuarios.Db");
+            optionsBuilder.UseSqlite(@"Data Source = Data/DatosUsuarios.Db");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Permisos>().HasData(
+                new Permisos() { PermisoID = 1, NombrePermiso = "Modifica", DescripcionPermiso = "Este permiso puede modificar datos" },
+                new Permisos() { PermisoID = 2, NombrePermiso = "Elimina", DescripcionPermiso = "Este permiso puede eliminar datos" },
+                new Permisos() { PermisoID = 3, NombrePermiso = "Agrega", DescripcionPermiso = "Este permiso puede agregar datos" }
+            );
         }
     }
 }
