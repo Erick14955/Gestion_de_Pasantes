@@ -129,7 +129,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             }
             else
             {
-                MessageBox.Show("Institución no Encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Institución no Encontrads", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
