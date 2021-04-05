@@ -12,6 +12,26 @@ namespace Gestion_de_Pasantes.BLL
 {
     public class HabilidadesBLL
     {
+        public static bool ExisteNombre(string Nombre)
+        {
+            Contexto contexto = new Contexto();
+            bool paso;
+
+            try
+            {
+                paso = contexto.Habilidades.Any(e => e.Nombre.Equals(Nombre));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return paso;
+        }
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
