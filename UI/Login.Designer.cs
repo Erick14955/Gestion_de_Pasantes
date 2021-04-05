@@ -37,15 +37,17 @@ namespace Gestion_de_Pasantes
             this.passwordtextBox = new System.Windows.Forms.TextBox();
             this.Loginbutton = new System.Windows.Forms.Button();
             this.ErroreserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErroreserrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Emaillabel
             // 
             this.Emaillabel.AutoSize = true;
-            this.Emaillabel.Location = new System.Drawing.Point(114, 216);
+            this.Emaillabel.Location = new System.Drawing.Point(100, 162);
             this.Emaillabel.Name = "Emaillabel";
-            this.Emaillabel.Size = new System.Drawing.Size(46, 20);
+            this.Emaillabel.Size = new System.Drawing.Size(36, 15);
             this.Emaillabel.TabIndex = 2;
             this.Emaillabel.Text = "Email";
             // 
@@ -53,19 +55,18 @@ namespace Gestion_de_Pasantes
             // 
             this.EmailtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmailtextBox.Location = new System.Drawing.Point(114, 240);
-            this.EmailtextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EmailtextBox.Location = new System.Drawing.Point(100, 180);
             this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(149, 27);
+            this.EmailtextBox.Size = new System.Drawing.Size(131, 23);
             this.EmailtextBox.TabIndex = 3;
             this.EmailtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EmailtextBox_KeyPress);
             // 
             // passwordlabel
             // 
             this.passwordlabel.AutoSize = true;
-            this.passwordlabel.Location = new System.Drawing.Point(114, 288);
+            this.passwordlabel.Location = new System.Drawing.Point(100, 216);
             this.passwordlabel.Name = "passwordlabel";
-            this.passwordlabel.Size = new System.Drawing.Size(83, 20);
+            this.passwordlabel.Size = new System.Drawing.Size(67, 15);
             this.passwordlabel.TabIndex = 4;
             this.passwordlabel.Text = "Contraseña";
             // 
@@ -73,21 +74,19 @@ namespace Gestion_de_Pasantes
             // 
             this.passwordtextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordtextBox.Location = new System.Drawing.Point(114, 312);
-            this.passwordtextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.passwordtextBox.Location = new System.Drawing.Point(100, 234);
             this.passwordtextBox.Name = "passwordtextBox";
             this.passwordtextBox.PasswordChar = '*';
-            this.passwordtextBox.Size = new System.Drawing.Size(149, 27);
+            this.passwordtextBox.Size = new System.Drawing.Size(131, 23);
             this.passwordtextBox.TabIndex = 5;
             this.passwordtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordtextBox_KeyPress);
             // 
             // Loginbutton
             // 
             this.Loginbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Loginbutton.Location = new System.Drawing.Point(114, 367);
-            this.Loginbutton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Loginbutton.Location = new System.Drawing.Point(100, 275);
             this.Loginbutton.Name = "Loginbutton";
-            this.Loginbutton.Size = new System.Drawing.Size(101, 31);
+            this.Loginbutton.Size = new System.Drawing.Size(88, 23);
             this.Loginbutton.TabIndex = 6;
             this.Loginbutton.Text = "Iniciar sesion";
             this.Loginbutton.UseVisualStyleBackColor = true;
@@ -97,23 +96,34 @@ namespace Gestion_de_Pasantes
             // 
             this.ErroreserrorProvider.ContainerControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(100, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 109);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(378, 424);
+            this.ClientSize = new System.Drawing.Size(331, 318);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Loginbutton);
             this.Controls.Add(this.passwordtextBox);
             this.Controls.Add(this.passwordlabel);
             this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.Emaillabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(394, 460);
+            this.MinimumSize = new System.Drawing.Size(347, 355);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.ErroreserrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,6 +136,7 @@ namespace Gestion_de_Pasantes
         private System.Windows.Forms.TextBox passwordtextBox;
         private System.Windows.Forms.Button Loginbutton;
         private System.Windows.Forms.ErrorProvider ErroreserrorProvider;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
