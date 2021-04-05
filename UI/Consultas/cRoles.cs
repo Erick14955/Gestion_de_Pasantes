@@ -33,13 +33,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = RolesBLL.GetList(r => r.RolID == Utilitarios.ToInt(InformacionTextBox.Text));
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 1:
-                                lista = RolesBLL.GetList(r => r.NombreRol.Contains(InformacionTextBox.Text));
+                                lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                                 break;
                             case 2:
-                                lista = RolesBLL.GetList(r => r.DescripcionRol.Contains(InformacionTextBox.Text));
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
                                 break;
                             default:
                                 break;
@@ -55,13 +55,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
                         switch (FiltroComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = RolesBLL.GetList(r => r.RolID == Utilitarios.ToInt(InformacionTextBox.Text) && r.esActivo);
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text) && r.esActivo);
                                 break;
                             case 1:
-                                lista = RolesBLL.GetList(r => r.NombreRol.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo || r.NombreRol.Contains(InformacionTextBox.Text.ToLower()) && r.esActivo);
+                                lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.esActivo);
                                 break;
                             case 2:
-                                lista = RolesBLL.GetList(r => r.DescripcionRol.Contains(InformacionTextBox.Text) && r.esActivo);
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text) && r.esActivo);
                                 break;
                             default:
                                 break;
@@ -82,13 +82,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
                             Institucion
                             Total de horas*/
                             case 0:
-                                lista = RolesBLL.GetList(r => r.RolID == Utilitarios.ToInt(InformacionTextBox.Text) && !r.esActivo);
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.esActivo);
                                 break;
                             case 1:
-                                lista = RolesBLL.GetList(r => r.NombreRol.Contains(InformacionTextBox.Text.ToUpper()) && !r.esActivo || r.NombreRol.Contains(InformacionTextBox.Text.ToLower()) && !r.esActivo);
+                                lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.esActivo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.esActivo);
                                 break;
                             case 2:
-                                lista = RolesBLL.GetList(r => r.DescripcionRol.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo);
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo);
                                 break;
                             default:
                                 break;
@@ -105,13 +105,13 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     switch (FiltroComboBox.SelectedIndex)
                     {
                         case 0:
-                            lista = RolesBLL.GetList(r => r.RolID == Utilitarios.ToInt(InformacionTextBox.Text));
+                            lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
-                            lista = RolesBLL.GetList(r => r.NombreRol.Contains(InformacionTextBox.Text));
+                            lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                             break;
                         case 3:
-                            lista = RolesBLL.GetList(r => r.DescripcionRol.Contains(InformacionTextBox.Text));
+                            lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
                             break;
                         default:
                             break;
