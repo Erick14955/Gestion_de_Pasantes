@@ -36,7 +36,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
                                 break;
                             case 1:
-                                lista = TareasBLL.GetList(r => r.NombreTarea.Contains(InformacionTextBox.Text));
+                                lista = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                                 break;
                             case 2:
                                 lista = TareasBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
@@ -58,7 +58,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
                                 break;
                             case 1:
-                                lista = TareasBLL.GetList(r => r.NombreTarea.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.NombreTarea.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
+                                lista = TareasBLL.GetList(r => r.Nombre.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
                                 break;
                             case 2:
                                 lista = TareasBLL.GetList(r => r.Asignado.Contains(FiltroCheckBox.Text) && r.Activo);
@@ -80,7 +80,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                                 lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
                                 break;
                             case 1:
-                                lista = TareasBLL.GetList(r => r.NombreTarea.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.NombreTarea.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
+                                lista = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
                                 break;
                             case 2:
                                 lista = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
@@ -103,7 +103,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                             lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
                             break;
                         case 1:
-                            lista = TareasBLL.GetList(r => r.NombreTarea.Contains(InformacionTextBox.Text));
+                            lista = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                             break;
                         case 3:
                             lista = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text));
