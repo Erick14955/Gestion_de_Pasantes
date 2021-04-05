@@ -149,7 +149,7 @@ namespace Gestion_de_Pasantes.BLL
 
             try
             {
-                encontrado = contexto.Instituciones.Any(e => e.NombreInstitucion == nombre);
+                encontrado = contexto.Instituciones.Any(e => e.Nombre == nombre);
             }
             catch (Exception)
             {
