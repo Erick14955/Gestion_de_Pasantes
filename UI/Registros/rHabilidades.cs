@@ -41,5 +41,26 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             return habilidad;
         }
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (NombreTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombreTextBox,"Debes agregar un Nombre a esta habilidad.");
+                NombreTextBox.Focus();
+
+                paso = false;
+            }
+            if (DescripcionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DescripcionTextBox,"Debes agregar una descripcion a esta habilidad.");
+                DescripcionTextBox.Focus();
+
+                paso = false;
+            }
+
+            return paso;
+        }
     }
 }

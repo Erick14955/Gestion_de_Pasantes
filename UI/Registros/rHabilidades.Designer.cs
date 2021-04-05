@@ -29,6 +29,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -41,7 +42,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.HabilidadIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.HabilidadIdNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // EliminarButton
@@ -148,6 +151,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label1.TabIndex = 13;
             this.label1.Text = "Habilidad Id";
             // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
             // rHabilidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -168,6 +175,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Name = "rHabilidades";
             this.Text = "rHabilidades";
             ((System.ComponentModel.ISupportInitialize)(this.HabilidadIdNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +195,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.NumericUpDown HabilidadIdNumericUpDown;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
