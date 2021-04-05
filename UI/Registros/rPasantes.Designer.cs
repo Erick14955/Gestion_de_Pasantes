@@ -29,6 +29,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.PasanteIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarButton = new System.Windows.Forms.Button();
@@ -58,9 +59,11 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.ActivoCheckBox = new System.Windows.Forms.CheckBox();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PasanteIdNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -87,6 +90,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.BuscarButton.TabIndex = 2;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // label2
             // 
@@ -227,6 +231,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.RemoverButton.TabIndex = 27;
             this.RemoverButton.Text = "Remover";
             this.RemoverButton.UseVisualStyleBackColor = true;
+            this.RemoverButton.Click += new System.EventHandler(this.RemoverButton_Click);
             // 
             // AgregarButton
             // 
@@ -236,6 +241,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.AgregarButton.TabIndex = 26;
             this.AgregarButton.Text = "Agregar";
             this.AgregarButton.UseVisualStyleBackColor = true;
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // ComentarioTextBox
             // 
@@ -288,6 +294,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.NuevoButton.TabIndex = 28;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // GuardarButton
             // 
@@ -297,6 +304,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.GuardarButton.TabIndex = 29;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
             // 
@@ -306,6 +314,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.EliminarButton.TabIndex = 30;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // ActivoCheckBox
             // 
@@ -316,6 +325,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.ActivoCheckBox.TabIndex = 31;
             this.ActivoCheckBox.Text = "Activo";
             this.ActivoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // rPasantes
             // 
@@ -346,10 +359,12 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.label1);
             this.Name = "rPasantes";
             this.Text = "Registro Pasante";
+            this.Load += new System.EventHandler(this.rPasantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PasanteIdNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,6 +401,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.CheckBox ActivoCheckBox;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
 
