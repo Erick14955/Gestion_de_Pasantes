@@ -18,19 +18,19 @@ namespace Gestion_de_Pasantes.UI.Registros
         public rPasantes()
         {
             InitializeComponent();
+            this.Detalle = new List<HabilidadesDetalle>();
         }
         private void Limpiar()
         {
             PasanteIdNumericUpDown.Value = 0;
             FechaCreacionDateTimePicker.Value = DateTime.Now.Date;
-            InstitucionComboBox.ValueMember = " ";
             NombrePasanteTextBox.Clear();
             MatriculaTextBox.Clear();
             EmailTextBox.Clear();
             HorasARealizarTextBox.Clear();
             TelefonoTextBox.Clear();
-            HabilidadComboBox.ValueMember = " ";
             ComentarioTextBox.Clear();
+            MyErrorProvider.Clear();
 
             this.Detalle = new List<HabilidadesDetalle>();
             CargarGrid();
@@ -46,8 +46,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             HorasARealizarTextBox.Text = pasante.HorasARealizar.ToString();
             TelefonoTextBox.Text = pasante.Telefono;
 
-            HabilidadComboBox.DisplayMember = " ";
-            ComentarioTextBox.Clear();
 
             this.Detalle = pasante.Detalle;
             CargarGrid();
@@ -72,18 +70,54 @@ namespace Gestion_de_Pasantes.UI.Registros
         {
             DetalleDataGridView.DataSource = null;
             DetalleDataGridView.DataSource = this.Detalle;
+            DetalleDataGridView.Columns["PasanteId"].Visible = false;
+            DetalleDataGridView.Columns["DetalleId"].Visible = false;
         }
         private bool Validar()
         {
             bool paso = true;
+            if (InstitucionComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(InstitucionComboBox, "Debes agreagr datos aqui.");
+                InstitucionComboBox.Focus();
 
+                paso = false;
+            }
+            if (NombrePasanteTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombrePasanteTextBox, "Debes agreagr datos aqui.");
+                NombrePasanteTextBox.Focus();
 
-            return paso;
-        }
-        private bool ValidarAgregar()
-        {
-            bool paso = true;
+                paso = false;
+            }
+            if (MatriculaTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(MatriculaTextBox, "Debes agreagr datos aqui.");
+                MatriculaTextBox.Focus();
 
+                paso = false;
+            }
+            if (EmailTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(EmailTextBox, "Debes agreagr datos aqui.");
+                EmailTextBox.Focus();
+
+                paso = false;
+            }
+            if (HorasARealizarTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(HorasARealizarTextBox, "Debes agreagr datos aqui.");
+                HorasARealizarTextBox.Focus();
+
+                paso = false;
+            }
+            if (TelefonoTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(TelefonoTextBox, "Debes agreagr datos aqui.");
+                TelefonoTextBox.Focus();
+
+                paso = false;
+            }
 
             return paso;
         }
@@ -100,6 +134,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             Pasantes pasante;
             int id;
             int.TryParse(PasanteIdNumericUpDown.Text, out id);
@@ -116,20 +151,17 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void AgregarButton_Click(object sender, EventArgs e)
         {
-                        MyErrorProvider.Clear();
-            if (!ValidarAgregar())
-                return;
-
+            MyErrorProvider.Clear();
             if (DetalleDataGridView.DataSource != null)
                 this.Detalle = (List<HabilidadesDetalle>)DetalleDataGridView.DataSource;
 
-            if(HabilidadComboBox.Text == null)
+            if(HabilidadComboBox.Text == string.Empty)
             {
                 MessageBox.Show("Selecciona una habilidad en el combobox.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            Habilidades habilidad = HabilidadesBLL.Buscar(int.Parse(HabilidadComboBox.Text));
+            Habilidades habilidad = HabilidadesBLL.Buscar(HabilidadComboBox.SelectedIndex+1);
 
             try 
             {
@@ -176,6 +208,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             Pasantes pasante;
             MyErrorProvider.Clear();
             if (!Validar())

@@ -24,6 +24,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             NombreTextBox.Clear();
             DescripcionTextBox.Clear();
             FechaCreacionDateTimePicker.Value = DateTime.Now.Date;
+            MyErrorProvider.Clear();
         }
         private void LlenaCampo(Habilidades habilidad)
         {
@@ -73,6 +74,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             int id;
             Habilidades habilidad = new Habilidades();
             int.TryParse(HabilidadIdNumericUpDown.Text, out id);
@@ -98,6 +100,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             Habilidades habilidad;
 
             if (!Validar())
