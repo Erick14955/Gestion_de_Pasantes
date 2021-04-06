@@ -30,6 +30,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             PrioridadComboBox.Text = " ";
             NombrePasanteTextBox.Clear();
             EstadoTareaComboBox.Text = " ";
+            MyErrorProvider.Clear();
         }
 
         public void LlenarCampos(Tareas tareas)
@@ -67,32 +68,32 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             if (string.IsNullOrEmpty(NombreTareaTextBox.Text))
             {
-                MyerrorProvider.SetError(NombreTareaTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(NombreTareaTextBox, "Este campo no puede quedar vacio");
                 NombreTareaTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrEmpty(NombrePasanteTextBox.Text))
             {
-                MyerrorProvider.SetError(NombrePasanteTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(NombrePasanteTextBox, "Este campo no puede quedar vacio");
                 NombrePasanteTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrEmpty(DescripcionTexBox.Text))
             {
-                MyerrorProvider.SetError(DescripcionTexBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(DescripcionTexBox, "Este campo no puede quedar vacio");
                 DescripcionTexBox.Focus();
                 paso = false;
 
             }
             if (string.IsNullOrWhiteSpace(PrioridadComboBox.Text))
             {
-                MyerrorProvider.SetError(PrioridadComboBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(PrioridadComboBox, "Este campo no puede quedar vacio");
                 PrioridadComboBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(EstadoTareaComboBox.Text))
             {
-                MyerrorProvider.SetError(EstadoTareaComboBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(EstadoTareaComboBox, "Este campo no puede quedar vacio");
                 EstadoTareaComboBox.Focus();
                 paso = false;
             }
@@ -102,6 +103,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             int id;
             Tareas tareas = new Tareas();
             int.TryParse(TareaIdNumericUpDown.Text, out id);
@@ -116,7 +118,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             }
             else
             {
-                MessageBox.Show("Pasante no Encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tarea no Encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -127,6 +129,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             Tareas tareas;
 
             if (!Validar())
@@ -149,17 +152,29 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            MyerrorProvider.Clear();
-
+            MyErrorProvider.Clear();
             int id;
             int.TryParse(TareaIdNumericUpDown.Text, out id);
 
-            Limpiar();
+            if (TareaIdNumericUpDown.Value == 0)
+            {
+                MessageBox.Show("Debes agregar un id valido para poder eliminarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            if (PasantesBLL.Eliminar(id))
-                MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!TareasBLL.Existe(id))
+                MessageBox.Show("Tarea Inexistente!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
-                MyerrorProvider.SetError(TareaIdNumericUpDown, "No se puede eliminar una tarea que no existe");
+            {
+                if (MessageBox.Show("Deseas eliminar esta tarea?", "Validar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (TareasBLL.Eliminar(id))
+                    {
+                        MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                }
+            }
         }
     }
 }

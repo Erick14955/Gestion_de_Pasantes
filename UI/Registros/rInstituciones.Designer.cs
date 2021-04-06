@@ -38,7 +38,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.InstitucionIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ActivocheckBox = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -54,10 +54,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.InstitucionIdNumericUpDown)).BeginInit();
             this.TipoInstituciongroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -127,12 +127,12 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // IdnumericUpDown
+            // InstitucionIdNumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(146, 29);
-            this.IdnumericUpDown.Name = "IdnumericUpDown";
-            this.IdnumericUpDown.Size = new System.Drawing.Size(150, 27);
-            this.IdnumericUpDown.TabIndex = 9;
+            this.InstitucionIdNumericUpDown.Location = new System.Drawing.Point(146, 29);
+            this.InstitucionIdNumericUpDown.Name = "InstitucionIdNumericUpDown";
+            this.InstitucionIdNumericUpDown.Size = new System.Drawing.Size(150, 27);
+            this.InstitucionIdNumericUpDown.TabIndex = 9;
             // 
             // ActivocheckBox
             // 
@@ -277,9 +277,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // MyerrorProvider
+            // MyErrorProvider
             // 
-            this.MyerrorProvider.ContainerControl = this;
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // rInstituciones
             // 
@@ -299,7 +299,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ActivocheckBox);
-            this.Controls.Add(this.IdnumericUpDown);
+            this.Controls.Add(this.InstitucionIdNumericUpDown);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.DirecciontextBox);
             this.Controls.Add(this.label4);
@@ -310,10 +310,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.label1);
             this.Name = "rInstituciones";
             this.Text = "Registro de instituciones";
-            ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstitucionIdNumericUpDown)).EndInit();
             this.TipoInstituciongroupBox.ResumeLayout(false);
             this.TipoInstituciongroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +329,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Buscarbutton;
-        private System.Windows.Forms.NumericUpDown IdnumericUpDown;
+        private System.Windows.Forms.NumericUpDown InstitucionIdNumericUpDown;
         private System.Windows.Forms.CheckBox ActivocheckBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
@@ -345,6 +345,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }

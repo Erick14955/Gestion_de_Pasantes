@@ -21,7 +21,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void Limpiar()
         {
-            IdnumericUpDown.Value = 0;
+            InstitucionIdNumericUpDown.Value = 0;
             NombretextBox.Clear();
             RegiontextBox.Clear();
             DirecciontextBox.Clear();
@@ -32,13 +32,13 @@ namespace Gestion_de_Pasantes.UI.Registros
             PrivadaRadioButton.Checked = false;
             PublicaRadioButton.Checked = false;
             ActivocheckBox.Checked = false;
-            MyerrorProvider.Clear();
+            MyErrorProvider.Clear();
         }
 
         private void LlenarCampos(Instituciones instituciones)
         {
             ActivocheckBox.Checked = instituciones.Activo;
-            IdnumericUpDown.Value = instituciones.InstitucionId;
+            InstitucionIdNumericUpDown.Value = instituciones.InstitucionId;
             NombretextBox.Text = instituciones.Nombre;
             RegiontextBox.Text = instituciones.Region;
             DirecciontextBox.Text = instituciones.Direccion;
@@ -56,7 +56,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             Instituciones instituciones = new Instituciones();
 
             instituciones.Activo = ActivocheckBox.Checked;
-            instituciones.InstitucionId = (int)IdnumericUpDown.Value;
+            instituciones.InstitucionId = (int)InstitucionIdNumericUpDown.Value;
             instituciones.Nombre = NombretextBox.Text;
             instituciones.Region = RegiontextBox.Text;
             instituciones.Direccion = DirecciontextBox.Text;
@@ -75,37 +75,37 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             if(NombretextBox.Text == string.Empty)
             {
-                MyerrorProvider.SetError(NombretextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(NombretextBox, "Este campo no puede quedar vacio");
                 NombretextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(CorreotextBox.Text))
             {
-                MyerrorProvider.SetError(CorreotextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(CorreotextBox, "Este campo no puede quedar vacio");
                 CorreotextBox.Focus();
                 paso = false;
             }
             if(RegiontextBox.Text == string.Empty)
             {
-                MyerrorProvider.SetError(RegiontextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(RegiontextBox, "Este campo no puede quedar vacio");
                 RegiontextBox.Focus();
                 paso = false;
             }
             if(DirecciontextBox.Text == string.Empty)
             {
-                MyerrorProvider.SetError(DirecciontextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(DirecciontextBox, "Este campo no puede quedar vacio");
                 DirecciontextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(TelefonotextBox.Text))
             {
-                MyerrorProvider.SetError(TelefonotextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(TelefonotextBox, "Este campo no puede quedar vacio");
                 TelefonotextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(FaxtextBox.Text))
             {
-                MyerrorProvider.SetError(FaxtextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(FaxtextBox, "Este campo no puede quedar vacio");
                 FaxtextBox.Focus();
                 paso = false;
             }
@@ -115,9 +115,10 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             int id;
             Instituciones instituciones = new Instituciones();
-            int.TryParse(IdnumericUpDown.Text, out id);
+            int.TryParse(InstitucionIdNumericUpDown.Text, out id);
 
             Limpiar();
 
@@ -129,7 +130,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             }
             else
             {
-                MessageBox.Show("Institución no Encontrads", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Institución no Encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -140,6 +141,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            MyErrorProvider.Clear();
             Instituciones instituciones;
 
             if (!Validar())
@@ -147,7 +149,7 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             if (InstitucionesBLL.ExisteInstitucion(NombretextBox.Text))
             {
-                MyerrorProvider.SetError(NombretextBox, "Esta institución ya existe en la base de datos");
+                MyErrorProvider.SetError(NombretextBox, "Esta institución ya existe en la base de datos");
                 NombretextBox.Focus();
             }
 
@@ -168,16 +170,29 @@ namespace Gestion_de_Pasantes.UI.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-
+            MyErrorProvider.Clear();
             int id;
-            int.TryParse(IdnumericUpDown.Text, out id);
+            int.TryParse(InstitucionIdNumericUpDown.Text, out id);
 
-            Limpiar();
+            if (InstitucionIdNumericUpDown.Value == 0)
+            {
+                MessageBox.Show("Debes agregar un id valido para poder eliminarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            if (InstitucionesBLL.Eliminar(id))
-                MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!InstitucionesBLL.Existe(id))
+                MessageBox.Show("Institucion Inexistente!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
-                MyerrorProvider.SetError(IdnumericUpDown, "No se puede eliminar una institucion que no existe");
+            {
+                if (MessageBox.Show("Deseas eliminar esta institucion?", "Validar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (InstitucionesBLL.Eliminar(id))
+                    {
+                        MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                }
+            }
         }
 
     }

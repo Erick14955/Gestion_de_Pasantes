@@ -1,4 +1,5 @@
-﻿using Gestion_de_Pasantes.Entidades;
+﻿using Gestion_de_Pasantes.BLL;
+using Gestion_de_Pasantes.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,9 @@ namespace Gestion_de_Pasantes.UI.Registros
         {
             InitializeComponent();
         }
-        private void LimpiarClase()
+        private void Limpiar()
         {
-            NumericUpDown1.Value = 0;
+            UsuarioIdNumericUpDown.Value = 0;
             NombreTextBox.Clear();
             UsuarioTextBox.Clear();
             ClaveTextBox.Clear();
@@ -27,11 +28,12 @@ namespace Gestion_de_Pasantes.UI.Registros
             RolComboBox.Text = "";
             EmailTextBox.Clear();
             ActivoCheckBox.Checked = false;
+            MyErrorProvider.Clear();
         }
-        private Usuarios LlenarClase()
+        private Usuarios LlenaClase()
         {
             Usuarios usuario = new Usuarios();
-            usuario.UsuarioId = (int)NumericUpDown1.Value;
+            usuario.UsuarioId = (int)UsuarioIdNumericUpDown.Value;
             usuario.Nombre = NombreTextBox.Text;
             usuario.Alias = UsuarioTextBox.Text;
             usuario.Clave = ClaveTextBox.Text;
@@ -41,9 +43,9 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             return usuario;
         }
-        private void LlenarCampo(Usuarios usuarios)
+        private void LlenaCampo(Usuarios usuarios)
         {
-            NumericUpDown1.Value = usuarios.UsuarioId;
+            UsuarioIdNumericUpDown.Value = usuarios.UsuarioId;
             NombreTextBox.Text = usuarios.Nombre;
             UsuarioTextBox.Text = usuarios.Alias;
             ClaveTextBox.Text = usuarios.Clave;
@@ -57,43 +59,119 @@ namespace Gestion_de_Pasantes.UI.Registros
 
             if (string.IsNullOrEmpty(NombreTextBox.Text))
             {
-                MyerrorProvider.SetError(NombreTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(NombreTextBox, "Este campo no puede quedar vacio");
                 NombreTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrEmpty(UsuarioTextBox.Text))
             {
-                MyerrorProvider.SetError(UsuarioTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(UsuarioTextBox, "Este campo no puede quedar vacio");
                 UsuarioTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrEmpty(ClaveTextBox.Text))
             {
-                MyerrorProvider.SetError(ClaveTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(ClaveTextBox, "Este campo no puede quedar vacio");
                 ClaveTextBox.Focus();
                 paso = false;
 
             }
             if (string.IsNullOrWhiteSpace(ConfirmarClaveTextBox.Text))
             {
-                MyerrorProvider.SetError(ConfirmarClaveTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(ConfirmarClaveTextBox, "Este campo no puede quedar vacio");
                 ConfirmarClaveTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(RolComboBox.Text))
             {
-                MyerrorProvider.SetError(RolComboBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(RolComboBox, "Este campo no puede quedar vacio");
                 RolComboBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
             {
-                MyerrorProvider.SetError(EmailTextBox, "Este campo no puede quedar vacio");
+                MyErrorProvider.SetError(EmailTextBox, "Este campo no puede quedar vacio");
                 EmailTextBox.Focus();
                 paso = false;
             }
 
             return paso;
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            MyErrorProvider.Clear();
+            int id;
+            Usuarios usuario = new Usuarios();
+            int.TryParse(UsuarioIdNumericUpDown.Text, out id);
+
+            Limpiar();
+
+            usuario = UsuariosBLL.Buscar(id);
+
+            if (usuario != null)
+            {
+                LlenaCampo(usuario);
+            }
+            else
+            {
+                MessageBox.Show("Usuario no Encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+            MyErrorProvider.Clear();
+            Usuarios usuarios;
+
+            if (!Validar())
+                return;
+
+            usuarios = LlenaClase();
+
+            var paso = UsuariosBLL.Guardar(usuarios);
+
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            MyErrorProvider.Clear();
+            int id;
+            int.TryParse(UsuarioIdNumericUpDown.Text, out id);
+
+            if (UsuarioIdNumericUpDown.Value == 0)
+            {
+                MessageBox.Show("Debes agregar un id valido para poder eliminarlo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!UsuariosBLL.Existe(id))
+                MessageBox.Show("Usuario Inexistente!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                if (MessageBox.Show("Deseas eliminar este usuario?", "Validar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (UsuariosBLL.Eliminar(id))
+                    {
+                        MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                }
+            }
         }
     }
 }

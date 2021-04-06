@@ -51,9 +51,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TareaIdNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -249,9 +249,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.EliminarButton.UseVisualStyleBackColor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
-            // MyerrorProvider
+            // MyErrorProvider
             // 
-            this.MyerrorProvider.ContainerControl = this;
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // rTareas
             // 
@@ -282,7 +282,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Name = "rTareas";
             this.Text = "Registro Tareas";
             ((System.ComponentModel.ISupportInitialize)(this.TareaIdNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +311,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
-        private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
