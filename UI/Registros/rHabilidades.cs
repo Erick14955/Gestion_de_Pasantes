@@ -117,20 +117,40 @@ namespace Gestion_de_Pasantes.UI.Registros
                 MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        public bool ExisteEnLaBaseDeDatos()
+        {
+            Roles roles = RolesBLL.Buscar((int)HabilidadIdNumericUpDown.Value);
+            return (roles != null);
+        }
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
-
             int id;
             int.TryParse(HabilidadIdNumericUpDown.Text, out id);
 
-            Limpiar();
+            if (HabilidadIdNumericUpDown.Value == 0)
+            {
+                MessageBox.Show("Debes agregar un Id valido para poder eliminar una Habilidad", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            if (HabilidadesBLL.Eliminar(id))
-                MessageBox.Show("Transaccion Exitosa", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (ExisteEnLaBaseDeDatos())
+            {
+                if (MessageBox.Show("Deseas eliminar esta Habilidad?", "Elije una opcion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (HabilidadesBLL.Eliminar(id))
+                    {
+                        MessageBox.Show("Habilidad eliminada!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                        MyErrorProvider.SetError(HabilidadIdNumericUpDown, "Agrega un Id Valido! Este no existe.");
+                }
+
+            }
             else
-                MyErrorProvider.SetError(HabilidadIdNumericUpDown, "No se puede eliminar una habilidad que no existe");
+                MessageBox.Show("Esta habilidad no existe en la base de datos, prueba a eliminar otra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
     }
 }
