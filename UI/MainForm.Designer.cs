@@ -56,8 +56,15 @@ namespace Gestion_de_Pasantes
             this.RegistrarHabilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistrarInstitucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistrarTareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistrarRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultarPasantesStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarHabilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarTareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarInstitucioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,13 +73,6 @@ namespace Gestion_de_Pasantes
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RegistrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RegistrarRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultarHabilidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultarTareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultarInstitucioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultarRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -291,6 +291,18 @@ namespace Gestion_de_Pasantes
             this.RegistrarTareasToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.RegistrarTareasToolStripMenuItem.Text = "Registrar Tareas";
             // 
+            // RegistrarUsuariosToolStripMenuItem
+            // 
+            this.RegistrarUsuariosToolStripMenuItem.Name = "RegistrarUsuariosToolStripMenuItem";
+            this.RegistrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.RegistrarUsuariosToolStripMenuItem.Text = "Registrar Usuarios";
+            // 
+            // RegistrarRolesToolStripMenuItem
+            // 
+            this.RegistrarRolesToolStripMenuItem.Name = "RegistrarRolesToolStripMenuItem";
+            this.RegistrarRolesToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.RegistrarRolesToolStripMenuItem.Text = "Registrar Roles";
+            // 
             // ConsultasToolStripMenuItem
             // 
             this.ConsultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -309,6 +321,36 @@ namespace Gestion_de_Pasantes
             this.ConsultarPasantesStripMenuItem.Name = "ConsultarPasantesStripMenuItem";
             this.ConsultarPasantesStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.ConsultarPasantesStripMenuItem.Text = "Consultar Pasantes";
+            // 
+            // ConsultarHabilidadesToolStripMenuItem
+            // 
+            this.ConsultarHabilidadesToolStripMenuItem.Name = "ConsultarHabilidadesToolStripMenuItem";
+            this.ConsultarHabilidadesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.ConsultarHabilidadesToolStripMenuItem.Text = "Consultar Habilidades";
+            // 
+            // ConsultarTareasToolStripMenuItem
+            // 
+            this.ConsultarTareasToolStripMenuItem.Name = "ConsultarTareasToolStripMenuItem";
+            this.ConsultarTareasToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.ConsultarTareasToolStripMenuItem.Text = "Consultar Tareas";
+            // 
+            // ConsultarInstitucioneToolStripMenuItem
+            // 
+            this.ConsultarInstitucioneToolStripMenuItem.Name = "ConsultarInstitucioneToolStripMenuItem";
+            this.ConsultarInstitucioneToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.ConsultarInstitucioneToolStripMenuItem.Text = "Consultar Instituciones";
+            // 
+            // ConsultarRolesToolStripMenuItem
+            // 
+            this.ConsultarRolesToolStripMenuItem.Name = "ConsultarRolesToolStripMenuItem";
+            this.ConsultarRolesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.ConsultarRolesToolStripMenuItem.Text = "Consultar Roles";
+            // 
+            // ConsultarUsuariosToolStripMenuItem
+            // 
+            this.ConsultarUsuariosToolStripMenuItem.Name = "ConsultarUsuariosToolStripMenuItem";
+            this.ConsultarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.ConsultarUsuariosToolStripMenuItem.Text = "Consultar Usuarios";
             // 
             // helpToolStripMenuItem
             // 
@@ -363,48 +405,6 @@ namespace Gestion_de_Pasantes
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             this.optionsToolStripMenuItem.Text = "&Options";
             // 
-            // RegistrarUsuariosToolStripMenuItem
-            // 
-            this.RegistrarUsuariosToolStripMenuItem.Name = "RegistrarUsuariosToolStripMenuItem";
-            this.RegistrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.RegistrarUsuariosToolStripMenuItem.Text = "Registrar Usuarios";
-            // 
-            // RegistrarRolesToolStripMenuItem
-            // 
-            this.RegistrarRolesToolStripMenuItem.Name = "RegistrarRolesToolStripMenuItem";
-            this.RegistrarRolesToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.RegistrarRolesToolStripMenuItem.Text = "Registrar Roles";
-            // 
-            // ConsultarHabilidadesToolStripMenuItem
-            // 
-            this.ConsultarHabilidadesToolStripMenuItem.Name = "ConsultarHabilidadesToolStripMenuItem";
-            this.ConsultarHabilidadesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.ConsultarHabilidadesToolStripMenuItem.Text = "Consultar Habilidades";
-            // 
-            // ConsultarTareasToolStripMenuItem
-            // 
-            this.ConsultarTareasToolStripMenuItem.Name = "ConsultarTareasToolStripMenuItem";
-            this.ConsultarTareasToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.ConsultarTareasToolStripMenuItem.Text = "Consultar Habilidades";
-            // 
-            // ConsultarInstitucioneToolStripMenuItem
-            // 
-            this.ConsultarInstitucioneToolStripMenuItem.Name = "ConsultarInstitucioneToolStripMenuItem";
-            this.ConsultarInstitucioneToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.ConsultarInstitucioneToolStripMenuItem.Text = "Consultar Instituciones";
-            // 
-            // ConsultarRolesToolStripMenuItem
-            // 
-            this.ConsultarRolesToolStripMenuItem.Name = "ConsultarRolesToolStripMenuItem";
-            this.ConsultarRolesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.ConsultarRolesToolStripMenuItem.Text = "Consultar Roles";
-            // 
-            // ConsultarUsuariosToolStripMenuItem
-            // 
-            this.ConsultarUsuariosToolStripMenuItem.Name = "ConsultarUsuariosToolStripMenuItem";
-            this.ConsultarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.ConsultarUsuariosToolStripMenuItem.Text = "Consultar Usuarios";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -419,6 +419,7 @@ namespace Gestion_de_Pasantes
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

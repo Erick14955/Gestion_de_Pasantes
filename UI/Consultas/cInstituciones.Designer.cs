@@ -124,7 +124,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.Location = new System.Drawing.Point(766, 10);
             this.BuscarButton.Name = "BuscarButton";
