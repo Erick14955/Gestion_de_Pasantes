@@ -119,7 +119,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label4.Text = "Dirección";
             // 
             // Buscarbutton
-            // 
+            //
+            this.Buscarbutton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
             this.Buscarbutton.Location = new System.Drawing.Point(345, 27);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(64, 29);
@@ -249,7 +250,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
+            this.Nuevobutton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevo;
             this.Nuevobutton.Location = new System.Drawing.Point(88, 562);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(103, 62);
@@ -261,7 +262,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.Image = global::Gestion_de_Pasantes.Properties.Resources.guardar;
             this.Guardarbutton.Location = new System.Drawing.Point(233, 562);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(103, 62);
@@ -273,7 +274,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
+            this.EliminarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminar;
             this.EliminarButton.Location = new System.Drawing.Point(378, 562);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(103, 62);
