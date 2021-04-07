@@ -120,7 +120,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
             this.Buscarbutton.Location = new System.Drawing.Point(345, 27);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(64, 29);
