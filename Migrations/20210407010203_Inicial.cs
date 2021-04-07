@@ -50,7 +50,7 @@ namespace Gestion_de_Pasantes.Migrations
                     PasanteId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nombre = table.Column<string>(type: "TEXT", nullable: true),
-                    InstitucionId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Institucion = table.Column<string>(type: "TEXT", nullable: true),
                     Matricula = table.Column<int>(type: "INTEGER", nullable: false),
                     HorasARealizar = table.Column<int>(type: "INTEGER", nullable: false),
                     Email = table.Column<string>(type: "TEXT", nullable: true),

@@ -120,8 +120,8 @@ namespace Gestion_de_Pasantes.Migrations
                     b.Property<int>("HorasARealizar")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("InstitucionId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Institucion")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Matricula")
                         .HasColumnType("INTEGER");

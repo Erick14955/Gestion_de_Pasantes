@@ -120,11 +120,6 @@ namespace Gestion_de_Pasantes.UI.Registros
                 MessageBox.Show("Transaccion Fallida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public bool ExisteEnLaBaseDeDatos()
-        {
-            Roles roles = RolesBLL.Buscar((int)HabilidadIdNumericUpDown.Value);
-            return (roles != null);
-        }
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
@@ -137,7 +132,7 @@ namespace Gestion_de_Pasantes.UI.Registros
                 return;
             }
 
-            if (ExisteEnLaBaseDeDatos())
+            if (HabilidadesBLL.Existe((int)HabilidadIdNumericUpDown.Value))
             {
                 if (MessageBox.Show("Deseas eliminar esta Habilidad?", "Elije una opcion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {

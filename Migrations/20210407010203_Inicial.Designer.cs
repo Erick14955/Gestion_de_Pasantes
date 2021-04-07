@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gestion_de_Pasantes.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210406180629_Inicial")]
+    [Migration("20210407010203_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,8 +122,8 @@ namespace Gestion_de_Pasantes.Migrations
                     b.Property<int>("HorasARealizar")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("InstitucionId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Institucion")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Matricula")
                         .HasColumnType("INTEGER");

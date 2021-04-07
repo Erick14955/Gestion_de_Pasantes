@@ -39,7 +39,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         {
             PasanteIdNumericUpDown.Value = pasante.PasanteId;
             FechaCreacionDateTimePicker.Value = pasante.FechaCreacion.Date;
-            InstitucionComboBox.Text = pasante.InstitucionId.ToString();
+            InstitucionComboBox.Text = pasante.Institucion;
             NombrePasanteTextBox.Text = pasante.Nombre;
             MatriculaTextBox.Text = pasante.Matricula.ToString();
             EmailTextBox.Text = pasante.Email;
@@ -56,7 +56,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             pasante.PasanteId = Convert.ToInt32(PasanteIdNumericUpDown.Value);
             pasante.FechaCreacion = FechaCreacionDateTimePicker.Value.Date;
             pasante.Nombre = NombrePasanteTextBox.Text;
-            pasante.InstitucionId = int.Parse(InstitucionComboBox.Text);
+            pasante.Institucion = InstitucionComboBox.Text;
             pasante.Matricula = int.Parse(MatriculaTextBox.Text);
             pasante.Email = EmailTextBox.Text;
             pasante.HorasARealizar = int.Parse(HorasARealizarTextBox.Text);
