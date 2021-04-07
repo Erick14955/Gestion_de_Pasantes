@@ -212,7 +212,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.ActivoCheckBox.UseVisualStyleBackColor = true;
             // 
             // BuscarButton
-            // 
+            //
+            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
             this.BuscarButton.Location = new System.Drawing.Point(350, 27);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(64, 29);
@@ -221,7 +222,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // NuevoButton
-            // 
+            //
+            this.NuevoButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevo;
             this.NuevoButton.Location = new System.Drawing.Point(109, 477);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(103, 62);
@@ -233,6 +235,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.guardar;
             this.GuardarButton.Location = new System.Drawing.Point(255, 477);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(103, 62);
@@ -243,7 +246,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
-            // 
+            //
+            this.EliminarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminar;
             this.EliminarButton.Location = new System.Drawing.Point(401, 477);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(103, 62);
