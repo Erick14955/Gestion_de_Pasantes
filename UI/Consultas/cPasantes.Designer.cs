@@ -54,9 +54,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // FiltroCheckBox
             // 
             this.FiltroCheckBox.AutoSize = true;
-            this.FiltroCheckBox.Location = new System.Drawing.Point(12, 21);
+            this.FiltroCheckBox.Location = new System.Drawing.Point(14, 28);
+            this.FiltroCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FiltroCheckBox.Name = "FiltroCheckBox";
-            this.FiltroCheckBox.Size = new System.Drawing.Size(126, 19);
+            this.FiltroCheckBox.Size = new System.Drawing.Size(157, 24);
             this.FiltroCheckBox.TabIndex = 0;
             this.FiltroCheckBox.Text = "Uso Filtro de Fecha";
             this.FiltroCheckBox.UseVisualStyleBackColor = true;
@@ -64,9 +65,9 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 57);
+            this.label1.Location = new System.Drawing.Point(14, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 15);
+            this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Filtro";
             // 
@@ -79,9 +80,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
             "Nombre Pasante",
             "Institucion",
             "Email"});
-            this.FiltroComboBox.Location = new System.Drawing.Point(52, 52);
+            this.FiltroComboBox.Location = new System.Drawing.Point(59, 69);
+            this.FiltroComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FiltroComboBox.Name = "FiltroComboBox";
-            this.FiltroComboBox.Size = new System.Drawing.Size(123, 23);
+            this.FiltroComboBox.Size = new System.Drawing.Size(140, 28);
             this.FiltroComboBox.TabIndex = 2;
             // 
             // groupBox1
@@ -90,52 +92,57 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(196, 4);
+            this.groupBox1.Location = new System.Drawing.Point(224, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 44);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(545, 59);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(321, 12);
+            this.dateTimePicker2.Location = new System.Drawing.Point(367, 16);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(141, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(161, 27);
             this.dateTimePicker2.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(70, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(88, 16);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(161, 27);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(276, 16);
+            this.label3.Location = new System.Drawing.Point(315, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Hasta";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 16);
+            this.label2.Location = new System.Drawing.Point(31, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Desde";
             // 
             // InformacionTextBox
             // 
-            this.InformacionTextBox.Location = new System.Drawing.Point(196, 53);
+            this.InformacionTextBox.Location = new System.Drawing.Point(224, 71);
+            this.InformacionTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InformacionTextBox.Multiline = true;
             this.InformacionTextBox.Name = "InformacionTextBox";
-            this.InformacionTextBox.Size = new System.Drawing.Size(477, 23);
+            this.InformacionTextBox.Size = new System.Drawing.Size(545, 29);
             this.InformacionTextBox.TabIndex = 4;
             // 
             // EsactivoGroupBox
@@ -143,9 +150,11 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.EsactivoGroupBox.Controls.Add(this.InactivoRadioButton);
             this.EsactivoGroupBox.Controls.Add(this.ActivoRadioButton);
             this.EsactivoGroupBox.Controls.Add(this.TodoRadioButton);
-            this.EsactivoGroupBox.Location = new System.Drawing.Point(679, 4);
+            this.EsactivoGroupBox.Location = new System.Drawing.Point(776, 5);
+            this.EsactivoGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EsactivoGroupBox.Name = "EsactivoGroupBox";
-            this.EsactivoGroupBox.Size = new System.Drawing.Size(76, 73);
+            this.EsactivoGroupBox.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EsactivoGroupBox.Size = new System.Drawing.Size(87, 97);
             this.EsactivoGroupBox.TabIndex = 5;
             this.EsactivoGroupBox.TabStop = false;
             this.EsactivoGroupBox.Text = "EsActivo?";
@@ -153,9 +162,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // InactivoRadioButton
             // 
             this.InactivoRadioButton.AutoSize = true;
-            this.InactivoRadioButton.Location = new System.Drawing.Point(6, 48);
+            this.InactivoRadioButton.Location = new System.Drawing.Point(7, 64);
+            this.InactivoRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InactivoRadioButton.Name = "InactivoRadioButton";
-            this.InactivoRadioButton.Size = new System.Drawing.Size(67, 19);
+            this.InactivoRadioButton.Size = new System.Drawing.Size(82, 24);
             this.InactivoRadioButton.TabIndex = 2;
             this.InactivoRadioButton.TabStop = true;
             this.InactivoRadioButton.Text = "Inactivo";
@@ -164,9 +174,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // ActivoRadioButton
             // 
             this.ActivoRadioButton.AutoSize = true;
-            this.ActivoRadioButton.Location = new System.Drawing.Point(6, 31);
+            this.ActivoRadioButton.Location = new System.Drawing.Point(7, 41);
+            this.ActivoRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ActivoRadioButton.Name = "ActivoRadioButton";
-            this.ActivoRadioButton.Size = new System.Drawing.Size(59, 19);
+            this.ActivoRadioButton.Size = new System.Drawing.Size(72, 24);
             this.ActivoRadioButton.TabIndex = 1;
             this.ActivoRadioButton.TabStop = true;
             this.ActivoRadioButton.Text = "Activo";
@@ -175,9 +186,10 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // TodoRadioButton
             // 
             this.TodoRadioButton.AutoSize = true;
-            this.TodoRadioButton.Location = new System.Drawing.Point(6, 14);
+            this.TodoRadioButton.Location = new System.Drawing.Point(7, 19);
+            this.TodoRadioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TodoRadioButton.Name = "TodoRadioButton";
-            this.TodoRadioButton.Size = new System.Drawing.Size(56, 19);
+            this.TodoRadioButton.Size = new System.Drawing.Size(70, 24);
             this.TodoRadioButton.TabIndex = 0;
             this.TodoRadioButton.TabStop = true;
             this.TodoRadioButton.Text = "Todos";
@@ -185,10 +197,11 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
-            this.BuscarButton.Location = new System.Drawing.Point(766, 10);
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.Location = new System.Drawing.Point(875, 13);
+            this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(79, 66);
+            this.BuscarButton.Size = new System.Drawing.Size(90, 88);
             this.BuscarButton.TabIndex = 6;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -199,26 +212,29 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // PasantesDataGridView
             // 
             this.PasantesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PasantesDataGridView.Location = new System.Drawing.Point(12, 93);
+            this.PasantesDataGridView.Location = new System.Drawing.Point(14, 124);
+            this.PasantesDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PasantesDataGridView.Name = "PasantesDataGridView";
+            this.PasantesDataGridView.RowHeadersWidth = 51;
             this.PasantesDataGridView.RowTemplate.Height = 25;
-            this.PasantesDataGridView.Size = new System.Drawing.Size(833, 442);
+            this.PasantesDataGridView.Size = new System.Drawing.Size(952, 589);
             this.PasantesDataGridView.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 541);
+            this.button1.Location = new System.Drawing.Point(14, 721);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 22);
+            this.button1.Size = new System.Drawing.Size(109, 29);
             this.button1.TabIndex = 8;
             this.button1.Text = "Imprimir";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // cPasantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 571);
+            this.ClientSize = new System.Drawing.Size(977, 761);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.PasantesDataGridView);
             this.Controls.Add(this.BuscarButton);
@@ -228,8 +244,9 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cPasantes";
-            this.Text = "Consultas Pasantes";
+            this.Text = "Consultar Pasantes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.EsactivoGroupBox.ResumeLayout(false);
