@@ -161,7 +161,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // RemoverButton
             // 
-            this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
+            this.RemoverButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminarPequeño;
             this.RemoverButton.Location = new System.Drawing.Point(4, 335);
             this.RemoverButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RemoverButton.Name = "RemoverButton";
@@ -185,7 +185,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // AgregarButton
             // 
-            this.AgregarButton.Image = ((System.Drawing.Image)(resources.GetObject("AgregarButton.Image")));
+            this.AgregarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevoPequeño;
             this.AgregarButton.Location = new System.Drawing.Point(415, 28);
             this.AgregarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AgregarButton.Name = "AgregarButton";
