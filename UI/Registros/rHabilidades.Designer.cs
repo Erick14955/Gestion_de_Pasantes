@@ -30,7 +30,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rHabilidades));
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -50,7 +49,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminar;
             this.EliminarButton.Location = new System.Drawing.Point(314, 265);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(103, 62);
@@ -62,7 +60,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.guardar;
             this.GuardarButton.Location = new System.Drawing.Point(173, 265);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(103, 62);
@@ -74,7 +71,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevo;
             this.NuevoButton.Location = new System.Drawing.Point(32, 265);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(103, 62);
@@ -102,8 +98,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.DescripcionTextBox.TabIndex = 20;
             // 
             // BuscarButton
-            //
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            // 
             this.BuscarButton.Location = new System.Drawing.Point(361, 23);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(64, 29);
@@ -184,7 +179,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rHabilidades";
-            this.Text = "rHabilidades";
+            this.Text = "Registro de Habilidades";
             ((System.ComponentModel.ISupportInitialize)(this.HabilidadIdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
