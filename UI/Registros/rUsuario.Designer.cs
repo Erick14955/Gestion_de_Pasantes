@@ -177,7 +177,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.FechaIngresoDateTimePicker.TabIndex = 13;
             // 
             // BuscarButton
-            // 
+            //
+            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
             this.BuscarButton.Location = new System.Drawing.Point(425, 27);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarButton.Name = "BuscarButton";
@@ -187,7 +188,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // GuardarButton
-            // 
+            //
+            this.GuardarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.guardar;
             this.GuardarButton.Location = new System.Drawing.Point(478, 261);
             this.GuardarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GuardarButton.Name = "GuardarButton";
@@ -199,7 +201,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
-            // 
+            //
+            this.EliminarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminar;
             this.EliminarButton.Location = new System.Drawing.Point(632, 261);
             this.EliminarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EliminarButton.Name = "EliminarButton";
@@ -211,7 +214,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // NuevoButton
-            // 
+            //
+            this.NuevoButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevo;
             this.NuevoButton.Location = new System.Drawing.Point(324, 261);
             this.NuevoButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NuevoButton.Name = "NuevoButton";
