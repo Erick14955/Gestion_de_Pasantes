@@ -30,7 +30,6 @@ namespace Gestion_de_Pasantes.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -178,8 +177,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.FechaIngresoDateTimePicker.TabIndex = 13;
             // 
             // BuscarButton
-            //
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            // 
             this.BuscarButton.Location = new System.Drawing.Point(425, 27);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarButton.Name = "BuscarButton";
@@ -190,7 +188,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.guardar;
             this.GuardarButton.Location = new System.Drawing.Point(478, 261);
             this.GuardarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GuardarButton.Name = "GuardarButton";
@@ -203,7 +200,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminar;
             this.EliminarButton.Location = new System.Drawing.Point(632, 261);
             this.EliminarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EliminarButton.Name = "EliminarButton";
@@ -216,7 +212,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevo;
             this.NuevoButton.Location = new System.Drawing.Point(324, 261);
             this.NuevoButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NuevoButton.Name = "NuevoButton";
@@ -238,6 +233,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // RolComboBox
             // 
+            this.RolComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RolComboBox.FormattingEnabled = true;
             this.RolComboBox.Location = new System.Drawing.Point(658, 88);
             this.RolComboBox.Name = "RolComboBox";
