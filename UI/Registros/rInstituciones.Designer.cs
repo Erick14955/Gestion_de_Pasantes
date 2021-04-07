@@ -54,7 +54,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.PublicaRadioButton = new System.Windows.Forms.RadioButton();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InstitucionIdNumericUpDown)).BeginInit();
             this.TipoInstituciongroupBox.SuspendLayout();
@@ -120,7 +120,6 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
             this.Buscarbutton.Location = new System.Drawing.Point(345, 27);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(64, 29);
@@ -250,33 +249,39 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.Location = new System.Drawing.Point(88, 562);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(103, 53);
+            this.Nuevobutton.Size = new System.Drawing.Size(103, 62);
             this.Nuevobutton.TabIndex = 20;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(232, 562);
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.Location = new System.Drawing.Point(233, 562);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(103, 53);
+            this.Guardarbutton.Size = new System.Drawing.Size(103, 62);
             this.Guardarbutton.TabIndex = 21;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // Eliminarbutton
+            // EliminarButton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(378, 562);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(103, 53);
-            this.Eliminarbutton.TabIndex = 22;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
+            this.EliminarButton.Location = new System.Drawing.Point(378, 562);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(103, 62);
+            this.EliminarButton.TabIndex = 22;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // MyErrorProvider
             // 
@@ -286,8 +291,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 637);
-            this.Controls.Add(this.Eliminarbutton);
+            this.ClientSize = new System.Drawing.Size(568, 645);
+            this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.TipoInstituciongroupBox);
@@ -345,7 +350,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private System.Windows.Forms.RadioButton PrivadaRadioButton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
