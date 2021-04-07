@@ -249,9 +249,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(100, 567);
+            this.Nuevobutton.Location = new System.Drawing.Point(88, 562);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(94, 29);
+            this.Nuevobutton.Size = new System.Drawing.Size(103, 53);
             this.Nuevobutton.TabIndex = 20;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
@@ -259,9 +259,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(236, 567);
+            this.Guardarbutton.Location = new System.Drawing.Point(232, 562);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(94, 29);
+            this.Guardarbutton.Size = new System.Drawing.Size(103, 53);
             this.Guardarbutton.TabIndex = 21;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
@@ -269,9 +269,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(374, 567);
+            this.Eliminarbutton.Location = new System.Drawing.Point(378, 562);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(94, 29);
+            this.Eliminarbutton.Size = new System.Drawing.Size(103, 53);
             this.Eliminarbutton.TabIndex = 22;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
@@ -285,7 +285,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 623);
+            this.ClientSize = new System.Drawing.Size(568, 637);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);

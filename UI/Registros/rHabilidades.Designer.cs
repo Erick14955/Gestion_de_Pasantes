@@ -49,7 +49,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(306, 265);
+            this.EliminarButton.Location = new System.Drawing.Point(314, 265);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(103, 53);
             this.EliminarButton.TabIndex = 24;
@@ -59,7 +59,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(173, 262);
+            this.GuardarButton.Location = new System.Drawing.Point(173, 265);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(103, 53);
             this.GuardarButton.TabIndex = 23;
@@ -69,7 +69,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(40, 265);
+            this.NuevoButton.Location = new System.Drawing.Point(32, 265);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(103, 53);
             this.NuevoButton.TabIndex = 22;

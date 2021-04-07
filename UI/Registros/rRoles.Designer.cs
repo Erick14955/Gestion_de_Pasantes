@@ -104,10 +104,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(105, 680);
+            this.NuevoButton.Location = new System.Drawing.Point(87, 696);
             this.NuevoButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(96, 52);
+            this.NuevoButton.Size = new System.Drawing.Size(103, 53);
             this.NuevoButton.TabIndex = 21;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(229, 681);
+            this.GuardarButton.Location = new System.Drawing.Point(226, 697);
             this.GuardarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(96, 52);
+            this.GuardarButton.Size = new System.Drawing.Size(103, 53);
             this.GuardarButton.TabIndex = 22;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
@@ -126,10 +126,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(352, 681);
+            this.EliminarButton.Location = new System.Drawing.Point(365, 697);
             this.EliminarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(96, 52);
+            this.EliminarButton.Size = new System.Drawing.Size(103, 53);
             this.EliminarButton.TabIndex = 23;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
@@ -154,10 +154,10 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // RemoverButton
             // 
-            this.RemoverButton.Location = new System.Drawing.Point(13, 335);
+            this.RemoverButton.Location = new System.Drawing.Point(4, 335);
             this.RemoverButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(105, 36);
+            this.RemoverButton.Size = new System.Drawing.Size(98, 29);
             this.RemoverButton.TabIndex = 5;
             this.RemoverButton.Text = "Remover";
             this.RemoverButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +180,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.AgregarButton.Location = new System.Drawing.Point(415, 28);
             this.AgregarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(94, 31);
+            this.AgregarButton.Size = new System.Drawing.Size(98, 29);
             this.AgregarButton.TabIndex = 3;
             this.AgregarButton.Text = "Agregar";
             this.AgregarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -271,7 +271,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 749);
+            this.ClientSize = new System.Drawing.Size(554, 773);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.FechaCreacionDateTimePicker);
             this.Controls.Add(this.NombreTextBox);

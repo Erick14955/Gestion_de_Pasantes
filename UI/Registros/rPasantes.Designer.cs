@@ -227,7 +227,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.RemoverButton.Location = new System.Drawing.Point(6, 292);
             this.RemoverButton.Name = "RemoverButton";
-            this.RemoverButton.Size = new System.Drawing.Size(94, 29);
+            this.RemoverButton.Size = new System.Drawing.Size(98, 29);
             this.RemoverButton.TabIndex = 27;
             this.RemoverButton.Text = "Remover";
             this.RemoverButton.UseVisualStyleBackColor = true;
@@ -237,7 +237,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AgregarButton.Location = new System.Drawing.Point(546, 40);
             this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(98, 27);
+            this.AgregarButton.Size = new System.Drawing.Size(98, 29);
             this.AgregarButton.TabIndex = 26;
             this.AgregarButton.Text = "Agregar";
             this.AgregarButton.UseVisualStyleBackColor = true;
@@ -288,9 +288,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(157, 823);
+            this.NuevoButton.Location = new System.Drawing.Point(158, 823);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(108, 39);
+            this.NuevoButton.Size = new System.Drawing.Size(103, 53);
             this.NuevoButton.TabIndex = 28;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.UseVisualStyleBackColor = true;
@@ -298,9 +298,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(297, 825);
+            this.GuardarButton.Location = new System.Drawing.Point(298, 825);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(108, 39);
+            this.GuardarButton.Size = new System.Drawing.Size(103, 53);
             this.GuardarButton.TabIndex = 29;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.UseVisualStyleBackColor = true;
@@ -308,9 +308,9 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(437, 825);
+            this.EliminarButton.Location = new System.Drawing.Point(438, 825);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(108, 39);
+            this.EliminarButton.Size = new System.Drawing.Size(103, 53);
             this.EliminarButton.TabIndex = 30;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.UseVisualStyleBackColor = true;
@@ -334,7 +334,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 882);
+            this.ClientSize = new System.Drawing.Size(698, 903);
             this.Controls.Add(this.ActivoCheckBox);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.GuardarButton);
