@@ -207,7 +207,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.Location = new System.Drawing.Point(875, 16);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -221,12 +221,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // ImprimirButton
             // 
+            this.ImprimirButton.Image = ((System.Drawing.Image)(resources.GetObject("ImprimirButton.Image")));
             this.ImprimirButton.Location = new System.Drawing.Point(14, 721);
             this.ImprimirButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ImprimirButton.Name = "ImprimirButton";
-            this.ImprimirButton.Size = new System.Drawing.Size(101, 33);
+            this.ImprimirButton.Size = new System.Drawing.Size(109, 33);
             this.ImprimirButton.TabIndex = 16;
             this.ImprimirButton.Text = "Imprimir";
+            this.ImprimirButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ImprimirButton.UseVisualStyleBackColor = true;
             // 
             // cRoles
@@ -243,6 +245,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cRoles";
             this.Text = "Consultar Roles";

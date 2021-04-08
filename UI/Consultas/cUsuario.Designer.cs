@@ -53,12 +53,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // ImprimirButton
             // 
+            this.ImprimirButton.Image = ((System.Drawing.Image)(resources.GetObject("ImprimirButton.Image")));
             this.ImprimirButton.Location = new System.Drawing.Point(14, 721);
             this.ImprimirButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ImprimirButton.Name = "ImprimirButton";
             this.ImprimirButton.Size = new System.Drawing.Size(109, 33);
             this.ImprimirButton.TabIndex = 26;
             this.ImprimirButton.Text = "Imprimir";
+            this.ImprimirButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ImprimirButton.UseVisualStyleBackColor = true;
             // 
             // UsuarioDataGridView
@@ -74,7 +76,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.Location = new System.Drawing.Point(878, 16);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarButton.Name = "BuscarButton";
@@ -243,6 +245,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cUsuario";
             this.Text = "Consultar Usuarios";

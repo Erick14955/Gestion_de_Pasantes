@@ -30,6 +30,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rHabilidades));
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // EliminarButton
             // 
+            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.Location = new System.Drawing.Point(314, 265);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(103, 62);
@@ -60,6 +62,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.Location = new System.Drawing.Point(173, 265);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(103, 62);
@@ -71,6 +74,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // NuevoButton
             // 
+            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
             this.NuevoButton.Location = new System.Drawing.Point(32, 265);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(103, 62);
@@ -99,6 +103,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // BuscarButton
             // 
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.Location = new System.Drawing.Point(361, 23);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(64, 29);
@@ -178,6 +183,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.HabilidadIdNumericUpDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rHabilidades";
             this.Text = "Registro de Habilidades";
             ((System.ComponentModel.ISupportInitialize)(this.HabilidadIdNumericUpDown)).EndInit();

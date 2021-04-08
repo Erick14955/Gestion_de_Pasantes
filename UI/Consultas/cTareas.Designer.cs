@@ -53,12 +53,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // button1
             // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(14, 721);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 33);
             this.button1.TabIndex = 17;
             this.button1.Text = "Imprimir";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // TareasDataGridView
@@ -74,7 +76,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.Location = new System.Drawing.Point(875, 16);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarButton.Name = "BuscarButton";
@@ -243,6 +245,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cTareas";
             this.Text = "Consultar Tareas";

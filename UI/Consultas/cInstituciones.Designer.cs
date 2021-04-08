@@ -131,7 +131,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BuscarButton.Location = new System.Drawing.Point(875, 13);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -156,12 +156,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // button2
             // 
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(14, 721);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 35);
+            this.button2.Size = new System.Drawing.Size(109, 33);
             this.button2.TabIndex = 8;
             this.button2.Text = "Imprimir";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // FiltroComboBox
@@ -242,6 +244,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cInstituciones";
             this.Text = "Consultar Instituciónes";

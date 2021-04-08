@@ -29,6 +29,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cHabilidades));
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.UsuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.BuscarButton = new System.Windows.Forms.Button();
@@ -52,12 +53,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // ImprimirButton
             // 
+            this.ImprimirButton.Image = ((System.Drawing.Image)(resources.GetObject("ImprimirButton.Image")));
             this.ImprimirButton.Location = new System.Drawing.Point(13, 721);
             this.ImprimirButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ImprimirButton.Name = "ImprimirButton";
             this.ImprimirButton.Size = new System.Drawing.Size(109, 33);
             this.ImprimirButton.TabIndex = 35;
             this.ImprimirButton.Text = "Imprimir";
+            this.ImprimirButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ImprimirButton.UseVisualStyleBackColor = true;
             // 
             // UsuarioDataGridView
@@ -73,6 +76,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             // 
             // BuscarButton
             // 
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.Location = new System.Drawing.Point(877, 16);
             this.BuscarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarButton.Name = "BuscarButton";
@@ -240,6 +244,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.Controls.Add(this.FiltroComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FiltroCheckBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cHabilidades";
             this.Text = "Consultar Habilidades";

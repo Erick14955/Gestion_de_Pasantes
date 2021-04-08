@@ -30,6 +30,7 @@ namespace Gestion_de_Pasantes.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rPasantes));
             this.label1 = new System.Windows.Forms.Label();
             this.PasanteIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BuscarButton = new System.Windows.Forms.Button();
@@ -84,7 +85,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.buscar;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.Location = new System.Drawing.Point(307, 22);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(64, 29);
@@ -226,7 +227,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // RemoverButton
             // 
-            this.RemoverButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminarPequeño;
+            this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
             this.RemoverButton.Location = new System.Drawing.Point(6, 292);
             this.RemoverButton.Name = "RemoverButton";
             this.RemoverButton.Size = new System.Drawing.Size(98, 29);
@@ -238,7 +239,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // AgregarButton
             // 
-            this.AgregarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevoPequeño;
+            this.AgregarButton.Image = ((System.Drawing.Image)(resources.GetObject("AgregarButton.Image")));
             this.AgregarButton.Location = new System.Drawing.Point(546, 40);
             this.AgregarButton.Name = "AgregarButton";
             this.AgregarButton.Size = new System.Drawing.Size(98, 29);
@@ -292,8 +293,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.DetalleDataGridView.TabIndex = 0;
             // 
             // NuevoButton
-            //
-            this.NuevoButton.Image = global::Gestion_de_Pasantes.Properties.Resources.nuevo;
+            // 
+            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
             this.NuevoButton.Location = new System.Drawing.Point(158, 823);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(103, 62);
@@ -305,7 +306,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.guardar;
+            this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.Location = new System.Drawing.Point(298, 823);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(103, 62);
@@ -316,8 +317,8 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
-            //
-            this.EliminarButton.Image = global::Gestion_de_Pasantes.Properties.Resources.eliminar;
+            // 
+            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.Location = new System.Drawing.Point(438, 823);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(103, 62);
@@ -368,6 +369,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.PasanteIdNumericUpDown);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rPasantes";
             this.Text = "Registro Pasante";
             this.Load += new System.EventHandler(this.rPasantes_Load);
