@@ -1,3 +1,4 @@
+using Gestion_de_Pasantes.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Gestion_de_Pasantes
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new rLogIn());
         }
     }
 }
