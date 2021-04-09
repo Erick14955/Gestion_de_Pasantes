@@ -154,11 +154,11 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
             "Nombre Tarea",
-            "Nombre de Asignado"});
+            "Nombre Pasante"});
             this.FiltroComboBox.Location = new System.Drawing.Point(59, 72);
             this.FiltroComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FiltroComboBox.Name = "FiltroComboBox";
-            this.FiltroComboBox.Size = new System.Drawing.Size(130, 28);
+            this.FiltroComboBox.Size = new System.Drawing.Size(145, 28);
             this.FiltroComboBox.TabIndex = 11;
             // 
             // label1
