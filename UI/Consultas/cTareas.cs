@@ -21,108 +21,45 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private void BuscarButton_Click_1(object sender, EventArgs e)
         {
-            var lista = new List<Tareas>();
+            var listado = new List<Tareas>();
 
-            if (FiltroCheckBox.Checked)
+            if (!string.IsNullOrEmpty(InformacionTextBox.Text))
             {
-                if (TodoRadioButton.Checked)
+                switch (FiltroComboBox.SelectedIndex)
                 {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
-                                break;
-                            case 1:
-                                lista = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                                break;
-                            case 2:
-                                lista = TareasBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = TareasBLL.GetList(r => true);
-                }
-                else if (ActivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
-                                break;
-                            case 1:
-                                lista = TareasBLL.GetList(r => r.Nombre.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
-                                break;
-                            case 2:
-                                lista = TareasBLL.GetList(r => r.Asignado.Contains(FiltroCheckBox.Text) && r.Activo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = TareasBLL.GetList(r => r.Activo);
-                }
-                else if (InactivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
-                                break;
-                            case 1:
-                                lista = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
-                                break;
-                            case 2:
-                                lista = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = TareasBLL.GetList(r => !r.Activo);
+                    case 0:
+                        listado = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
+                        break;
+                    case 1:
+                        listado = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
+                        break;
+                    case 3:
+                        listado = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text));
+                        break;
                 }
             }
             else
             {
-                if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                {
-                    switch (FiltroComboBox.SelectedIndex)
-                    {
-                        case 0:
-                            lista = TareasBLL.GetList(r => r.TareaId == Utilitarios.ToInt(InformacionTextBox.Text));
-                            break;
-                        case 1:
-                            lista = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                            break;
-                        case 3:
-                            lista = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text));
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                else
-                    lista = TareasBLL.GetList(r => true);
+                listado = TareasBLL.GetList(c => true);
             }
 
-            if (FiltroCheckBox.Checked)
+            if (FiltroCheckBox.Checked == true)
             {
-                lista = TareasBLL.GetList(r => r.FechaFinal >= dateTimePicker.Value && r.FechaFinal <= dateTimePicker.Value);
+                listado = TareasBLL.GetList(e => e.FechaInicio.Date >= FechaDesdeDateTimePicker.Value.Date && e.FechaInicio.Date <= FechaHastaDateTimePicker.Value.Date);
+            }
+
+            if (ActivoRadioButton.Checked == true)
+            {
+                listado = TareasBLL.GetList(e => e.Activo == true);
+            }
+
+            if (InactivoRadioButton.Checked == true)
+            {
+                listado = TareasBLL.GetList(e => e.Activo == false);
             }
 
             TareasDataGridView.DataSource = null;
-            TareasDataGridView.DataSource = lista;
+            TareasDataGridView.DataSource = listado;
         }
     }
 }

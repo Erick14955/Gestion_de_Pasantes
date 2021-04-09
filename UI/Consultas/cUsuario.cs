@@ -2,12 +2,6 @@
 using Gestion_de_Pasantes.Entidades;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestion_de_Pasantes.UI.Consultas
@@ -21,108 +15,46 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            var lista = new List<Usuarios>();
 
-            if (FiltroCheckBox.Checked)
+            var listado = new List<Usuarios>();
+
+            if (!string.IsNullOrEmpty(InformacionTextBox.Text))
             {
-                if (TodoRadioButton.Checked)
+                switch (FiltroComboBox.SelectedIndex)
                 {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text));
-                                break;
-                            case 1:
-                                lista = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                                break;
-                            case 2:
-                                lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text));
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = UsuariosBLL.GetList(r => true);
-                }
-                else if (ActivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(FiltroCheckBox.Text) && r.Activo);
-                                break;
-                            case 1:
-                                lista = UsuariosBLL.GetList(r => r.Nombre.Contains(FiltroCheckBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
-                                break;
-                            case 2:
-                                lista = UsuariosBLL.GetList(r => r.Email.Contains(FiltroCheckBox.Text) && r.Activo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = UsuariosBLL.GetList(r => r.Activo);
-                }
-                else if (InactivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
-                                break;
-                            case 1:
-                                lista = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
-                                break;
-                            case 2:
-                                lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = UsuariosBLL.GetList(r => !r.Activo);
+                    case 0:
+                        listado = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text));
+                        break;
+                    case 1:
+                        listado = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
+                        break;
+                    case 3:
+                        listado = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text));
+                        break;
                 }
             }
             else
             {
-                if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                {
-                    switch (FiltroComboBox.SelectedIndex)
-                    {
-                        case 0:
-                            lista = UsuariosBLL.GetList(r => r.UsuarioId == Utilitarios.ToInt(InformacionTextBox.Text));
-                            break;
-                        case 1:
-                            lista = UsuariosBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                            break;
-                        case 3:
-                            lista = UsuariosBLL.GetList(r => r.Email.Contains(InformacionTextBox.Text));
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                else
-                    lista = UsuariosBLL.GetList(r => true);
+                listado = UsuariosBLL.GetList(c => true);
             }
 
-            if (FiltroCheckBox.Checked)
+            if (FiltroCheckBox.Checked == true)
             {
-                lista = UsuariosBLL.GetList(r => r.FechaIngreso >= dateTimePicker1.Value && r.FechaIngreso <= dateTimePicker2.Value);
+                listado = UsuariosBLL.GetList(e => e.FechaIngreso.Date >= FechaDesdeDateTimePicker.Value.Date && e.FechaIngreso.Date <= FechaHastaDateTimePicker.Value.Date);
+            }
+
+            if (ActivoRadioButton.Checked == true)
+            {
+                listado = UsuariosBLL.GetList(e => e.Activo == true);
+            }
+
+            if (InactivoRadioButton.Checked == true)
+            {
+                listado = UsuariosBLL.GetList(e => e.Activo == false);
             }
 
             UsuarioDataGridView.DataSource = null;
-            UsuarioDataGridView.DataSource = lista;
+            UsuarioDataGridView.DataSource = listado;
         }
     }
 }

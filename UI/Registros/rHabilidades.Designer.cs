@@ -91,7 +91,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Descripcion";
+            this.label4.Text = "Descripción";
             // 
             // DescripcionTextBox
             // 
@@ -151,7 +151,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Fecha Creacion";
+            this.label2.Text = "Fecha Creación";
             // 
             // label1
             // 

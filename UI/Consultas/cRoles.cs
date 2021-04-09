@@ -21,108 +21,45 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            var lista = new List<Roles>();
+            var listado = new List<Roles>();
 
-            if (FiltroCheckBox.Checked)
+            if (!string.IsNullOrEmpty(InformacionTextBox.Text))
             {
-                if (TodoRadioButton.Checked)
+                switch (FiltroComboBox.SelectedIndex)
                 {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text));
-                                break;
-                            case 1:
-                                lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                                break;
-                            case 2:
-                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = RolesBLL.GetList(r => true);
-                }
-                else if (ActivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text) && r.esActivo);
-                                break;
-                            case 1:
-                                lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.esActivo);
-                                break;
-                            case 2:
-                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text) && r.esActivo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = RolesBLL.GetList(r => r.esActivo);
-                }
-                else if (InactivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.esActivo);
-                                break;
-                            case 1:
-                                lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.esActivo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.esActivo);
-                                break;
-                            case 2:
-                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text.ToUpper()) && r.esActivo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = RolesBLL.GetList(r => !r.esActivo);
+                    case 0:
+                        listado = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text));
+                        break;
+                    case 1:
+                        listado = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
+                        break;
+                    case 3:
+                        listado = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
+                        break;
                 }
             }
             else
             {
-                if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                {
-                    switch (FiltroComboBox.SelectedIndex)
-                    {
-                        case 0:
-                            lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(InformacionTextBox.Text));
-                            break;
-                        case 1:
-                            lista = RolesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                            break;
-                        case 3:
-                            lista = RolesBLL.GetList(r => r.Descripcion.Contains(InformacionTextBox.Text));
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                else
-                    lista = RolesBLL.GetList(r => true);
+                listado = RolesBLL.GetList(c => true);
             }
 
-            if (FiltroCheckBox.Checked)
+            if (FiltroCheckBox.Checked == true)
             {
-                lista = RolesBLL.GetList(r => r.FechaCreacion >= FechaInicio.Value && r.FechaCreacion<= FechaFinal.Value);
+                listado = RolesBLL.GetList(e => e.FechaCreacion.Date >= FechaDesdeDateTimePicker.Value.Date && e.FechaCreacion.Date <= FechaHastaDateTimePicker.Value.Date);
+            }
+
+            if (ActivoRadioButton.Checked == true)
+            {
+                listado = RolesBLL.GetList(e => e.esActivo == true);
+            }
+
+            if (InactivoRadioButton.Checked == true)
+            {
+                listado = RolesBLL.GetList(e => e.esActivo == false);
             }
 
             RolesDataGridView.DataSource = null;
-            RolesDataGridView.DataSource = lista;
+            RolesDataGridView.DataSource = listado;
         }
     }
 }

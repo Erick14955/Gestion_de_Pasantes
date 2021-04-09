@@ -15,7 +15,8 @@ namespace Gestion_de_Pasantes.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     FechaCreacion = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Nombre = table.Column<string>(type: "TEXT", nullable: true),
-                    Descripcion = table.Column<string>(type: "TEXT", nullable: true)
+                    Descripcion = table.Column<string>(type: "TEXT", nullable: true),
+                    EsActivo = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

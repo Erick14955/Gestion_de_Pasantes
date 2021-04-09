@@ -42,9 +42,9 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.button2 = new System.Windows.Forms.Button();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaDesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.FechaHastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InstitucionesDataGridView)).BeginInit();
@@ -189,14 +189,14 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.label2.TabIndex = 0;
             this.label2.Text = "Hasta";
             // 
-            // dateTimePicker1
+            // FechaDesdeDateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(100, 16);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 27);
-            this.dateTimePicker1.TabIndex = 4;
+            this.FechaDesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaDesdeDateTimePicker.Location = new System.Drawing.Point(100, 16);
+            this.FechaDesdeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FechaDesdeDateTimePicker.Name = "FechaDesdeDateTimePicker";
+            this.FechaDesdeDateTimePicker.Size = new System.Drawing.Size(161, 27);
+            this.FechaDesdeDateTimePicker.TabIndex = 4;
             // 
             // label3
             // 
@@ -207,20 +207,20 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.label3.TabIndex = 1;
             this.label3.Text = "Desde";
             // 
-            // dateTimePicker2
+            // FechaHastaDateTimePicker
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(367, 16);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(161, 27);
-            this.dateTimePicker2.TabIndex = 5;
+            this.FechaHastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaHastaDateTimePicker.Location = new System.Drawing.Point(367, 16);
+            this.FechaHastaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FechaHastaDateTimePicker.Name = "FechaHastaDateTimePicker";
+            this.FechaHastaDateTimePicker.Size = new System.Drawing.Size(161, 27);
+            this.FechaHastaDateTimePicker.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.FechaHastaDateTimePicker);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.FechaDesdeDateTimePicker);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(224, 5);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -272,9 +272,9 @@ namespace Gestion_de_Pasantes.UI.Consultas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox FiltroComboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaDesdeDateTimePicker;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker FechaHastaDateTimePicker;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

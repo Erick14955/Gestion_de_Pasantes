@@ -25,6 +25,9 @@ namespace Gestion_de_Pasantes.Migrations
                     b.Property<string>("Descripcion")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("EsActivo")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("TEXT");
 

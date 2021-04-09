@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gestion_de_Pasantes.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210407010203_Inicial")]
+    [Migration("20210408230139_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,9 @@ namespace Gestion_de_Pasantes.Migrations
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("EsActivo")
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("TEXT");

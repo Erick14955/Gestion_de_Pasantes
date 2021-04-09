@@ -100,7 +100,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Fecha Creacion";
+            this.label2.Text = "Fecha Creación";
             // 
             // FechaCreacionDateTimePicker
             // 
@@ -127,7 +127,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Matricula";
+            this.label5.Text = "Matrícula";
             // 
             // label6
             // 
@@ -207,7 +207,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Telefono";
+            this.label8.Text = "Teléfono";
             // 
             // groupBox1
             // 

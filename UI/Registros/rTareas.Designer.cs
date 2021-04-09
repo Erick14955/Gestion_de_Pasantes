@@ -96,7 +96,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Descripcion";
+            this.label3.Text = "Descripción";
             // 
             // DescripcionTexBox
             // 
@@ -173,7 +173,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 20);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Fecha Creacion";
+            this.label9.Text = "Fecha Creación";
             // 
             // FechaInicioDateTimePicker
             // 

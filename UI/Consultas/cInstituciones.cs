@@ -21,108 +21,47 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            var lista = new List<Instituciones>();
+            var listado = new List<Instituciones>();
 
-            if (FiltroCheckBox.Checked)
+            if (!string.IsNullOrEmpty(InformacionTextBox.Text))
             {
-                if (TodoRadioButton.Checked)
+                switch (FiltroComboBox.SelectedIndex)
                 {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
+                    case 0:
+                        listado = InstitucionesBLL.GetList(e => e.InstitucionId == int.Parse(InformacionTextBox.Text));
+                        break;
 
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text));
-                                break;
-                            case 1:
-                                lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                                break;
-                            case 2:
-                                lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text));
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = InstitucionesBLL.GetList(r => true);
-                }
-                else if (ActivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text) && r.Activo);
-                                break;
-                            case 1:
-                                lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && r.Activo);
-                                break;
-                            case 2:
-                                lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text) && r.Activo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = InstitucionesBLL.GetList(r => r.Activo);
-                }
-                else if (InactivoRadioButton.Checked)
-                {
-                    if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                    {
-                        switch (FiltroComboBox.SelectedIndex)
-                        {
-                            case 0:
-                                lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text) && !r.Activo);
-                                break;
-                            case 1:
-                                lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text.ToUpper()) && !r.Activo || r.Nombre.Contains(InformacionTextBox.Text.ToLower()) && !r.Activo);
-                                break;
-                            case 2:
-                                lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text.ToUpper()) && r.Activo);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    else
-                        lista = InstitucionesBLL.GetList(r => !r.Activo);
+                    case 1:
+                        listado = InstitucionesBLL.GetList(e => e.Nombre.Contains(InformacionTextBox.Text));
+                        break;
+                    case 2:
+                        listado = InstitucionesBLL.GetList(e => e.Region.Contains(InformacionTextBox.Text));
+                        break;
                 }
             }
             else
             {
-                if (!String.IsNullOrWhiteSpace(InformacionTextBox.Text))
-                {
-                    switch (FiltroComboBox.SelectedIndex)
-                    {
-                        case 0:
-                            lista = InstitucionesBLL.GetList(r => r.InstitucionId == Utilitarios.ToInt(InformacionTextBox.Text));
-                            break;
-                        case 1:
-                            lista = InstitucionesBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
-                            break;
-                        case 3:
-                            lista = InstitucionesBLL.GetList(r => r.Region.Contains(InformacionTextBox.Text));
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                else
-                    lista = InstitucionesBLL.GetList(r => true);
+                listado = InstitucionesBLL.GetList(c => true);
             }
 
-            if (FiltroCheckBox.Checked)
+            if (FiltroCheckBox.Checked == true)
             {
-                lista = InstitucionesBLL.GetList(r => r.Fecha >= dateTimePicker1.Value && r.Fecha <= dateTimePicker2.Value);
+                listado = InstitucionesBLL.GetList(e => e.Fecha.Date >= FechaDesdeDateTimePicker.Value.Date && e.Fecha.Date <= FechaHastaDateTimePicker.Value.Date);
             }
+
+            if (ActivoRadioButton.Checked == true)
+            {
+                listado = InstitucionesBLL.GetList(e => e.Activo == true);
+            }
+
+            if (InactivoRadioButton.Checked == true)
+            {
+                listado = InstitucionesBLL.GetList(e => e.Activo == false);
+            }
+
 
             InstitucionesDataGridView.DataSource = null;
-            InstitucionesDataGridView.DataSource = lista;
+            InstitucionesDataGridView.DataSource = listado;
         }
     }
 }

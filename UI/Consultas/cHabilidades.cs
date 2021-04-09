@@ -22,7 +22,45 @@ namespace Gestion_de_Pasantes.UI.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            var lista = new List<Habilidades>();
+            var listado = new List<Habilidades>();
+
+            if (!string.IsNullOrEmpty(InformacionTextBox.Text))
+            {
+                switch (FiltroComboBox.SelectedIndex)
+                {
+                    case 0:
+                        listado = HabilidadesBLL.GetList(e => e.HabilidadId == int.Parse(InformacionTextBox.Text));
+                        break;
+
+                    case 1:
+                        listado = HabilidadesBLL.GetList(e => e.Nombre.Contains(InformacionTextBox.Text));
+                        break;
+
+                }
+            }
+            else
+            {
+                listado = HabilidadesBLL.GetList(c => true);
+            }
+
+            if (FiltroCheckBox.Checked == true)
+            {
+                listado = HabilidadesBLL.GetList(e => e.FechaCreacion.Date >= FechaDesdeDateTimePicker.Value.Date && e.FechaCreacion.Date <= FechaHastaDateTimePicker.Value.Date);
+            }
+
+            if (ActivoRadioButton.Checked == true)
+            {
+                listado = HabilidadesBLL.GetList(e => e.EsActivo == true);
+            }
+
+            if (InactivoRadioButton.Checked == true)
+            {
+                listado = HabilidadesBLL.GetList(e => e.EsActivo == false);
+            }
+
+            UsuarioDataGridView.DataSource = null;
+            UsuarioDataGridView.DataSource = listado;
+            /*var lista = new List<Habilidades>();
 
             if (FiltroCheckBox.Checked)
             {
@@ -107,7 +145,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
             }
 
             UsuarioDataGridView.DataSource = null;
-            UsuarioDataGridView.DataSource = lista;
+            UsuarioDataGridView.DataSource = lista;*/
         }
     }
 }

@@ -81,7 +81,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Descripcion";
+            this.label3.Text = "Descripción";
             // 
             // label1
             // 
@@ -270,7 +270,7 @@ namespace Gestion_de_Pasantes.UI.Registros
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Fecha Creacion";
+            this.label4.Text = "Fecha Creación";
             // 
             // MyErrorProvider
             // 
