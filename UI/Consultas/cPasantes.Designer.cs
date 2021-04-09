@@ -78,8 +78,9 @@ namespace Gestion_de_Pasantes.UI.Consultas
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Id",
             "Nombre Pasante",
+            "Matricula",
             "Institucion",
-            "Email"});
+            "Horas a realizar"});
             this.FiltroComboBox.Location = new System.Drawing.Point(59, 69);
             this.FiltroComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FiltroComboBox.Name = "FiltroComboBox";
