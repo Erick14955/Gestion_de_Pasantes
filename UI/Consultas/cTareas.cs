@@ -33,7 +33,7 @@ namespace Gestion_de_Pasantes.UI.Consultas
                     case 1:
                         listado = TareasBLL.GetList(r => r.Nombre.Contains(InformacionTextBox.Text));
                         break;
-                    case 3:
+                    case 2:
                         listado = TareasBLL.GetList(r => r.Asignado.Contains(InformacionTextBox.Text));
                         break;
                 }
