@@ -17,7 +17,6 @@ namespace Gestion_de_Pasantes.UI.Consultas
         public cHabilidades()
         {
             InitializeComponent();
-
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
